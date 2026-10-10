@@ -32,18 +32,25 @@
   } // 0건 처리 끝
 
   box.appendChild(el('p', { class: 'cite' }, results.length + '건')); // 건수
-  const list = el('div', { class: 'grid' }); // 결과 격자
-  results.forEach(function (r) { // 결과마다
-    const res = X.byId.get(r.id); // 자원
-    const card = el('article', { class: 'card group-bar ' + (X.GROUP_CLASS[X.groupsOf(res)[0]] || '') }); // 결과 카드
-    const meta = X.groupChips(res); // 문화권 칩
-    meta.insertBefore(el('span', { class: 'chip' }, TYPE_NAME[r.type]), meta.firstChild); // 종류 칩을 앞에
-    card.appendChild(meta); // 칩 줄
-    card.appendChild(el('h3', {}, el('a', { href: X.itemUrl(r.id) }, X.titleOf(res)))); // 이름 링크
-    card.appendChild(el('p', { class: 'cite' }, r.hit.kind + '에서 찾음: ' + r.hit.text)); // 무엇으로 찾았는지(이표기 등)
-    if (r.type === 'label') card.appendChild(el('p', {}, res['dia:gloss'].value)); // 어휘면 뜻
-    card.appendChild(X.citeNode(X.firstCites(res))); // 출처·쪽수
-    list.appendChild(card); // 격자에 추가
-  }); // 결과 끝
-  box.appendChild(list); // 화면에 붙임
+  ['label', 'concept', 'scene'].forEach(function (type) { // 종류별로 묶어서 보여 줌
+    const hits = results.filter(function (r) { return r.type === type; }); // 이 종류의 결과
+    if (!hits.length) return; // 없으면 건너뜀
+    box.appendChild(el('h2', {}, TYPE_NAME[type] + ' · ' + hits.length)); // 종류 소제목
+    const list = el('div', { class: type === 'scene' ? 'grid' : 'word-wall' }); // 장면은 카드 격자, 나머지는 타일 벽
+    hits.forEach(function (r) { // 결과마다
+      const res = X.byId.get(r.id); // 자원
+      let card; // 그릴 카드
+      if (type === 'label') card = X.labelCard(res); // 어휘는 큰 글씨 타일
+      else if (type === 'scene') card = X.sceneCard(res); // 장면은 그림 표지 카드
+      else { // 생활 대상은 아이콘 타일
+        card = el('article', { class: 'word-tile' }); // 타일 틀
+        card.appendChild(window.ArchiveIcons.iconSvg(r.id)); // 아이콘
+        card.appendChild(el('p', { class: 'word' }, el('a', { href: X.itemUrl(r.id) }, X.titleOf(res)))); // 이름
+        card.appendChild(X.citeCompact(X.firstCites(res))); // 출처·쪽수
+      } // 카드 종류 끝
+      if (r.hit.kind === '이표기') (card.querySelector('.scene-body') || card).appendChild(el('span', { class: 'cite' }, '이표기 ‘' + r.hit.text + '’로 찾음')); // 이표기로 찾았으면 알려 줌
+      list.appendChild(card); // 목록에 추가
+    }); // 결과 끝
+    box.appendChild(list); // 화면에 붙임
+  }); // 종류 끝
 })(); // 즉시 실행 함수 끝

@@ -56,7 +56,8 @@
     if (!ref) return src; // 모르는 출처면 ID 그대로
     const who = asList(ref['dcterms:creator'])[0]; // 첫 저자
     const year = ref['dcterms:date'] && ref['dcterms:date'].value; // 연도
-    return (who ? who.value.split(' (')[0] : src) + (year ? '(' + String(year).slice(0, 4) + ')' : ''); // 예: 권기배(2020)
+    const roman = who && /\(([^,)]+)/.exec(who.value); // 괄호 안 로마자 이름이 있으면(예: Iwata-Weickgennant) 짧게 쓰려고 꺼냄
+    return (roman ? roman[1] : who ? who.value : src) + (year ? '(' + String(year).slice(0, 4) + ')' : ''); // 예: 권기배(2020)
   } // refName 끝
 
   function citeNode(cites) { // "출처ID:쪽" 목록을 화면용 한 줄로 만드는 함수
@@ -126,35 +127,55 @@
     return out; // 모은 근거를 돌려줌
   } // firstCites 끝
 
-  function labelCard(lab) { // 어휘 카드를 만드는 함수
-    const card = el('article', { class: 'card label-card ' + (GROUP_CLASS[groupsOf(lab)[0]] || '') }); // 첫 문화권 색을 씀
-    card.appendChild(groupChips(lab)); // 문화권 칩
+  function citeCompact(cites) { // 근거 목록을 '저자(연도) 쪽, 쪽' 한 줄로 줄여 보여 주는 함수
+    const bySrc = {}; // 출처ID → 쪽 목록
+    const order = []; // 출처가 처음 나온 순서
+    asList(cites).forEach(function (c) { // 근거마다
+      const cut = c.indexOf(':'); // 출처ID와 쪽을 나누는 위치
+      const src = cut < 0 ? c : c.slice(0, cut); // 출처ID
+      const page = cut < 0 ? '' : c.slice(cut + 1); // 쪽
+      if (!bySrc[src]) { bySrc[src] = []; order.push(src); } // 처음 보는 출처면 등록
+      if (page && bySrc[src].indexOf(page) < 0) bySrc[src].push(page); // 쪽을 중복 없이 추가
+    }); // 근거 끝
+    if (!order.length) return null; // 근거가 없으면 그리지 않음
+    const span = el('span', { class: 'cite' }); // 출처 줄
+    order.forEach(function (src, i) { // 출처마다
+      if (i) span.appendChild(document.createTextNode(' · ')); // 구분점
+      span.appendChild(byId.has(src) ? el('a', { href: itemUrl(src) }, refName(src)) : document.createTextNode(src)); // 출처 링크
+      const pages = bySrc[src]; // 그 출처의 쪽들
+      if (pages.length) span.appendChild(document.createTextNode(' ' + pages.join(', ') + (/^\d/.test(pages[0]) ? '쪽' : ''))); // 쪽수 붙임
+    }); // 출처 끝
+    return span; // 출처 줄을 돌려줌
+  } // citeCompact 끝
+
+  function labelCard(lab) { // 어휘 카드(큰 글씨 타일)를 만드는 함수
+    const gid = groupsOf(lab)[0]; // 첫 문화권
+    const card = el('article', { class: 'word-tile ' + (GROUP_CLASS[gid] || '') }); // 문화권 색 타일
     const form = lab['skosxl:literalForm']; // 표기 값
-    card.appendChild(el('p', { class: 'form', lang: form.lang }, el('a', { href: itemUrl(lab.id) }, form.value))); // 큰 글씨 표기(자원 페이지 링크)
-    const variants = asList(lab['dia:variantForm']).map(function (v) { return v.value; }); // 이표기 목록
-    if (variants.length) card.appendChild(el('p', { class: 'variants' }, '이표기 · ' + variants.join(', '))); // 이표기 줄
-    card.appendChild(el('p', { class: 'gloss' }, lab['dia:gloss'].value)); // 뜻
-    const den = lab['dia:denotes']; // 가리키는 생활 대상
-    if (den && den.ref) card.appendChild(el('p', { class: 'cite' }, ['가리키는 대상: ', refLink(den.ref)])); // 대상 링크
-    card.appendChild(citeNode(firstCites(lab))); // 출처·쪽수
-    return card; // 카드를 돌려줌
+    card.appendChild(el('p', { class: 'word-group' }, titleOf(byId.get(gid)))); // 문화권 이름(작은 글씨)
+    card.appendChild(el('p', { class: 'word', lang: form.lang }, el('a', { href: itemUrl(lab.id) }, form.value))); // 큰 글씨 표기(자원 페이지 링크)
+    card.appendChild(el('p', { class: 'word-gloss' }, lab['dia:gloss'].value)); // 뜻(두 줄까지만 보임)
+    card.appendChild(citeCompact(firstCites(lab))); // 출처·쪽수 한 줄
+    return card; // 타일을 돌려줌
   } // labelCard 끝
 
-  function sceneCard(sc) { // 생활 장면 카드를 만드는 함수
-    const card = el('article', { class: 'card scene-card group-bar ' + (GROUP_CLASS[groupsOf(sc)[0]] || '') }); // 문화권 색 띠
-    const meta = groupChips(sc); // 문화권 칩
-    if (sc['dcterms:temporal'] && sc['dcterms:temporal'].value) meta.appendChild(el('span', { class: 'chip' }, sc['dcterms:temporal'].value)); // 시기 칩
-    card.appendChild(meta); // 칩 줄 붙임
-    card.appendChild(el('h3', {}, el('a', { href: itemUrl(sc.id) }, titleOf(sc)))); // 제목(자원 페이지 링크)
-    const ul = el('ul'); // 설명 문장 목록
-    asList(sc['dcterms:description']).forEach(function (d) { // 설명 문장마다
-      const li = el('li', {}, d.value); // 문장
-      const b = badgeFor(d); // 해석 여부 배지
-      if (b) li.appendChild(b); // 있으면 붙임
-      li.appendChild(citeNode(d.cite)); // 문장별 출처·쪽수
-      ul.appendChild(li); // 목록에 추가
-    }); // 설명 처리 끝
-    card.appendChild(ul); // 목록 붙임
+  function sceneCard(sc) { // 생활 장면 카드(그림 표지 + 제목 + 한 문장)를 만드는 함수
+    const gid = groupsOf(sc)[0]; // 첫 문화권
+    const card = el('article', { class: 'scene-card ' + (GROUP_CLASS[gid] || '') }); // 카드 틀
+    const subject = asList(sc['dcterms:subject'])[0]; // 첫 생활 대상
+    const cover = el('div', { class: 'scene-cover', 'aria-hidden': 'true' }); // 그림 표지(장식)
+    if (subject && window.ArchiveIcons) cover.appendChild(window.ArchiveIcons.iconSvg(subject.ref)); // 대상 아이콘
+    if (subject) cover.appendChild(el('span', { class: 'cover-word' }, titleOf(byId.get(subject.ref)))); // 대상 이름을 큰 글씨로
+    card.appendChild(cover); // 표지 붙임
+    const body = el('div', { class: 'scene-body' }); // 글 영역
+    const meta = el('p', { class: 'scene-meta' }, titleOf(byId.get(gid))); // 문화권 이름
+    if (sc['dcterms:temporal'] && sc['dcterms:temporal'].value) meta.appendChild(document.createTextNode(' · ' + sc['dcterms:temporal'].value)); // 시기
+    body.appendChild(meta); // 메타 줄 붙임
+    body.appendChild(el('h3', {}, el('a', { href: itemUrl(sc.id) }, titleOf(sc)))); // 제목(자원 페이지 링크)
+    const first = asList(sc['dcterms:description']).filter(function (d) { return d.value; })[0]; // 첫 설명 문장
+    if (first) body.appendChild(el('p', { class: 'scene-summary' }, first.value)); // 한 문장 요약
+    body.appendChild(citeCompact(firstCites(sc))); // 출처·쪽수 한 줄
+    card.appendChild(body); // 글 영역 붙임
     return card; // 카드를 돌려줌
   } // sceneCard 끝
 
@@ -312,7 +333,7 @@
   window.Archive = { // 페이지별 스크립트가 쓸 기능 묶음
     data: A, byId: byId, asList: asList, classOf: classOf, titleOf: titleOf, itemUrl: itemUrl, el: el, // 기본 도구
     citeNode: citeNode, valueNode: valueNode, badgeFor: badgeFor, refLink: refLink, refName: refName, // 값·출처 표시
-    groupsOf: groupsOf, groupChips: groupChips, labelCard: labelCard, sceneCard: sceneCard, firstCites: firstCites, // 카드·칩
+    groupsOf: groupsOf, groupChips: groupChips, labelCard: labelCard, sceneCard: sceneCard, citeCompact: citeCompact, firstCites: firstCites, // 카드·칩
     search: search, suggest: suggest, wrapLon: wrapLon, osmLayer: osmLayer, // 검색·지도
     fitWhenReady: fitWhenReady, representativePlace: representativePlace, // 지도 맞춤·대표 장소
     GROUP_CLASS: GROUP_CLASS, CLASS_NAME: CLASS_NAME, LANG_NAME: LANG_NAME // 표시용 사전

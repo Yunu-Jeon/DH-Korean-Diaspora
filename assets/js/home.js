@@ -41,26 +41,46 @@
     const concept = X.byId.get(best.id); // 고른 생활 대상
     const lead = document.getElementById('compare-lead'); // 안내 문장 자리
     const howMany = { 2: '두', 3: '세' }[best.n] || String(best.n); // 문화권 수를 우리말 수사로
-    lead.textContent = '‘' + X.titleOf(concept) + '’을(를) ' + howMany + ' 문화권에서는 이렇게 불렀습니다.'; // 안내 문장
-    const box = document.getElementById('compare'); // 카드 자리
-    byConcept[best.id].forEach(function (lab) { box.appendChild(X.labelCard(lab)); }); // 어휘 카드들
+    lead.textContent = '‘' + X.titleOf(concept) + '’ 하나를 ' + howMany + ' 문화권에서는 이렇게 불렀습니다.'; // 안내 문장
+    const box = document.getElementById('compare'); // 나무 그림 자리
+    const leaves = byConcept[best.id]; // 갈래가 될 어휘들
+    const root = X.el('a', { class: 'tree-root', href: X.itemUrl(best.id) }); // 뿌리: 생활 대상(자원 페이지 링크)
+    if (window.ArchiveIcons) root.appendChild(window.ArchiveIcons.iconSvg(best.id)); // 대상 아이콘
+    root.appendChild(document.createTextNode(X.titleOf(concept))); // 대상 이름
+    box.appendChild(root); // 뿌리 붙임
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); // 뿌리에서 갈래로 뻗는 선(장식)
+    svg.setAttribute('class', 'tree-lines'); // 스타일용 클래스
+    svg.setAttribute('viewBox', '0 0 100 56'); // 가로 100 기준 좌표
+    svg.setAttribute('preserveAspectRatio', 'none'); // 화면 너비에 맞게 늘림
+    svg.setAttribute('aria-hidden', 'true'); // 장식이므로 읽지 않음
+    let paths = ''; // 선 경로 모음
+    leaves.forEach(function (lab, i) { // 갈래마다
+      const x = (i + 0.5) * 100 / leaves.length; // 그 타일 가운데의 가로 위치
+      paths += '<path d="M50 0 C50 30 ' + x + ' 26 ' + x + ' 56" fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke"/>'; // 뿌리에서 타일로 휘어 내려가는 선(숫자만 들어감)
+    }); // 갈래 끝
+    svg.innerHTML = paths; // 선 넣기
+    box.appendChild(svg); // 선 붙임
+    const row = X.el('div', { class: 'tree-leaves', style: '--n:' + leaves.length }); // 갈래 타일 줄
+    leaves.forEach(function (lab) { row.appendChild(X.labelCard(lab)); }); // 어휘 타일
+    box.appendChild(row); // 줄 붙임
   } // drawCompare 끝
 
-  function drawGroups() { // 문화권 카드를 그리는 함수
-    const box = document.getElementById('group-cards'); // 카드 자리
+  function drawGroups() { // 문화권 타일을 그리는 함수(글은 줄이고 숫자로 보여 줌)
+    const box = document.getElementById('group-cards'); // 타일 자리
     A.groups.forEach(function (g) { // 문화권마다
-      const card = X.el('article', { class: 'card group-bar ' + X.GROUP_CLASS[g.id] }); // 문화권 색 띠 카드
-      card.appendChild(X.el('h3', {}, X.el('a', { href: 'collection.html#' + g.id.split(':')[1] }, X.titleOf(g)))); // 이름(컬렉션의 해당 문화권으로)
-      const first = X.asList(g['dcterms:description']).filter(function (d) { return d.value; })[0]; // 첫 설명 문장
-      if (first) { card.appendChild(X.el('p', {}, first.value)); card.appendChild(X.citeNode(first.cite)); } // 설명과 출처
+      const tile = X.el('article', { class: 'group-tile ' + X.GROUP_CLASS[g.id] }); // 문화권 색 타일
+      tile.appendChild(X.el('h3', {}, X.el('a', { href: 'collection.html#' + g.id.split(':')[1] }, X.titleOf(g)))); // 이름(타일 전체가 컬렉션 링크)
       const nScene = A.scenes.filter(function (s) { return X.groupsOf(s).indexOf(g.id) >= 0; }).length; // 이 문화권의 장면 수
       const nLabel = A.labels.filter(function (s) { return X.groupsOf(s).indexOf(g.id) >= 0; }).length; // 이 문화권의 어휘 수
-      card.appendChild(X.el('p', { class: 'cite' }, '생활 장면 ' + nScene + ' · 어휘 ' + nLabel)); // 건수
-      box.appendChild(card); // 카드 추가
+      const nPlace = X.asList(g['dcterms:spatial']).length; // 이 문화권의 장소 수
+      const stats = X.el('p', { class: 'group-stats' }); // 숫자 줄
+      [[nScene, '생활 장면'], [nLabel, '어휘'], [nPlace, '장소']].forEach(function (s) { stats.appendChild(X.el('span', {}, [X.el('b', {}, String(s[0])), s[1]])); }); // 숫자와 이름
+      tile.appendChild(stats); // 숫자 줄 붙임
+      box.appendChild(tile); // 타일 추가
     }); // 문화권 끝
   } // drawGroups 끝
 
   drawHeroMap(); // 히어로 지도 그리기
-  drawCompare(); // 비교 카드 그리기
-  drawGroups(); // 문화권 카드 그리기
+  drawCompare(); // 나무 그림 그리기
+  drawGroups(); // 문화권 타일 그리기
 })(); // 즉시 실행 함수 끝

@@ -27,29 +27,33 @@
   } // select 끝
 
   function groupSection(g) { // 문화권 하나의 묶음을 만드는 함수
-    const sec = el('section', { class: 'exhibit-section ' + X.GROUP_CLASS[g.id], id: 'sec-' + keyOf(g.id), 'aria-labelledby': 'h-' + keyOf(g.id) }); // 섹션 틀
-    const head = el('header'); // 머리
-    head.appendChild(el('h2', { id: 'h-' + keyOf(g.id) }, el('a', { href: X.itemUrl(g.id) }, X.titleOf(g)))); // 문화권 이름(자원 페이지 링크)
-    X.asList(g['dcterms:description']).forEach(function (d) { head.appendChild(X.valueNode(d)); }); // 이동 개요 문장과 출처
+    const key = keyOf(g.id); // 짧은 키
+    const sec = el('section', { class: 'band ' + X.GROUP_CLASS[g.id], id: 'sec-' + key, 'aria-labelledby': 'h-' + key }); // 문화권 띠
+    const head = el('header', { class: 'band-head' }); // 머리
+    head.appendChild(el('h2', { id: 'h-' + key }, el('a', { href: X.itemUrl(g.id), style: 'color:inherit;text-decoration:none' }, X.titleOf(g)))); // 문화권 이름(자원 페이지 링크)
+    const more = el('details', { class: 'more' }); // 이동 개요는 접어 둠
+    more.appendChild(el('summary', {}, '이동 개요 보기')); // 펼치기 버튼
+    X.asList(g['dcterms:description']).forEach(function (d) { more.appendChild(X.valueNode(d)); }); // 개요 문장과 출처
+    head.appendChild(more); // 머리에 붙임
     sec.appendChild(head); // 머리 붙임
 
     const scenes = A.scenes.filter(function (s) { return X.groupsOf(s).indexOf(g.id) >= 0; }); // 이 문화권의 장면
-    sec.appendChild(el('h3', {}, '생활 장면 (' + scenes.length + ')')); // 장면 소제목
+    sec.appendChild(el('h3', {}, '생활 장면 · ' + scenes.length)); // 장면 소제목
     const sg = el('div', { class: 'grid' }); // 장면 카드 격자
     scenes.forEach(function (s) { sg.appendChild(X.sceneCard(s)); }); // 장면 카드
     sec.appendChild(sg); // 격자 붙임
 
     const labels = A.labels.filter(function (s) { return X.groupsOf(s).indexOf(g.id) >= 0; }); // 이 문화권의 어휘
-    sec.appendChild(el('h3', { style: 'margin-top:28px' }, '어휘 (' + labels.length + ')')); // 어휘 소제목
-    const lg = el('div', { class: 'grid-tight' }); // 어휘 카드 격자
-    labels.forEach(function (l) { lg.appendChild(X.labelCard(l)); }); // 어휘 카드
-    sec.appendChild(lg); // 격자 붙임
+    sec.appendChild(el('h3', {}, '어휘 · ' + labels.length)); // 어휘 소제목
+    const lg = el('div', { class: 'word-wall' }); // 큰 글씨 타일 벽
+    labels.forEach(function (l) { lg.appendChild(X.labelCard(l)); }); // 어휘 타일
+    sec.appendChild(lg); // 벽 붙임
 
     const places = X.asList(g['dcterms:spatial']).map(function (v) { return v.ref; }); // 이 문화권의 장소 ID
-    sec.appendChild(el('h3', { style: 'margin-top:28px' }, '장소 (' + places.length + ')')); // 장소 소제목
-    const pl = el('ul', { class: 'plain-list' }); // 장소 목록
-    places.forEach(function (pid) { pl.appendChild(el('li', {}, X.refLink(pid))); }); // 장소 링크
-    sec.appendChild(pl); // 목록 붙임
+    sec.appendChild(el('h3', {}, '장소 · ' + places.length)); // 장소 소제목
+    const pl = el('div', { class: 'filter-bar' }); // 장소 칩 줄
+    places.forEach(function (pid) { pl.appendChild(el('a', { class: 'chip ' + X.GROUP_CLASS[g.id], href: X.itemUrl(pid) }, X.titleOf(X.byId.get(pid)))); }); // 장소 칩 링크
+    sec.appendChild(pl); // 줄 붙임
     return sec; // 섹션을 돌려줌
   } // groupSection 끝
 
