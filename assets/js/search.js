@@ -32,7 +32,7 @@
       box.appendChild(el('p', {}, '찾은 결과가 없습니다.')); // 안내
       const sug = X.suggest(q); // 비슷한 표기
       if (sug.length) { const pp = el('p', {}, '혹시 이 표기를 찾으셨나요? '); sug.forEach(function (s, i) { if (i) pp.appendChild(document.createTextNode(' · ')); pp.appendChild(el('a', { href: 'search.html?q=' + encodeURIComponent(s.text) }, s.text)); }); box.appendChild(pp); } // 제안
-      else box.appendChild(el('p', {}, ['비슷한 표기도 찾지 못했습니다. ', el('a', { href: 'collection.html' }, '컬렉션'), '에서 둘러볼 수 있습니다.'])); // 제안도 없음
+      else box.appendChild(el('p', {}, ['비슷한 표기도 찾지 못했습니다. ', el('a', { href: 'index.html' }, '홈'), '에서 문화권을 골라 둘러볼 수 있습니다.'])); // 제안도 없음
       return; // 끝
     } // 0건 끝
     const filters = el('div', { class: 'filters panel' }, [facet('type', Object.keys(TYPE_NAME).map(function (k) { return [k, TYPE_NAME[k]]; })), facet('culture', A.groups.map(function (g) { return [X.cultureKey(g.id), X.titleOf(g)]; }))]); // 패싯 두 줄

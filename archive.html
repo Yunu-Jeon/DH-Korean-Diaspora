@@ -32,13 +32,17 @@
       <nav class="main-nav" aria-label="주 메뉴">
         <ul>
           <li><a href="index.html">홈</a></li>
-          <li><a href="collection.html">컬렉션</a></li>
+          <li><a href="archive.html?culture=koryo" data-culture="koryo">고려인</a></li>
+          <li><a href="archive.html?culture=zainichi" data-culture="zainichi">재일조선인</a></li>
+          <li><a href="archive.html?culture=hawaii" data-culture="hawaii">하와이 한인</a></li>
           <li><a href="about.html">소개</a></li>
         </ul>
       </nav>
+      <!-- 검색창: 돋보기 아이콘과 굵은 테두리로 눈에 띄게 -->
       <form class="search-form" role="search" action="search.html" method="get">
-        <label class="sr-only" for="site-q">어휘·생활 대상·생활 장면 검색</label>
-        <input id="site-q" name="q" type="search" placeholder="예: Kim Chee, 김치, 고본질" autocomplete="off">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g></svg>
+        <label class="sr-only" for="site-q">아카이브 검색(어휘·음식·장면, 이표기 포함)</label>
+        <input id="site-q" name="q" type="search" placeholder="말·음식·장면 검색 (예: Kim Chee, 김치)" autocomplete="off">
         <button type="submit">검색</button>
       </form>
     </div>
@@ -52,13 +56,10 @@
     <header id="culture-head"></header>
 
     <!-- 식(食)·호(呼)·일(事)·학(學) 탭 -->
-    <nav class="aspect-tabs" id="aspect-tabs" aria-label="생활문화의 측면"></nav>
+    <nav class="aspect-tabs exhibit-nav" id="aspect-tabs" aria-label="생활문화의 측면 바로가기"></nav>
 
-    <!-- 고른 측면의 장면과 어휘 -->
-    <section id="aspect-panel" aria-live="polite"></section>
-
-    <!-- 측면을 정할 근거가 없는 말 -->
-    <section class="section" id="free-words"></section>
+    <!-- 이 문화권의 모든 정보: 네 측면 → 측면 없는 말 → 생활 대상 → 장소 → 자료 -->
+    <div id="archive-body"></div>
   </main>
 
   <!-- 푸터 -->

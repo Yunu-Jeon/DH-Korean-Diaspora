@@ -11,14 +11,13 @@
 | 화면 | 파일 | 주소 예시 |
 | --- | --- | --- |
 | 홈: 소개 아래 큰 지도, 마커 프리뷰 → 문화권 아카이브 | `index.html` | `index.html` |
-| 문화권별 아카이브: 식·호·일·학 탭, 장면 카드와 관련 어휘 | `archive.html` | `archive.html?culture=koryo&aspect=eat` |
+| 문화권별 아카이브: 한 문화권의 모든 정보(네 측면의 장면·어휘, 측면 없는 말, 생활 대상, 장소, 자료) | `archive.html` | `archive.html?culture=koryo#eat` |
 | 전시 서사: 큐레이터 해설과 장면·어휘를 네 장으로 이어 읽기 | `exhibition.html` | `exhibition.html?culture=hawaii#call` |
-| 컬렉션: 문화권·측면·종류로 전체 자원 거르기 | `collection.html` | `collection.html?culture=zainichi&type=label` |
 | 검색 결과(이표기 포함, 종류·문화권 패싯) | `search.html` | `search.html?q=Kim%20Chee` |
 | 개별 자원: 설명 → 관련 자원 → 자료 정보와 출처 → 전체 메타데이터 | `item.html` | `item.html?id=label:kim-chee` |
-| 소개: 범위·기획 의도·AP 요약·참고문헌·확인 필요·이용 조건 | `about.html` | `about.html` |
+| 소개: 소개·기획 의도·참고문헌 | `about.html` | `about.html` |
 
-- 상단 메뉴는 홈 · 컬렉션 · 소개입니다. 전시 서사는 문화권 아카이브의 ‘전시 서사 읽기’로 들어갑니다.
+- 상단 메뉴는 홈 · 고려인 · 재일조선인 · 하와이 한인 · 소개이고, 헤더에 검색창이 있습니다. 전시 서사는 문화권 아카이브의 ‘전시 서사 읽기’로 들어갑니다.
 - 문화권 아카이브와 전시 서사 위에는 문화권 전환 메뉴가 고정되어 있고(모바일은 드롭다운), 전환해도 고른 측면이 유지됩니다.
 - 오른쪽 아래 ‘아카이브 챗봇’ 버튼은 준비 중 안내만 보여 주며 입력은 막혀 있습니다.
 
@@ -26,13 +25,13 @@
 
 | 경로 | 내용 | GitHub |
 | --- | --- | --- |
-| `*.html` 7개 | 위 화면들 | 올림 |
+| `*.html` 6개 | 위 화면들 | 올림 |
 | `assets/` | CSS, JavaScript(아이콘·챗봇 창 포함), 파비콘 SVG | 올림 |
 | `site-data/archive.js` | 사이트가 읽는 공개용 데이터(스크립트로 생성) | 올림 |
 | `ap/application-profile.md` | 응용 프로파일(데이터 설계) | 올림 |
 | `scripts/` | 데이터 검사·화면 문안 검사·공개 데이터 내보내기 | 올림 |
 | `data/` | 검수용 원본 데이터(클래스별 JSON, 화면 문안 `display_text.json`, 큐레이터 해설) | **올리지 않음** |
-| `review/` | 내부 검수 문서 `전시문안_근거대조표.md` | **올리지 않음** |
+| `review/` | 내부 문서: `아카이브_전체정보.md`(범위·구조·건수·문화권별 내용·확인 필요·이용 조건), `전시문안_근거대조표.md` | **올리지 않음** |
 | `uploads/` | 원문 PDF | **올리지 않음** |
 | `image/` | 디자인 참고 이미지 | **올리지 않음** |
 
@@ -48,6 +47,12 @@ py scripts/check_data.py
 
 ```bash
 py scripts/build_display.py
+```
+
+전체 정보 문서(`review/아카이브_전체정보.md`)를 다시 만듭니다.
+
+```bash
+py scripts/build_overview.py
 ```
 
 마지막으로 공개용 데이터를 내보냅니다.

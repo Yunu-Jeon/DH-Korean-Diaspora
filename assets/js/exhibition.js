@@ -7,6 +7,7 @@
   const g = X.groupByKey(new URLSearchParams(location.search).get('culture')) || A.groups[0]; // 문화권
 
   document.title = X.titleOf(g) + ' 전시 서사 — 한 뿌리, 다른 땅'; // 탭 제목
+  document.querySelectorAll('.main-nav a[data-culture]').forEach(function (a) { if (a.getAttribute('data-culture') === X.cultureKey(g.id)) a.setAttribute('aria-current', 'page'); }); // 상단 메뉴에서 현재 문화권 표시
   document.getElementById('switch-slot').appendChild(X.cultureSwitcher(g.id, function (gid) { return X.exhibitionUrl(gid) + location.hash; })); // 문화권 전환(읽던 측면 유지)
   const head = document.getElementById('culture-head'); // 머리
   head.className = 'culture-head ' + X.GROUP_CLASS[g.id]; // 문화권 색

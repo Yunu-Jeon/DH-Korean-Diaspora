@@ -45,15 +45,8 @@
   function cultureKey(gid) { return String(gid).split(':')[1]; } // 'group:koryo' → 'koryo'
   function groupByKey(key) { return byId.get('group:' + key); } // 'koryo' → 문화권 자원
   function itemUrl(id) { return 'item.html?id=' + encodeURIComponent(id); } // 개별 자원 페이지 주소(상대 경로)
-  function archiveUrl(gid, aspect) { return 'archive.html?culture=' + cultureKey(gid) + (aspect ? '&aspect=' + ASPECT_INFO[aspect].key : ''); } // 문화권 아카이브 주소
+  function archiveUrl(gid, aspect) { return 'archive.html?culture=' + cultureKey(gid) + (aspect ? '#' + ASPECT_INFO[aspect].key : ''); } // 문화권 아카이브 주소(측면은 # 위치)
   function exhibitionUrl(gid, aspect) { return 'exhibition.html?culture=' + cultureKey(gid) + (aspect ? '#' + ASPECT_INFO[aspect].key : ''); } // 전시 서사 주소
-  function collectionUrl(gid, aspect, cls) { // 필터가 걸린 컬렉션 주소
-    const q = new URLSearchParams(); // 주소 매개변수
-    if (gid) q.set('culture', cultureKey(gid)); // 문화권
-    if (aspect) q.set('aspect', ASPECT_INFO[aspect].key); // 측면
-    if (cls) q.set('type', cls); // 클래스
-    return 'collection.html' + (q.toString() ? '?' + q.toString() : ''); // 합친 주소
-  } // collectionUrl 끝
 
   function el(tag, attrs, children) { // 요소를 안전하게 만드는 함수(데이터를 innerHTML로 넣지 않음)
     const node = document.createElement(tag); // 요소 생성
@@ -327,13 +320,13 @@
     panel.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); }); // Esc로 닫기
   } // setupChat 끝
 
-  function setupSearchBox() { const q = new URLSearchParams(location.search).get('q'); const i = document.getElementById('site-q'); if (q && i) i.value = q; } // 검색 결과 화면에서 검색어 유지
+  function setupSearchBox() { const q = new URLSearchParams(location.search).get('q'); ['site-q', 'page-q'].forEach(function (id) { const i = document.getElementById(id); if (q && i) i.value = q; }); } // 검색 결과 화면에서 검색어 유지
 
   document.addEventListener('DOMContentLoaded', function () { setupChat(); setupSearchBox(); }); // 문서가 준비되면 챗봇과 검색창 연결
 
   window.Archive = { // 페이지별 스크립트가 쓸 기능 묶음
     data: A, display: D, byId: byId, asList: asList, el: el, classOf: classOf, titleOf: titleOf, groupsOf: groupsOf, // 기본 도구
-    itemUrl: itemUrl, archiveUrl: archiveUrl, exhibitionUrl: exhibitionUrl, collectionUrl: collectionUrl, cultureKey: cultureKey, groupByKey: groupByKey, // 주소
+    itemUrl: itemUrl, archiveUrl: archiveUrl, exhibitionUrl: exhibitionUrl, cultureKey: cultureKey, groupByKey: groupByKey, // 주소
     ASPECTS: ASPECTS, ASPECT_INFO: ASPECT_INFO, ASPECT_BY_KEY: ASPECT_BY_KEY, aspectOf: aspectOf, aspectName: aspectName, // 측면
     sceneCard: sceneCard, labelCard: labelCard, conceptCard: conceptCard, materialCard: materialCard, sceneSummary: sceneSummary, flags: flags, // 카드
     citeLine: citeLine, allCites: allCites, valueNode: valueNode, badgeFor: badgeFor, refLink: refLink, refName: refName, // 출처·메타데이터

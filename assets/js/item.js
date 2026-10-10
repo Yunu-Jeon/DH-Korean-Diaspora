@@ -38,7 +38,7 @@
 
   function render(id) { // 자원 하나를 그리는 함수
     const res = X.byId.get(id); // 자원
-    if (!res) { document.title = '찾을 수 없음 — 한 뿌리, 다른 땅'; box.appendChild(el('h1', {}, '자원을 찾을 수 없습니다')); box.appendChild(el('p', {}, ['주소를 확인하거나 ', el('a', { href: 'collection.html' }, '컬렉션'), '에서 찾아 주세요.'])); return; } // 없는 ID
+    if (!res) { document.title = '찾을 수 없음 — 한 뿌리, 다른 땅'; box.appendChild(el('h1', {}, '자원을 찾을 수 없습니다')); box.appendChild(el('p', {}, ['주소를 확인하거나 ', el('a', { href: 'index.html' }, '홈'), '에서 문화권을 골라 찾아 주세요.'])); return; } // 없는 ID
     const cls = X.classOf(id); // 클래스
     const title = X.titleOf(res); // 이름
     document.title = title + ' — 한 뿌리, 다른 땅'; // 탭 제목
@@ -69,7 +69,7 @@
     if (cls === 'reference') { facts.push(['저자', val(res, 'dcterms:creator')]); if (val(res, 'dcterms:isPartOf')) facts.push(['수록', val(res, 'dcterms:isPartOf')]); facts.push(['접근 조건', val(res, 'dcterms:accessRights')]); } // 출처 정보
     if (cls === 'material') { facts.push(['유형', val(res, 'dcterms:type')]); facts.push(['생산 연도', val(res, 'dcterms:date') || '연도 미상']); } // 자료 정보
     if (facts.length) main.appendChild(el('dl', { class: 'facts' }, facts.reduce(function (a, f) { return a.concat([el('dt', {}, f[0]), el('dd', {}, f[1])]); }, []))); // 정보 목록
-    if (gids.length) main.appendChild(el('p', { class: 'head-links' }, gids.map(function (g) { return el('a', { class: 'btn', href: X.archiveUrl(g, X.aspectOf(res) || null) }, X.titleOf(X.byId.get(g)) + ' 아카이브로'); }).concat([el('a', { class: 'btn', href: X.collectionUrl(gids.length === 1 ? gids[0] : null, X.aspectOf(res) || null) }, '컬렉션에서 보기')]))); // 관련 문화권·컬렉션 경로
+    if (gids.length) main.appendChild(el('p', { class: 'head-links' }, gids.map(function (g) { return el('a', { class: 'btn', href: X.archiveUrl(g) + (X.aspectOf(res) ? '#' + X.ASPECT_INFO[X.aspectOf(res)].key : '') }, X.titleOf(X.byId.get(g)) + ' 아카이브로'); }))); // 관련 문화권 아카이브로 가는 경로
     if (main.childNodes.length) box.appendChild(main); // 붙임
 
     // 3. 관련 자원(데이터의 참조만 따름)
