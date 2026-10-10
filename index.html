@@ -21,7 +21,7 @@
   <!-- 본문 바로가기(키보드 사용자용) -->
   <a class="skip-link" href="#main">본문 바로가기</a>
 
-  <!-- 헤더: 로고와 짧은 제목, 메뉴(홈·컬렉션·소개), 검색창. 챗봇 버튼은 스크립트가 오른쪽 아래에 띄움 -->
+  <!-- 헤더: 로고(홈으로), 아카이브 메뉴 하나, 오른쪽 검색창. 챗봇 버튼은 스크립트가 오른쪽 아래에 띄움 -->
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="한 뿌리, 다른 땅 — 홈">
@@ -33,11 +33,7 @@
       </a>
       <nav class="main-nav" aria-label="주 메뉴">
         <ul>
-          <li><a href="index.html" aria-current="page">홈</a></li>
-          <li><a href="archive.html?culture=koryo" data-culture="koryo">고려인</a></li>
-          <li><a href="archive.html?culture=zainichi" data-culture="zainichi">재일조선인</a></li>
-          <li><a href="archive.html?culture=hawaii" data-culture="hawaii">하와이 한인</a></li>
-          <li><a href="about.html">소개</a></li>
+          <li><a href="archive.html" data-archive>아카이브</a></li>
         </ul>
       </nav>
       <!-- 검색창: 돋보기 아이콘과 굵은 테두리로 눈에 띄게 -->
@@ -59,6 +55,16 @@
       <p class="intro" id="home-intro"></p>
     </section>
 
+    <!-- 검색 배너: 제목 바로 아래, 지도 위 -->
+    <form class="search-banner" role="search" action="search.html" method="get">
+      <label for="home-q">아카이브 검색</label>
+      <div class="search-form search-big">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g></svg>
+        <input id="home-q" name="q" type="search" placeholder="말·음식·장면을 찾아보세요 (예: Kim Chee, 김치, 고본질)" autocomplete="off">
+        <button type="submit">검색</button>
+      </div>
+    </form>
+
     <!-- 큰 지도: 마커를 누르면 프리뷰, 프리뷰 버튼으로 문화권 아카이브에 들어감 -->
     <section class="map-frame panel" id="map-section" aria-labelledby="map-title">
       <h2 class="sr-only" id="map-title">문화권 지도</h2>
@@ -66,12 +72,23 @@
       <p class="map-note">이름표는 각 문화권 자료에 가장 많이 나오는 장소를 대표로 표시한 것으로, 공동체 전체의 분포를 뜻하지 않습니다.</p>
       <p class="culture-links" id="culture-links"><span class="sr-only">문화권 바로가기: </span></p>
     </section>
+
+    <!-- 소개(예전 소개 페이지): 범위, 기획 의도, 참고문헌 -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">소개</h2>
+      <p>이 아카이브는 <strong>고려인·재일조선인·하와이 한인</strong> 세 문화권의 생활문화를 <strong>식(食) 먹는 것, 호(呼) 부르는 것, 일(事) 일하는 것, 학(學) 배우는 것</strong> 네 측면과, 그것을 부르던 말로 보여 드립니다.</p>
+      <h3 id="intent">기획 의도</h3>
+      <p>한 뿌리에서 흩어진 사람들이 다른 땅에서 무엇을 먹고, 어떻게 부르고, 어떻게 일하고 배웠는지를 문헌에 근거한 생활 장면과 어휘로 모읍니다. 말(어휘)과 그 말이 가리키는 대상(생활 대상)을 따로 기술해, 같은 대상을 문화권마다 다르게 부르는 모습을 나란히 볼 수 있게 했습니다.</p>
+      <p>문화권별 아카이브에서는 한 문화권의 장면·말·장소·자료를 탭으로 나누어 살펴볼 수 있고, 전시 서사에서는 큐레이터 해설을 따라 장면과 말을 이어 읽을 수 있습니다. 각 자료의 근거 문헌과 쪽수는 개별 자원 화면의 ‘자료 정보와 출처’에 있습니다.</p>
+      <h3 id="sources">참고문헌</h3>
+      <ul class="plain-list" id="source-list"></ul>
+    </section>
   </main>
 
   <!-- 푸터 -->
   <footer class="site-footer">
     <div class="inner">
-      <p>한 뿌리, 다른 땅 — 근거 문헌과 쪽수는 각 자원의 ‘자료 정보와 출처’에서 확인할 수 있습니다. <a href="about.html#sources">참고문헌</a> · <a href="about.html#terms">이용 조건</a></p>
+      <p>한 뿌리, 다른 땅 — 근거 문헌과 쪽수는 각 자원의 ‘자료 정보와 출처’에서 확인할 수 있습니다. <a href="index.html#about">소개</a> · <a href="index.html#sources">참고문헌</a></p>
     </div>
   </footer>
 

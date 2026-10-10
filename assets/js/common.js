@@ -45,7 +45,7 @@
   function cultureKey(gid) { return String(gid).split(':')[1]; } // 'group:koryo' → 'koryo'
   function groupByKey(key) { return byId.get('group:' + key); } // 'koryo' → 문화권 자원
   function itemUrl(id) { return 'item.html?id=' + encodeURIComponent(id); } // 개별 자원 페이지 주소(상대 경로)
-  function archiveUrl(gid, aspect) { return 'archive.html?culture=' + cultureKey(gid) + (aspect ? '#' + ASPECT_INFO[aspect].key : ''); } // 문화권 아카이브 주소(측면은 # 위치)
+  function archiveUrl(gid, aspect) { return 'archive.html?culture=' + cultureKey(gid) + (aspect ? '&tab=' + ASPECT_INFO[aspect].key : ''); } // 문화권 아카이브 주소(측면은 탭)
   function exhibitionUrl(gid, aspect) { return 'exhibition.html?culture=' + cultureKey(gid) + (aspect ? '#' + ASPECT_INFO[aspect].key : ''); } // 전시 서사 주소
 
   function el(tag, attrs, children) { // 요소를 안전하게 만드는 함수(데이터를 innerHTML로 넣지 않음)
@@ -220,7 +220,7 @@
     A.groups.forEach(function (g) { const o = el('option', { value: makeHref(g.id) }, titleOf(g)); if (g.id === currentGid) o.selected = true; select.appendChild(o); }); // 선택지
     select.addEventListener('change', function () { location.href = select.value; }); // 고르면 이동
     nav.appendChild(el('div', { class: 'culture-select-wrap' }, [label, select])); // 붙임
-    nav.appendChild(el('a', { class: 'map-link', href: 'index.html#map' }, '전체 지도 보기')); // 전체 지도로
+    nav.appendChild(el('a', { class: 'map-link', href: 'index.html#map-section' }, '전체 지도 보기')); // 전체 지도로
     return nav; // 메뉴
   } // cultureSwitcher 끝
 

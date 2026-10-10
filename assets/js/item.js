@@ -69,7 +69,7 @@
     if (cls === 'reference') { facts.push(['저자', val(res, 'dcterms:creator')]); if (val(res, 'dcterms:isPartOf')) facts.push(['수록', val(res, 'dcterms:isPartOf')]); facts.push(['접근 조건', val(res, 'dcterms:accessRights')]); } // 출처 정보
     if (cls === 'material') { facts.push(['유형', val(res, 'dcterms:type')]); facts.push(['생산 연도', val(res, 'dcterms:date') || '연도 미상']); } // 자료 정보
     if (facts.length) main.appendChild(el('dl', { class: 'facts' }, facts.reduce(function (a, f) { return a.concat([el('dt', {}, f[0]), el('dd', {}, f[1])]); }, []))); // 정보 목록
-    if (gids.length) main.appendChild(el('p', { class: 'head-links' }, gids.map(function (g) { return el('a', { class: 'btn', href: X.archiveUrl(g) + (X.aspectOf(res) ? '#' + X.ASPECT_INFO[X.aspectOf(res)].key : '') }, X.titleOf(X.byId.get(g)) + ' 아카이브로'); }))); // 관련 문화권 아카이브로 가는 경로
+    if (gids.length) main.appendChild(el('p', { class: 'head-links' }, gids.map(function (g) { return el('a', { class: 'btn', href: X.archiveUrl(g, X.aspectOf(res) || null) }, X.titleOf(X.byId.get(g)) + ' 아카이브로'); }))); // 관련 문화권 아카이브로 가는 경로
     if (main.childNodes.length) box.appendChild(main); // 붙임
 
     // 3. 관련 자원(데이터의 참조만 따름)
@@ -92,8 +92,8 @@
     if (cites.length) src.appendChild(el('p', {}, X.citeLine(cites))); // 출처와 쪽수 한 줄
     else src.appendChild(el('p', { class: 'cite' }, '이 자원에 기록된 근거 쪽수가 없습니다.')); // 없으면
     if (res.note) src.appendChild(el('p', { class: 'cite' }, '편집 메모: ' + res.note)); // 편집 메모
-    src.appendChild(el('p', { class: 'cite' }, '전체 참고문헌은 ' + '소개 페이지에 있습니다. ')); // 안내
-    src.lastChild.appendChild(el('a', { href: 'about.html#sources' }, '참고문헌 보기')); // 링크
+    src.appendChild(el('p', { class: 'cite' }, '전체 참고문헌은 홈 아래쪽에 있습니다. ')); // 안내
+    src.lastChild.appendChild(el('a', { href: 'index.html#sources' }, '참고문헌 보기')); // 링크
     box.appendChild(src); // 붙임
 
     // 5. 전체 메타데이터(접힘, AP 순서)
