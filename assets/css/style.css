@@ -327,3 +327,8 @@ main { max-width: 1200px; margin: 0 auto; padding: 28px 16px 120px; }
 /* 소개·기획 의도·참고문헌을 표제와 같은 가운데 단으로 */
 .about { max-width: 46rem; margin-left: auto; margin-right: auto; }
 .about h2 { text-align: center; }
+
+/* 지도 조작 버튼(+/−, 전체 범위)이 스크롤할 때 헤더 위로 올라오지 않게: 지도를 자기 층에 가둠 */
+#map { position: relative; z-index: 0; isolation: isolate; }
+.site-header { z-index: 1100; }
+#switch-slot { z-index: 1050; }

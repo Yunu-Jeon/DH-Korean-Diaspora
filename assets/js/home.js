@@ -10,11 +10,6 @@
   document.getElementById('home-subline').textContent = H.subline || ''; // 둘째 줄
   document.getElementById('home-intro').textContent = H.intro || ''; // 짧은 소개
 
-  const links = document.getElementById('culture-links'); // 접근 가능한 문화권 링크 자리(지도 대안)
-  A.groups.forEach(function (g, i) { // 문화권마다
-    if (i) links.appendChild(document.createTextNode(' · ')); // 구분점
-    links.appendChild(el('a', { href: X.archiveUrl(g.id) }, X.titleOf(g) + ' 아카이브')); // 문화권 아카이브 링크
-  }); // 문화권 끝
 
   function previewOf(g) { // 마커 프리뷰(이름·짧은 소개·아카이브 살펴보기 버튼)를 만드는 함수
     const intro = ((X.display.groups || {})[g.id] || [])[0]; // 화면용 소개 첫 문장
@@ -27,11 +22,11 @@
 
   function drawMap() { // 큰 지도를 그리는 함수
     const box = document.getElementById('map'); // 지도 자리
-    if (!window.L) { box.appendChild(el('p', { class: 'map-error' }, '지도를 불러오지 못했습니다. 아래 문화권 링크를 이용해 주세요.')); return; } // 라이브러리 실패 안내
+    if (!window.L) { box.appendChild(el('p', { class: 'map-error' }, '지도를 불러오지 못했습니다. 헤더의 검색창으로 자료를 찾을 수 있습니다.')); return; } // 라이브러리 실패 안내
     const map = L.map(box, { scrollWheelZoom: true, zoomControl: true, worldCopyJump: false }); // 휠만으로 확대·축소되는 지도
     const tiles = X.osmLayer(); // OSM 타일
     let failed = 0; // 타일 실패 수
-    tiles.on('tileerror', function () { failed += 1; if (failed === 4) box.parentNode.insertBefore(el('p', { class: 'map-error', role: 'status' }, '지도 타일을 불러오지 못하고 있습니다. 아래 문화권 링크로도 들어갈 수 있습니다.'), box.nextSibling); }); // 타일 실패 안내(한 번만)
+    tiles.on('tileerror', function () { failed += 1; if (failed === 4) box.parentNode.insertBefore(el('p', { class: 'map-error', role: 'status' }, '지도 배경을 불러오지 못하고 있습니다. 문화권 이름표는 그대로 누를 수 있습니다.'), box.nextSibling); }); // 타일 실패 안내(한 번만)
     tiles.addTo(map); // 타일 붙임
     const pts = []; // 전체 범위용 좌표
     A.groups.forEach(function (g) { // 문화권마다
