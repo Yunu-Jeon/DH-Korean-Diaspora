@@ -293,3 +293,21 @@ main { max-width: 1200px; margin: 0 auto; padding: 28px 16px 120px; }
 
 /* ===== 움직임 줄이기 ===== */
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* ===== 2026-10-10 조정: 로고·제목을 크게, 검색창을 길게 ===== */
+.brand { font-size: clamp(1.25rem, 2.4vw, 1.6rem); font-weight: 800; letter-spacing: -0.01em; gap: 12px; }
+.brand svg.logo { width: 44px; height: 44px; padding: 6px; border-radius: 12px; background: var(--ink); color: var(--bg); }
+.header-inner .search-form { flex: 1 1 22rem; max-width: 44rem; }
+.header-inner .search-form input { width: 100%; }
+
+/* ===== 홈: 소개·기획 의도·참고문헌을 같은 글자 크기로 ===== */
+.about { max-width: 52rem; margin: 8px 0 28px; }
+.about h2 { font-size: 1.35rem; margin: 1.2em 0 0.4em; }
+.about h2:first-child { margin-top: 0; }
+.about p, .about li { font-size: 1rem; line-height: 1.8; color: var(--ink-2); }
+#sources { margin-top: 44px; }
+
+/* ===== 문화권 페이지 위쪽: '전체 지도 보기'만 눈에 띄게 ===== */
+.culture-switch { justify-content: flex-start; }
+.map-link { margin-left: 0; display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; border-radius: 999px; background: var(--ink); color: var(--bg); font-weight: 700; font-size: 0.95rem; text-decoration: none; box-shadow: var(--shadow); }
+.map-link:hover { background: var(--accent); color: #fff; }

@@ -45,8 +45,8 @@
   function cultureKey(gid) { return String(gid).split(':')[1]; } // 'group:koryo' → 'koryo'
   function groupByKey(key) { return byId.get('group:' + key); } // 'koryo' → 문화권 자원
   function itemUrl(id) { return 'item.html?id=' + encodeURIComponent(id); } // 개별 자원 페이지 주소(상대 경로)
-  function archiveUrl(gid, aspect) { return 'archive.html?culture=' + cultureKey(gid) + (aspect ? '&tab=' + ASPECT_INFO[aspect].key : ''); } // 문화권 아카이브 주소(측면은 탭)
-  function exhibitionUrl(gid, aspect) { return 'exhibition.html?culture=' + cultureKey(gid) + (aspect ? '#' + ASPECT_INFO[aspect].key : ''); } // 전시 서사 주소
+  function archiveUrl(gid, aspect) { return 'archive.html?culture=' + cultureKey(gid) + (aspect ? '#' + ASPECT_INFO[aspect].key : ''); } // 문화권 페이지 주소(측면은 # 위치)
+  function exhibitionUrl(gid, aspect) { return archiveUrl(gid, aspect); } // 전시 서사는 문화권 페이지에 합쳐짐
 
   function el(tag, attrs, children) { // 요소를 안전하게 만드는 함수(데이터를 innerHTML로 넣지 않음)
     const node = document.createElement(tag); // 요소 생성
@@ -207,21 +207,8 @@
   } // materialCard 끝
 
   // ===== 문화권 전환 메뉴(상단 고정) =====
-  function cultureSwitcher(currentGid, makeHref) { // 고려인·재일조선인·하와이 한인 전환 메뉴를 만드는 함수
-    const nav = el('nav', { class: 'culture-switch', 'aria-label': '문화권 전환' }); // 메뉴 틀
-    const tabs = el('ul', { class: 'culture-tabs' }); // PC용 탭
-    A.groups.forEach(function (g) { // 문화권마다
-      const on = g.id === currentGid; // 현재 문화권인지
-      tabs.appendChild(el('li', {}, el('a', { href: makeHref(g.id), class: 'culture-tab ' + GROUP_CLASS[g.id], 'aria-current': on ? 'page' : null }, [on ? el('span', { class: 'sr-only' }, '현재: ') : null, titleOf(g)]))); // 탭(현재는 글자로도 알림)
-    }); // 문화권 끝
-    nav.appendChild(tabs); // 탭 붙임
-    const label = el('label', { class: 'culture-select-label', for: 'culture-select' }, '문화권'); // 모바일 드롭다운 이름
-    const select = el('select', { id: 'culture-select', class: 'culture-select' }); // 모바일용 드롭다운
-    A.groups.forEach(function (g) { const o = el('option', { value: makeHref(g.id) }, titleOf(g)); if (g.id === currentGid) o.selected = true; select.appendChild(o); }); // 선택지
-    select.addEventListener('change', function () { location.href = select.value; }); // 고르면 이동
-    nav.appendChild(el('div', { class: 'culture-select-wrap' }, [label, select])); // 붙임
-    nav.appendChild(el('a', { class: 'map-link', href: 'index.html#map-section' }, '전체 지도 보기')); // 전체 지도로
-    return nav; // 메뉴
+  function cultureSwitcher() { // 문화권 페이지 위쪽에 고정되는 '전체 지도 보기' 막대를 만드는 함수
+    return el('nav', { class: 'culture-switch', 'aria-label': '지도로 돌아가기' }, el('a', { class: 'map-link', href: 'index.html#map-section' }, '← 전체 지도 보기')); // 눈에 띄는 버튼 하나
   } // cultureSwitcher 끝
 
   // ===== 검색 =====
