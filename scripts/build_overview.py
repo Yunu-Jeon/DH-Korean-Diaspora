@@ -11,8 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent  # 저장소 루트
 DATA = ROOT / "data"  # 원본 데이터 폴더
 OUT = ROOT / "review" / "아카이브_전체정보.md"  # 결과 문서(공개하지 않음)
 ASPECTS = ["먹는 것", "부르는 것", "일하는 것", "배우는 것"]  # 측면 값(순서)
-LABEL = {"먹는 것": "식(食) — 먹는 것", "부르는 것": "호(呼) — 부르는 것", "일하는 것": "일(事) — 일하는 것", "배우는 것": "학(學) — 배우는 것"}  # 측면 표시 이름
-
+LABEL = {"먹는 것": "식(食) — 먹는 것", "부르는 것": "호(呼) — 부르는 것", "일하는 것": "사(事) — 일하는 것", "배우는 것": "학(學) — 배우는 것"}  # 측면 표시 이름
 
 def load(name):  # data 폴더의 JSON 하나를 읽는 함수
     return json.loads((DATA / name).read_text(encoding="utf-8"))  # UTF-8로 읽음
