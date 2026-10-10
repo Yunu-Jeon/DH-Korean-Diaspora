@@ -42,12 +42,12 @@
   </header>
 
   <main id="main">
-    <!-- 제목과 짧은 소개(타이포그래피) -->
-    <section class="home-intro" aria-labelledby="home-headline">
-      <p class="titles">한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브 · <span lang="en">One Root, Other Soils: An Archive of Korean Diaspora</span></p>
-      <h1 id="home-headline"></h1>
-      <p class="subline" id="home-subline"></p>
-      <p class="intro" id="home-intro"></p>
+    <!-- 표제: 가운데 정렬, 영문 제목 → 두 줄 메인 문구 → 가는 선 → 부제 -->
+    <section class="hero" aria-labelledby="home-headline">
+      <p class="hero-kicker" lang="en">One Root, Other Soils · An Archive of Korean Diaspora</p>
+      <h1 id="home-headline"><span>같기도 하고,</span> <span class="hero-accent">아니 같기도 하고</span></h1>
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-sub" id="home-subline"></p>
     </section>
 
     <!-- 소개와 기획 의도(같은 글자 크기) -->
@@ -60,7 +60,10 @@
 
     <!-- 큰 지도: 마커를 누르면 프리뷰, 프리뷰 버튼으로 문화권 아카이브에 들어감 -->
     <section class="map-frame panel" id="map-section" aria-labelledby="map-title">
-      <h2 class="sr-only" id="map-title">문화권 지도</h2>
+      <div class="map-head">
+        <h2 id="map-title">지도에서 문화권 고르기</h2>
+        <p id="home-intro"></p>
+      </div>
       <div id="map" role="region" aria-label="문화권 지도. 마우스 휠로 확대·축소하고, Tab으로 문화권 이름표에 옮겨 Enter를 누르면 소개가 열립니다."></div>
       <p class="map-note">이름표는 각 문화권 자료에 가장 많이 나오는 장소를 대표로 표시한 것으로, 공동체 전체의 분포를 뜻하지 않습니다.</p>
       <p class="culture-links" id="culture-links"><span class="sr-only">문화권 바로가기: </span></p>

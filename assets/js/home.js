@@ -6,7 +6,7 @@
   const el = X.el; // 요소 만들기 도구
   const H = X.display.home || {}; // 홈 문구
 
-  document.getElementById('home-headline').textContent = H.headline || ''; // 메인 문구
+  // 메인 문구(두 줄로 나눈 표제)는 HTML에 직접 적음 — display_text.json의 headline과 같은 문장
   document.getElementById('home-subline').textContent = H.subline || ''; // 둘째 줄
   document.getElementById('home-intro').textContent = H.intro || ''; // 짧은 소개
 
