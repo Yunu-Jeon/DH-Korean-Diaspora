@@ -8306,7 +8306,7 @@ window.ARCHIVE = {
   {
    "group": "group:zainichi",
    "aspect": "부르는 것",
-   "text": "재일조선인, 재일한국인, 재일동포, 재일코리안. 같은 사람들을 부르는 이름이 갈라졌고, 그들의 잡지는 일본어로 쓰였습니다.",
+   "text": "재일조선인·재일한국인·재일동포·재일코리안처럼 같은 사람들을 부르는 이름이 갈라졌고, 그들의 잡지는 일본어로 쓰였습니다.",
    "scenes": [
     "scene:zainichi-names",
     "scene:zainichi-japanese-magazines",
@@ -8454,223 +8454,866 @@ window.ARCHIVE = {
    ]
   }
  ],
- "labelPlacement": {
-  "label:kim-chee": [
-   [
-    "group:hawaii",
-    "먹는 것"
-   ],
-   [
-    "group:hawaii",
-    "일하는 것"
-   ]
+ "sceneLabels": {
+  "scene:koryo-daily-table": [
+   "label:jimchi",
+   "label:guksi",
+   "label:pegodya",
+   "label:mauje-tteok",
+   "label:khleb",
+   "label:dwi"
   ],
-  "label:meat-jeon": [
-   [
-    "group:hawaii",
-    "먹는 것"
-   ]
+  "scene:koryo-babimuri": [
+   "label:babimuri"
   ],
-  "label:jimchi": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:koryo-train-soup": [
+   "label:sirak-jangmul",
+   "label:mauje-tteok",
+   "label:khleb"
   ],
-  "label:morkovcha": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:koryo-soup-order": [
+   "label:sirak-jangmul"
   ],
-  "label:babimuri": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ],
-   [
-    "group:koryo",
-    "일하는 것"
-   ]
+  "scene:koryo-cabbage-kimchi": [
+   "label:jimchi"
   ],
-  "label:sirak-jangmul": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:koryo-carrot-kimchi": [
+   "label:morkovcha"
   ],
-  "label:guksi": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:koryo-seollal": [
+   "label:jimchi",
+   "label:morkovcha"
   ],
-  "label:pegodya": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:koryo-hwangap": [
+   "label:guksi"
   ],
-  "label:mauje-tteok": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:zainichi-worker-offal": [
+   "label:ttongchang",
+   "label:horumon"
   ],
-  "label:khleb": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:zainichi-black-market": [
+   "label:ttongchang",
+   "label:horumon"
   ],
-  "label:gireumgubi": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:zainichi-horumon-shop": [],
+  "scene:zainichi-horumon-bunka": [],
+  "scene:zainichi-poem-kimchi": [
+   "label:chosenzuke",
+   "label:kimuchi"
   ],
-  "label:dwi": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:zainichi-konbini-kimchi": [
+   "label:chosenzuke",
+   "label:kimuchi"
   ],
-  "label:jire": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:hawaii-camp-kimchi": [
+   "label:kim-chee"
   ],
-  "label:gamji": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
+  "scene:hawaii-independence-fund": [
+   "label:kim-chee",
+   "label:tae-gu"
   ],
-  "label:ttakkan": [
-   [
-    "group:koryo",
-    "부르는 것"
-   ]
+  "scene:hawaii-kimchi-brands": [
+   "label:kim-chee"
   ],
-  "label:ttongchang": [
-   [
-    "group:zainichi",
-    "먹는 것"
-   ]
+  "scene:koryo-kolkhoz-rice": [],
+  "scene:koryo-ushtobe-rice": [],
+  "scene:koryo-gobonjil": [
+   "label:babimuri"
   ],
-  "label:horumon": [
-   [
-    "group:zainichi",
-    "먹는 것"
-   ]
+  "scene:koryo-doenjang": [],
+  "scene:koryo-borrowed-words": [],
+  "scene:koryo-name-revival": [],
+  "scene:koryo-1938": [],
+  "scene:koryo-kazan-textbooks": [],
+  "scene:zainichi-lost-work": [],
+  "scene:zainichi-school-closure": [],
+  "scene:zainichi-education-issue": [],
+  "scene:zainichi-names": [],
+  "scene:zainichi-japanese-magazines": [],
+  "scene:hawaii-plantation-camp": [],
+  "scene:hawaii-taxi-cart": [],
+  "scene:hawaii-kimchi-factory": [
+   "label:kim-chee"
   ],
-  "label:chosenzuke": [
-   [
-    "group:zainichi",
-    "먹는 것"
-   ]
+  "scene:hawaii-taegu": [
+   "label:tae-gu"
   ],
-  "label:kimuchi": [
-   [
-    "group:zainichi",
-    "먹는 것"
-   ]
+  "scene:hawaii-takeout": [
+   "label:meat-jeon",
+   "label:man-doo",
+   "label:kal-bi",
+   "label:bul-go-gi",
+   "label:yakiniku"
   ],
-  "label:tae-gu": [
-   [
-    "group:hawaii",
-    "먹는 것"
-   ]
+  "scene:hawaii-code-mixing": [],
+  "scene:hawaii-chamber-split": [],
+  "scene:hawaii-first-schools": [],
+  "scene:hawaii-saturday-school": [],
+  "scene:hawaii-mother-tongue": []
+ },
+ "aspectLabels": {
+  "group:koryo|먹는 것": [
+   "label:gireumgubi",
+   "label:jire",
+   "label:gamji",
+   "label:ttakkan"
   ],
-  "label:man-doo": [
-   [
-    "group:hawaii",
-    "먹는 것"
-   ]
-  ],
-  "label:kal-bi": [
-   [
-    "group:hawaii",
-    "먹는 것"
-   ]
-  ],
-  "label:bul-go-gi": [
-   [
-    "group:hawaii",
-    "먹는 것"
-   ]
-  ],
-  "label:yakiniku": [
-   [
-    "group:zainichi",
-    "먹는 것"
-   ],
-   [
-    "group:hawaii",
-    "먹는 것"
-   ]
-  ],
-  "label:gobonjil": [
-   [
-    "group:koryo",
-    "일하는 것"
-   ]
-  ],
-  "label:operatsi": [
-   [
-    "group:koryo",
-    "부르는 것"
-   ]
-  ],
-  "label:kvartira": [
-   [
-    "group:koryo",
-    "부르는 것"
-   ]
-  ],
-  "label:ogre": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
-  ],
-  "label:gajuri": [
-   [
-    "group:koryo",
-    "먹는 것"
-   ]
-  ],
-  "label:zainichi-chosenjin": [
-   [
-    "group:zainichi",
-    "부르는 것"
-   ]
-  ],
-  "label:zainichi-kankokujin": [
-   [
-    "group:zainichi",
-    "부르는 것"
-   ]
-  ],
-  "label:zainichi-dongpo": [
-   [
-    "group:zainichi",
-    "부르는 것"
-   ]
-  ],
-  "label:zainichi-korean": [
-   [
-    "group:zainichi",
-    "부르는 것"
-   ]
-  ],
-  "label:bijikkae": [
-   [
-    "group:koryo",
-    "부르는 것"
-   ]
+  "group:zainichi|먹는 것": [
+   "label:yakiniku"
   ]
+ },
+ "freeLabels": {
+  "group:koryo": [
+   "label:gobonjil",
+   "label:operatsi",
+   "label:kvartira",
+   "label:ogre",
+   "label:gajuri",
+   "label:bijikkae"
+  ],
+  "group:zainichi": [
+   "label:zainichi-chosenjin",
+   "label:zainichi-kankokujin",
+   "label:zainichi-dongpo",
+   "label:zainichi-korean"
+  ]
+ },
+ "display": {
+  "about": "화면용 문안. AP 메타데이터와 분리해 자원 ID로 연결한다. summary의 from은 그 장면 dcterms:description 배열의 몇 번째 값(0부터)을 바꿔 쓴 것인지 적는다. scripts/build_display.py가 이 파일과 원본 데이터를 합쳐 공개용 문안과 '전시문안_근거대조표.md'를 만든다.",
+  "home": {
+   "headline": "같기도 하고, 아니 같기도 하고",
+   "subline": "한 뿌리에서 흩어져, 다른 땅에서 자란 이들에 관하여",
+   "intro": "고려인·재일조선인·하와이 한인이 먹고, 부르고, 일하고, 배운 장면과 그 장면을 부르던 말을 모았습니다. 지도에서 문화권을 골라 아카이브로 들어가 보세요."
+  },
+  "groups": {
+   "group:koryo": [
+    {
+     "text": "19세기 중엽 함경북도에서 연해주로 옮겨 간 한인들은 1937년 중앙아시아로 강제 이주되었습니다.",
+     "from": [
+      0,
+      1
+     ]
+    },
+    {
+     "text": "이들의 말인 고려말은 모국어와 떨어진 채 러시아어의 영향을 받으며 따로 변해 왔다고 연구자들은 봅니다.",
+     "from": [
+      3
+     ]
+    }
+   ],
+   "group:zainichi": [
+    {
+     "text": "식민지 시기 일본으로 건너간 조선인 가운데 상당수는 해방 뒤에도 일본에 남았습니다.",
+     "from": [
+      0
+     ]
+    },
+    {
+     "text": "냉전기에는 한반도의 분단이 재일 사회 안에도 그대로 옮겨졌습니다.",
+     "from": [
+      1
+     ]
+    }
+   ],
+   "group:hawaii": [
+    {
+     "text": "1902년부터 1905년까지 약 7,400명의 한인이 하와이 사탕수수 농장 노동자로 이주했습니다.",
+     "from": [
+      0
+     ]
+    },
+    {
+     "text": "첫 이민단 102명은 1903년 1월 13일 호놀룰루항에 내렸습니다.",
+     "from": [
+      1
+     ]
+    }
+   ]
+  },
+  "scenes": {
+   "scene:koryo-daily-table": {
+    "title": "세 갈래 음식이 함께 오르는 밥상",
+    "summary": [
+     {
+      "text": "카자흐스탄 고려인의 밥상에는 밥·국·두부 같은 한식과 이주 과정에서 바뀐 고려인 음식, 러시아·카자흐 음식이 함께 오릅니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "젊은 세대는 밥 대신 빵을 주로 먹는다고 합니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-babimuri": {
+    "title": "물에 만 밥, 바비무리",
+    "summary": [
+     {
+      "text": "일은 많고 먹을 것이 모자랄 때 고려인들은 밥을 물에 말아 서둘러 끼니를 해결했습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "땅을 빌려 멀리 떠나는 농사가 생긴 뒤 더 자주 먹게 되었고, 지금도 밥상에 자주 오릅니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-train-soup": {
+    "title": "강제 이주 열차에서 끓인 국",
+    "summary": [
+     {
+      "text": "강제 이주 열차에서 마른 음식만 먹던 고려인들은 기차가 서면 내려 마른 나무를 모아 국을 끓였습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "정차역 간이상점에 뛰어가 러시아 빵을 사기도 했습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-soup-order": {
+    "title": "국을 먼저, 밥은 나중에",
+    "summary": [
+     {
+      "text": "원동 시절에는 밥을 국에 말아 먹었지만, 지금 카자흐스탄 고려인은 시래기된장국을 먼저 먹고 밥은 따로 먹습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "연구자는 이를 수프를 먼저 먹는 러시아 식사 문화의 영향으로 봅니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-cabbage-kimchi": {
+    "title": "양배추로 담근 김치",
+    "summary": [
+     {
+      "text": "양념과 젓갈을 구하기 어렵고 배추가 비싸서, 고려인들은 양배추를 소금물에 불려 고추·마늘·소금으로 버무린 김치를 담갔습니다.",
+      "from": [
+       2
+      ]
+     },
+     {
+      "text": "콜호즈에서는 가을에 김장을 해 장독째 땅굴에 보관했다는 회상도 있습니다.",
+      "from": [
+       0
+      ]
+     }
+    ]
+   },
+   "scene:koryo-carrot-kimchi": {
+    "title": "시장에 나간 당근 김치",
+    "summary": [
+     {
+      "text": "강제 이주 뒤 고려인들은 현지에서 쉽게 구하는 당근으로 김치를 대신하는 샐러드를 만들었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "러시아인과 카자흐스탄 현지인에게도 인기를 얻어 러시아 남부 도시와 사할린에서도 많이 팔립니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-seollal": {
+    "title": "여러 음식이 한 상에 오르는 설날",
+    "summary": [
+     {
+      "text": "설날 상에는 찰떡·증편·김치와 함께 러시아식 샐러드와 소시지, 중앙아시아식 볶음밥이 함께 오릅니다.",
+      "from": [
+       2
+      ]
+     },
+     {
+      "text": "차례와 세배 풍습은 지금은 찾아보기 어렵고, 고려문화원 중심의 공연 행사로 바뀌었습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-hwangap": {
+    "title": "집에서 식당으로 옮겨 간 환갑잔치",
+    "summary": [
+     {
+      "text": "예전 환갑은 지인을 집으로 불러 찰떡·증편·고사리 같은 한식 위주로 차렸습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "지금은 파티 전문 식당을 빌리고, 국수와 나물 옆에 베스바르마크·샤슬릭·러시아식 샐러드가 함께 놓입니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-worker-offal": {
+    "title": "노동자 합숙소의 월급날 내장구이",
+    "summary": [
+     {
+      "text": "1920~30년대 일본으로 건너간 조선인 노동자들은 쌀·소금·채소로 겨우 끼니를 이었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "내장구이는 자주 먹지 못하는 음식이어서, 한 공사장 합숙소에서는 한 달에 두 번 월급날에 구워 먹었다고 합니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-black-market": {
+    "title": "패전 직후 암시장의 내장구이",
+    "summary": [
+     {
+      "text": "패전 직후 고기는 통제 품목이었지만 내장은 통제 밖이었고, 이를 구해 구워 팔기 시작한 이들이 조선인이었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "교토역 남쪽 조선인 암시장 주변에서는 도살장의 소 내장을 사서 풍로에 구워 먹었다는 회고가 있습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-horumon-shop": {
+    "title": "내장구이점에서 야키니쿠 가게로",
+    "summary": [
+     {
+      "text": "조선인이 운영한 내장구이점은 일본의 경제 성장기에 등심과 갈비도 함께 다루며 불고기·야키니쿠 가게로 커졌습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "1960년 이후에는 회사원 등 일본인도 즐겨 찾는 외식이 되었습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-horumon-bunka": {
+    "title": "잡지 이름이 된 음식, 『호르몬 문화』",
+    "summary": [
+     {
+      "text": "1990년 9월부터 2000년 9월까지 나온 재일조선인 잡지 『호르몬 문화』는 '재일'의 독자성을 드러낼 이름으로 내장 요리의 이름을 골랐습니다.",
+      "from": [
+       0,
+       1
+      ]
+     },
+     {
+      "text": "창간호의 한 필자는 어릴 때는 내장을 다른 이름으로 불렀다고 회고했습니다.",
+      "from": [
+       2
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-poem-kimchi": {
+    "title": "아침마다 김치를 써는 어머니",
+    "summary": [
+     {
+      "text": "재일 시인 종추월의 시 「キムチ」(작품 발표 1971년)에서는 아침 식탁을 차리며 항아리에서 김치를 꺼내 써는 어머니가 묘사됩니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "연구자는 이 시가 여성이 문화를 이어 가는 역할을 그리면서도 어머니 역할을 신화화할 위험이 있다고 지적합니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-konbini-kimchi": {
+    "title": "편의점 진열대의 김치",
+    "summary": [
+     {
+      "text": "재일 3세 시인 정장의 시 「コンビニにキムチ」(시집 수록 2004년)에서는 꺼려지던 김치가 편의점에서 샐러드 옆에 팔리는 데 대한 놀라움과 복잡한 감정이 묘사됩니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "일본에서 김치는 1999년 생산량 1위 절임 음식이 되었습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-camp-kimchi": {
+    "title": "농장 캠프 아이들이 나눠 먹은 김치",
+    "summary": [
+     {
+      "text": "사탕수수 농장은 민족별로 캠프를 나누었고, 첫 한인 이민단은 와이알루아 농장의 한인 캠프에 짐을 풀었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "말이 통하지 않던 어른들과 달리 아이들은 서로의 집을 드나들며 김치를 맛보았습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-independence-fund": {
+    "title": "김치를 팔아 모은 독립운동 기금",
+    "summary": [
+     {
+      "text": "1919년 3·1운동 소식이 전해지자 하와이 한인 여성들은 김치를 만들어 팔아 독립운동 기금을 모았습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "포르투갈인·일본인·필리핀인도 김치를 사 먹었고, 대구무침과 무말랭이무침도 잘 팔렸습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-kimchi-brands": {
+    "title": "한인 2세가 만든 김치 상표들",
+    "summary": [
+     {
+      "text": "1930년대 한인 2세 조 김의 김치 공장이 상품 판매를 시작했고, 1950년대에는 'Joe Kim Kim Chee'라는 이름으로 바뀌었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "1949년 코할라, 1952년 케에아우, 1950년대 초 호놀룰루에서도 김치 상표가 나왔습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-kolkhoz-rice": {
+    "title": "콜호즈 들판의 벼와 목화",
+    "summary": [
+     {
+      "text": "강제 이주 뒤 고려인들은 집단농장(콜호즈)에서 벼와 목화를 주로 길렀고, 소련 전체에서 손꼽히는 생산량을 올렸습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "카라탈 지역의 고려인 농장에서는 23명이 '사회주의 노동영웅' 칭호를 받았습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-ushtobe-rice": {
+    "title": "우쉬토베 들판의 벼농사",
+    "summary": [
+     {
+      "text": "고려인이 처음 정착한 우쉬토베에서는 1989–90년 무렵 지역 기후에 맞는 새 벼 품종 네 가지가 개발되었다는 구술이 있습니다.",
+      "from": [
+       1
+      ]
+     },
+     {
+      "text": "고려인의 쌀 수요가 줄면서 지금은 현지인의 식탁에 맞는 품종이 주로 재배된다고 합니다.",
+      "from": [
+       2
+      ]
+     }
+    ]
+   },
+   "scene:koryo-gobonjil": {
+    "title": "땅을 빌려 떠나는 농사, 고본질",
+    "summary": [
+     {
+      "text": "고려인 가족들이 농사철에 집을 떠나 먼 곳의 땅을 빌려 농사짓고 수확물을 파는 방식을 '고본질'이라 부릅니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "이 말은 뜻이 넓어져 집을 떠나 고생스럽게 돈을 버는 일이나 보따리장사도 가리키게 되었습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-doenjang": {
+    "title": "메주를 띄워 된장을 담그는 집",
+    "summary": [
+     {
+      "text": "우즈베키스탄 시온고 콜호즈에서는 메주콩을 삶아 빚고 그늘에 말리는 된장 만들기 전통이 거의 그대로 이어지고 있습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "된장·고추장·간장을 직접 담가 먹으며 딸과 며느리에게 담그는 법을 알려 준다는 구술이 있습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-borrowed-words": {
+    "title": "러시아어가 스며든 고려말",
+    "summary": [
+     {
+      "text": "새로운 개념어는 러시아어를 그대로 빌려 써서, 수술은 '오뻬라찌', 아파트는 '과찌라'라고 합니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "친족 호칭은 오래 남았지만 부모만큼은 러시아어식으로 '마마', '빠빠'라고 부릅니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-name-revival": {
+    "title": "'조선'에서 다시 '고려'로",
+    "summary": [
+     {
+      "text": "고려인 신문 『레닌기치』는 처음에 자기 말을 '고려말'이라 불렀으나, 북한 정부 수립 뒤 '조선'이라는 말로 바꾸었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "소련 해체를 전후해 '고려사람', '고려말'이라는 이름이 다시 쓰이게 되었습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:koryo-1938": {
+    "title": "1938년, 끊긴 한국어 교육",
+    "summary": [
+     {
+      "text": "구소련은 1938년 모든 한국어 교육을 공식적으로 폐지했습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "이후 60여 년 동안 러시아어로 교육받으면서 고려말을 다음 세대에 물려주기가 어려워졌습니다.",
+      "from": [
+       2
+      ]
+     }
+    ]
+   },
+   "scene:koryo-kazan-textbooks": {
+    "title": "카잔에서 만든 한인 교과서",
+    "summary": [
+     {
+      "text": "1901년부터 1904년까지 카잔에서 한인 학생들의 도움으로 한인 자녀용 러시아어 교과서와 회화서, 사전이 만들어졌습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "한인 학생들의 말을 키릴문자로 정밀하게 받아 적어, 1세기 전 육진방언을 보여 주는 자료가 되었습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-lost-work": {
+    "title": "국적과 함께 잃은 일할 권리",
+    "summary": [
+     {
+      "text": "재일조선인은 일본 국적을 잃으면서 세금은 내면서도 참정권과 직업 선택의 자유, 건강보험·연금 같은 권리를 잃었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "한국전쟁 무렵 재일조선인 경제활동인구 가운데 무직자의 비율이 가장 높았습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-school-closure": {
+    "title": "민족학교 폐쇄령과 한신교육투쟁",
+    "summary": [
+     {
+      "text": "연합군최고사령부의 민족학교 폐교 명령으로 재일조선인 아이들은 일본인 학교에 다니게 되었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "폐쇄령이 나오자 오사카·고베의 학부모와 동포들이 민족교육을 지키려고 투쟁했습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-education-issue": {
+    "title": "잡지가 물은 '민족교육의 미래'",
+    "summary": [
+     {
+      "text": "『호르몬 문화』 5호는 '재일조선인·민족교육의 미래'를 특집으로 다루었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "연구자는 이 잡지가 교육 같은 오래된 주제를 1990년대 3세대의 눈으로 다시 보려 했다고 평가합니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-names": {
+    "title": "갈라진 스스로의 이름",
+    "summary": [
+     {
+      "text": "해방 직후 일본에 남은 사람들은 자신을 '재일조선인'이라 불렀습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "1948년 남북한 정부가 세워진 뒤 '재일한국인'·'재일조선인'·'재일동포'로 이름이 갈라졌습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:zainichi-japanese-magazines": {
+    "title": "일본어로 쓰는 재일 잡지",
+    "summary": [
+     {
+      "text": "일본어로 낸 첫 재일 종합문예지 『민주조선』(1946)은 조선의 역사와 문화에 대한 일본인의 인식을 바로잡겠다며 출발했습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "모국어 교육을 받지 못한 한 재일 작가는 '국어로 쓰지 않은 것은 문학이 아니다'라는 비판을 받았다고 회고했습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-plantation-camp": {
+    "title": "사탕수수 농장의 민족별 캠프",
+    "summary": [
+     {
+      "text": "1903년부터 1905년까지 약 7,400명의 한인이 사탕수수 농장 노동자로 하와이에 왔습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "농장은 민족별로 캠프를 나누었고, 한인들은 캠프에서 동장을 뽑아 동네 질서를 지켰습니다.",
+      "from": [
+       1,
+       2
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-taxi-cart": {
+    "title": "카트와 택시, 하와이 한인의 생업",
+    "summary": [
+     {
+      "text": "1981년 한인 기사 30여 명이 돈을 모아 한인 최초의 택시회사 '로얄택시'를 세웠습니다.",
+      "from": [
+       1
+      ]
+     },
+     {
+      "text": "와이키키 인터내셔널 마켓의 카트 100개 정도 가운데 50개 정도를 한인이 운영했습니다.",
+      "from": [
+       0
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-kimchi-factory": {
+    "title": "하와이 최대 김치공장",
+    "summary": [
+     {
+      "text": "제조업에 종사하는 한인은 적지만, 김치공장을 운영하는 한인도 있습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "하와이 최대 김치공장 '함즈 엔터프라이즈'는 하루 2–3톤의 김치를 만듭니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-taegu": {
+    "title": "하와이 음식이 된 대구무침",
+    "summary": [
+     {
+      "text": "마른 대구를 불려 무친 대구무침은 초기 이민자들의 대표 음식이었고, 이제는 하와이의 토착 음식이 되었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "하와이 슈퍼마켓은 대구무침을 'Tae Gu', 'Taegu'라는 이름으로 팝니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-takeout": {
+    "title": "테이크아웃 한식당의 메뉴판",
+    "summary": [
+     {
+      "text": "한 테이크아웃 한식당 메뉴판은 갈비를 'Kal bi', 불고기를 'Bul Go Gi', 만두를 'man doo', 전을 'Jun'으로 적었습니다.",
+      "from": [
+       1
+      ]
+     },
+     {
+      "text": "반찬으로는 김치·콩나물과 함께 마카로니 샐러드와 대구무침이 매일 나옵니다.",
+      "from": [
+       2
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-code-mixing": {
+    "title": "'you, homework 했어?' 섞어 쓰는 말",
+    "summary": [
+     {
+      "text": "초기 이민 2세들은 한국말을 거의 하지 못하고, 영어와 한국어를 섞어 쓰는 언어혼용이 뚜렷합니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "한 2세 할머니는 'you'와 'homework' 같은 영어 낱말을 한국어 문장에 섞어 말했습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-chamber-split": {
+    "title": "말이 갈라 놓은 상공회의소",
+    "summary": [
+     {
+      "text": "영어로 회의하려는 2·3세와 한국어로 하려는 후기 이민자가 갈라지면서 한인 상공회의소는 두 단체가 되었습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "두 단체는 1988년 1월 30일 하와이 한인 상의회로 다시 합쳤습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-first-schools": {
+    "title": "한인중앙학교와 섬마다 세운 한글학교",
+    "summary": [
+     {
+      "text": "한인중앙학교에서는 정규 과정 외에 오후에 한국사와 한글을 가르쳤습니다.",
+      "from": [
+       1
+      ]
+     },
+     {
+      "text": "1907년 힐로의 한인소학교를 시작으로 하와이 여러 섬에 한글학교 25개가 세워졌고, 어른들도 밤에 배웠습니다.",
+      "from": [
+       2
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-saturday-school": {
+    "title": "토요일의 교회 한글학교",
+    "summary": [
+     {
+      "text": "2003년 봄 학기에 하와이 한인학교협의회 소속 18개 학교에 741명이 등록했습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "한글학교는 대개 교회나 사찰 부설로, 매주 토요일 3–5시간씩 가르칩니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   },
+   "scene:hawaii-mother-tongue": {
+    "title": "어머니에게서 딸에게 이어진 우리말",
+    "summary": [
+     {
+      "text": "초기 이민 1세들은 자녀에게 우리말을 가르치려 애썼지만 결국 포기하곤 했다고 마지막 사진신부의 딸은 말했습니다.",
+      "from": [
+       0
+      ]
+     },
+     {
+      "text": "그나마 어머니와 딸, 시어머니와 며느리 사이에서 한국어가 이어졌습니다.",
+      "from": [
+       1
+      ]
+     }
+    ]
+   }
+  }
  },
  "exported": "2026-10-10"
 };

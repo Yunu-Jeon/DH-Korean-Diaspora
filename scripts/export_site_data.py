@@ -51,41 +51,32 @@ archive["curatorNotes"] = json.loads((DATA / "curator_notes.json").read_text(enc
 archive["others"] = json.loads((DATA / "others.json").read_text(encoding="utf-8"))["items"]  # 네 측면 밖 내용 목록
 
 
-def cites_of(res):  # 자원의 모든 값에 붙은 근거("출처ID:쪽")를 모으는 함수
-    out = set()  # 결과 집합
-    for val in res.values():  # 속성 값마다
-        for v in as_list(val):  # 값 객체마다
-            if isinstance(v, dict):  # 값 객체면
-                out.update(v.get("cite", []))  # 근거를 모음
-    return out  # 근거 집합을 돌려줌
-
-
 def groups_of(res):  # 자원이 속한 문화권 ID 목록을 구하는 함수
     return [v["ref"] for v in as_list(res.get("dcterms:spatial", [])) if str(v.get("ref", "")).startswith("group:")]  # spatial 중 문화권만
 
 
-placement = {}  # 어휘 ID → [[문화권, 측면], ...] (전시에서 어휘 카드를 놓을 자리)
-for lab in archive["labels"]:  # 어휘마다
-    den = (lab.get("dia:denotes") or {}).get("ref")  # 가리키는 생활 대상
-    forms = [lab["skosxl:literalForm"]["value"]] + [v["value"] for v in as_list(lab.get("dia:variantForm", []))]  # 표기와 이표기
-    spots = []  # 이 어휘의 자리 목록
-    for g in groups_of(lab):  # 어휘가 쓰인 문화권마다
-        scenes = [s for s in archive["scenes"] if g in groups_of(s)]  # 같은 문화권의 장면
-        hit = [s for s in scenes if den and any(v.get("ref") == den for v in as_list(s.get("dcterms:subject", [])))]  # 규칙 1: 가리키는 대상을 다루는 장면
-        if not hit:  # 없으면
-            long_forms = [f for f in forms if len(f) >= 3]  # '재일'처럼 너무 짧은 표기는 아무 데나 걸리므로 뺌
-            text = {s["id"]: s["dcterms:title"]["value"] + " " + " ".join(d.get("value", "") for d in as_list(s["dcterms:description"])) for s in scenes}  # 장면별 제목+설명 글
-            count = {sid: sum(t.count(f) for f in long_forms) for sid, t in text.items()}  # 장면마다 표기가 나온 횟수
-            best = max(count.values(), default=0)  # 가장 많이 나온 횟수
-            hit = [s for s in scenes if best and count[s["id"]] == best]  # 규칙 2: 표기가 가장 많이 나오는 장면
-        if not hit:  # 그래도 없으면
-            hit = [s for s in scenes if cites_of(s) & cites_of(lab)]  # 규칙 3: 같은 문헌의 같은 쪽을 근거로 한 장면
-        concept = next((c for c in archive["concepts"] if c["id"] == den), None)  # 가리키는 생활 대상 자원
-        fallback = concept["dia:aspect"]["value"] if concept else "부르는 것"  # 장면이 없으면 대상의 측면, 대상도 없으면 '부르는 것'
-        aspects = sorted({s["dia:aspect"]["value"] for s in hit}) or [fallback]  # 장면들의 측면
-        spots += [[g, a] for a in aspects]  # 자리 추가
-    placement[lab["id"]] = spots  # 결과 저장
-archive["labelPlacement"] = placement  # 사이트에서 쓰도록 넣음
+# 장면과 어휘의 연결: AP의 참조(어휘 → dia:denotes → 생활 대상 ← dcterms:subject ← 장면)만 따른다
+concepts = {c["id"]: c for c in archive["concepts"]}  # 생활 대상 ID → 자원
+scene_labels = {}  # 장면 ID → 직접 연결된 어휘 ID 목록
+for s in archive["scenes"]:  # 장면마다
+    subjects = {v.get("ref") for v in as_list(s.get("dcterms:subject", []))}  # 장면이 다루는 생활 대상
+    scene_labels[s["id"]] = [l["id"] for l in archive["labels"] if (l.get("dia:denotes") or {}).get("ref") in subjects and set(groups_of(l)) & set(groups_of(s))]  # 그 대상을 가리키고 같은 문화권에서 쓰인 어휘
+linked = {(lid, g, s["dia:aspect"]["value"]) for s in archive["scenes"] for lid in scene_labels[s["id"]] for g in groups_of(s)}  # (어휘, 문화권, 측면)으로 이미 장면에 붙은 자리
+aspect_labels = {}  # "문화권|측면" → 장면과 직접 이어지지 않았지만 그 측면의 생활 대상을 가리키는 어휘 목록
+free_labels = {}  # 문화권 → 가리키는 생활 대상이 없는 어휘 목록(측면을 정할 근거가 없음)
+for l in archive["labels"]:  # 어휘마다
+    den = (l.get("dia:denotes") or {}).get("ref")  # 가리키는 생활 대상
+    for g in groups_of(l):  # 쓰인 문화권마다
+        if den in concepts:  # 생활 대상이 있으면
+            a = concepts[den]["dia:aspect"]["value"]  # 그 대상의 측면
+            if (l["id"], g, a) not in linked:  # 같은 측면 장면에 붙지 않았으면
+                aspect_labels.setdefault(f"{g}|{a}", []).append(l["id"])  # '이 측면의 어휘'로
+        elif not den:  # 생활 대상이 없으면
+            free_labels.setdefault(g, []).append(l["id"])  # 측면 없이 문화권 단위로
+archive["sceneLabels"] = scene_labels  # 사이트에서 쓰도록 넣음
+archive["aspectLabels"] = aspect_labels  # 사이트에서 쓰도록 넣음
+archive["freeLabels"] = free_labels  # 사이트에서 쓰도록 넣음
+archive["display"] = json.loads((DATA / "display_text.json").read_text(encoding="utf-8"))  # 화면용 문안(제목·요약, '-습니다'체)
 archive["exported"] = date.today().isoformat()  # 내보낸 날짜를 기록
 
 OUT.parent.mkdir(exist_ok=True)  # site-data 폴더가 없으면 만듦

@@ -41,6 +41,6 @@
   const others = document.getElementById('others-list'); // 네 측면 밖 목록 자리
   (A.others || []).forEach(function (o) { // 항목마다
     const g = X.byId.get(o.group); // 문화권
-    others.appendChild(el('li', {}, [o.what + ' ', el('span', { class: 'badge' }, o.kind), el('span', { class: 'badge' }, X.titleOf(g)), X.citeCompact(o.cite)])); // 내용·종류·문화권·출처
+    others.appendChild(el('li', {}, [o.what + ' ', el('span', { class: 'badge' }, o.kind), el('span', { class: 'badge' }, X.titleOf(g)), X.citeLine(o.cite)])); // 내용·종류·문화권·출처
   }); // 항목 끝
 })(); // 즉시 실행 함수 끝
