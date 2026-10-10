@@ -24,7 +24,7 @@ scenes = {s["id"]: s for s in load("scenes.json")}  # 장면 ID → 장면 자�
 groups = {g["id"]: g for g in load("groups.json")}  # 문화권 ID → 문화권 자원
 text = load("display_text.json")  # 화면용 문안
 notes = load("curator_notes.json")["notes"]  # 큐레이터 해설
-ASPECT_LABEL = {"먹는 것": "식(食)", "부르는 것": "호(呼)", "일하는 것": "일(事)", "배우는 것": "학(學)"}  # 측면 표시 레이블
+ASPECT_LABEL = {"먹는 것": "식(食)", "부르는 것": "호(呼)", "일하는 것": "사(事)", "배우는 것": "학(學)"}  # 측면 표시 레이블
 problems = []  # 검사에서 찾은 문제
 rows = []  # 대조표의 줄들
 

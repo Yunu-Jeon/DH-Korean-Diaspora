@@ -15,7 +15,7 @@
   const ASPECT_INFO = { // 측면 값 → 화면 표시(한글·한자 병기)와 주소용 키
     '먹는 것': { key: 'eat', hanja: '食', ko: '식', label: '먹는 것', desc: '음식과 재료, 명절·잔치의 상차림' }, // 식
     '부르는 것': { key: 'call', hanja: '呼', ko: '호', label: '부르는 것', desc: '섞이고 바뀐 말, 스스로와 남을 부르는 이름' }, // 호
-    '일하는 것': { key: 'work', hanja: '事', ko: '일', label: '일하는 것', desc: '농장·콜호즈·가게·공장의 생업' }, // 일
+    '일하는 것': { key: 'work', hanja: '事', ko: '사', label: '일하는 것', desc: '농장·콜호즈·가게·공장의 생업' }, // 일
     '배우는 것': { key: 'learn', hanja: '學', ko: '학', label: '배우는 것', desc: '학교와 언어 교육, 다음 세대에 전하는 일' } // 학
   }; // ASPECT_INFO 끝
   const ASPECT_BY_KEY = {}; // 주소용 키 → 측면 값

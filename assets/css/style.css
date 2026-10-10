@@ -164,7 +164,7 @@ main { max-width: 1200px; margin: 0 auto; padding: 28px 16px 120px; }
 .culture-head .lead { margin-bottom: 0.4em; }
 .head-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
-/* ===== 식(食)·호(呼)·일(事)·학(學) 탭 ===== */
+/* ===== 식(食)·호(呼)·사(事)·학(學) 탭 ===== */
 .aspect-tabs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 128px), 1fr)); gap: 8px; margin: 0 0 24px; }
 .aspect-tab { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-decoration: none; min-width: 0; font: inherit; text-align: left; cursor: pointer; }
 .aspect-tab:hover { border-color: var(--ink-3); }

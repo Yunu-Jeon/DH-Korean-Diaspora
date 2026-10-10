@@ -64,7 +64,7 @@ w("## 1. 개요")  # 절 제목
 w("")  # 빈 줄
 w("- **제목:** 한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브 / One Root, Other Soils: An Archive of Korean Diaspora")  # 제목
 w(f"- **홈 문구:** {display['home']['headline']}: {display['home']['subline']}")  # 홈 문구
-w("- **범위:** 고려인·재일조선인·하와이 한인 × 식(食)·호(呼)·일(事)·학(學)")  # 범위
+w("- **범위:** 고려인·재일조선인·하와이 한인 × 식(食)·호(呼)·사(事)·학(學)")  # 범위
 w("- **저장소:** https://github.com/Yunu-Jeon/DH-Korean-Diaspora (GitHub Pages는 아직 켜지 않음)")  # 저장소
 w("")  # 빈 줄
 w("## 2. 사이트 구조")  # 절 제목
