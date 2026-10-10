@@ -11,15 +11,16 @@ DATA = Path(__file__).resolve().parent.parent / "data"  # 저장소 루트의 da
 # AP 3장의 카디널리티: 클래스 파일 이름 → {속성: 카디널리티}
 AP = {  # 클래스별 속성 규칙을 담은 사전
     "materials.json": {"dcterms:title": "1", "dcterms:type": "1", "dcterms:date": "0..1", "dcterms:rights": "1", "dcterms:source": "1", "dcterms:spatial": "1..n", "dcterms:relation": "0..n", "dia:citation": "0..n"},  # 자료
-    "scenes.json": {"dcterms:title": "1", "dcterms:description": "1", "dcterms:subject": "1..n", "dcterms:spatial": "1..n", "dcterms:temporal": "0..1", "dia:lifeDomain": "1", "dcterms:source": "1..n", "dia:citation": "1..n"},  # 생활 장면
-    "concepts.json": {"skos:prefLabel": "1", "skos:definition": "0..1", "dia:lifeDomain": "1", "skos:exactMatch": "0..1", "dcterms:source": "1..n"},  # 생활 대상
-    "labels.json": {"skosxl:literalForm": "1", "dia:variantForm": "0..n", "dia:gloss": "1", "dia:denotes": "1", "dcterms:spatial": "1..n", "dia:sourceLanguage": "0..1", "dia:etymologyNote": "0..1", "dcterms:source": "1..n", "dia:citation": "1..n"},  # 어휘
+    "scenes.json": {"dcterms:title": "1", "dcterms:description": "1", "dcterms:subject": "0..n", "dcterms:spatial": "1..n", "dcterms:temporal": "0..1", "dia:aspect": "1", "dcterms:source": "1..n", "dia:citation": "1..n"},  # 생활 장면
+    "concepts.json": {"skos:prefLabel": "1", "skos:definition": "0..1", "dia:aspect": "1", "skos:exactMatch": "0..1", "dcterms:source": "1..n"},  # 생활 대상
+    "labels.json": {"skosxl:literalForm": "1", "dia:variantForm": "0..n", "dia:gloss": "1", "dia:denotes": "0..1", "dcterms:spatial": "1..n", "dia:sourceLanguage": "0..1", "dia:etymologyNote": "0..1", "dcterms:source": "1..n", "dia:citation": "1..n"},  # 어휘
     "places.json": {"dcterms:title": "1", "coords": "1", "dcterms:isPartOf": "0..1", "skos:exactMatch": "0..1"},  # 장소
     "groups.json": {"dcterms:title": "1", "dcterms:description": "1", "dcterms:spatial": "1..n", "dcterms:source": "1..n"},  # 문화권
     "references.json": {"dcterms:creator": "1..n", "dcterms:title": "1", "dcterms:date": "0..1", "dcterms:isPartOf": "0..1", "bibo:uri": "0..1", "dcterms:accessRights": "1"},  # 출처
 }  # AP 사전 끝
 CITED = {"materials.json", "scenes.json", "labels.json"}  # AP에 dia:citation 속성이 있는 클래스
 MULTI_OK_FOR_ONE = {"dcterms:description"}  # 카디널리티 1이지만 문장을 나눠 배열로 적은 속성(합치면 값 하나)
+ASPECTS = ["먹는 것", "부르는 것", "일하는 것", "배우는 것"]  # AP의 dia:aspect 값 4개(전시 순서)
 
 
 def load(name):  # data 폴더의 JSON 하나를 읽는 함수
@@ -91,6 +92,23 @@ for g in sorted(by_group):  # 문화권 이름순으로
     c = by_group[g]  # 그 문화권의 건수
     print(f"{g:16} 장면 {c['scenes.json']} / 어휘 {c['labels.json']} / 자료 {c['materials.json']}")  # 한 줄로 출력
 
+print("\n== 측면 × 문화권 (생활 장면 수) ==")  # 제목 출력
+group_ids = [g["id"] for g in data["groups.json"]]  # 문화권 ID 목록(파일 순서)
+cells = Counter()  # (측면, 문화권) → 장면 수
+for res in data["scenes.json"]:  # 장면마다
+    asp = res.get("dia:aspect", {}).get("value")  # 대표 측면
+    if asp not in ASPECTS:  # AP에 없는 측면 값이면
+        errors.append(f"scenes.json {res['id']}: dia:aspect 값 '{asp}'가 AP에 없음")  # 위반으로 기록
+    for g in group_of[res["id"]]:  # 장면의 문화권마다
+        cells[(asp, g)] += 1  # 칸 건수를 하나 더함
+print("측면".ljust(8) + "".join(g.split(":")[1].ljust(10) for g in group_ids))  # 표 머리줄
+for asp in ASPECTS:  # 측면마다
+    print(asp.ljust(8) + "".join(str(cells[(asp, g)]).ljust(10) for g in group_ids))  # 한 줄씩
+empty = [f"{asp} × {g}" for asp in ASPECTS for g in group_ids if not cells[(asp, g)]]  # 0건인 칸
+print("0건인 칸: " + (", ".join(empty) if empty else "없음"))  # 0건 칸 출력
+lit = [res["id"] for res in data["scenes.json"] if res.get("representation") == "문학 속 재현"]  # 문학 속 재현 장면
+print(f"문학 속 재현으로 표시한 장면: {len(lit)} ({', '.join(lit)})")  # 출력
+
 
 def count_pairs(labels):  # 같은 생활 대상을 다른 문화권에서 다르게 부르는 어휘 쌍을 세는 함수
     by_concept = defaultdict(list)  # 생활 대상 → (문화권, 표기) 목록
@@ -108,7 +126,7 @@ def count_pairs(labels):  # 같은 생활 대상을 다른 문화권에서 다�
     return pairs  # 쌍 목록을 돌려줌
 
 
-cands = load("labels_candidates.json")["items"]  # use 범위 밖이라 보류한 어휘 후보
+cands = load("labels_candidates.json")["items"]  # 보류한 어휘 후보
 p1 = count_pairs(data["labels.json"])  # 확정 어휘만으로 센 쌍
 p2 = count_pairs(data["labels.json"] + cands)  # 후보까지 포함해 센 쌍
 print(f"\n== 같은 생활 대상, 문화권마다 다른 어휘 ==\n확정 어휘만: {len(p1)}쌍")  # 확정 어휘 기준 쌍 수 출력

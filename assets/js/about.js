@@ -7,8 +7,8 @@
 
   const AP_ROWS = [ // AP 2장의 클래스 요약: [이름, 표준 클래스, 설명, 데이터 키]
     ['자료', 'dctype:Text / StillImage / MovingImage', '신문 지면·사진·문서·영상 같은 1차 사료', 'materials'], // 자료
-    ['생활 장면', 'dia:Scene', '관습·생활상을 담은 서사 단위', 'scenes'], // 생활 장면
-    ['생활 대상', 'skos:Concept', '음식·생활 사물을 가리켜지는 개념으로', 'concepts'], // 생활 대상
+    ['생활 장면', 'dia:Scene', '먹고, 부르고, 일하고, 배우는 생활문화의 한 장면(측면 하나로 분류)', 'scenes'], // 생활 장면
+    ['생활 대상', 'skos:Concept', '음식·생활 사물·일·교육 제도 등을 가리켜지는 개념으로', 'concepts'], // 생활 대상
     ['어휘', 'skosxl:Label', '같은 대상을 부르는 여러 말을 각각 독립 자원으로', 'labels'], // 어휘
     ['장소', 'dcterms:Location', '좌표와 상위 장소', 'places'], // 장소
     ['문화권', 'foaf:Group', '고려인·재일조선인·하와이 한인을 사람들의 집단으로', 'groups'], // 문화권
@@ -37,4 +37,10 @@
     pend.appendChild(li); // 목록에 추가
   }); // 항목 끝
   pend.appendChild(el('li', {}, '제목의 뜻, 호칭 설명, 메타데이터·요약문의 이용 조건은 작성 예정입니다.')); // 사용자 원고 대기 항목
+
+  const others = document.getElementById('others-list'); // 네 측면 밖 목록 자리
+  (A.others || []).forEach(function (o) { // 항목마다
+    const g = X.byId.get(o.group); // 문화권
+    others.appendChild(el('li', {}, [o.what + ' ', el('span', { class: 'badge' }, o.kind), el('span', { class: 'badge' }, X.titleOf(g)), X.citeCompact(o.cite)])); // 내용·종류·문화권·출처
+  }); // 항목 끝
 })(); // 즉시 실행 함수 끝

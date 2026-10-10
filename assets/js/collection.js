@@ -1,94 +1,95 @@
-// 컬렉션 페이지: 문화권별 묶음 + Leaflet 지도에서 문화권 고르기
+// 컬렉션 페이지: 이야기 없이 전체 자료를 문화권·측면·클래스로 걸러 보기
 (function () { // 전역 이름이 섞이지 않도록 즉시 실행 함수로 감쌈
   'use strict'; // 엄격 모드
   const X = window.Archive; // 공통 기능 묶음
   const A = X.data; // 아카이브 데이터
   const el = X.el; // 요소 만들기 도구
-  const bar = document.getElementById('filter-bar'); // 문화권 버튼 줄
-  const holder = document.getElementById('collection-groups'); // 문화권 묶음 자리
-  const buttons = {}; // 키 → 버튼
-  const sections = {}; // 문화권 ID → 섹션 요소
-  let current = 'all'; // 지금 고른 문화권('all'은 전체)
+  const state = { group: 'all', aspect: 'all', cls: 'all' }; // 지금 고른 거르개 값
+  const CLASSES = [['scene', '생활 장면'], ['label', '어휘'], ['concept', '생활 대상'], ['material', '자료']]; // 거를 수 있는 클래스
 
-  function keyOf(gid) { return gid.split(':')[1]; } // 'group:koryo' → 'koryo'
+  function makeFilter(boxId, key, options) { // 거르개 버튼 묶음을 만드는 함수
+    const box = document.getElementById(boxId); // 묶음 자리
+    const all = [['all', '전체']].concat(options); // 맨 앞에 '전체'
+    all.forEach(function (o) { // 선택지마다
+      const b = el('button', { type: 'button', class: 'pill ' + (X.GROUP_CLASS[o[0]] || ''), 'aria-pressed': String(state[key] === o[0]), 'data-v': o[0] }, o[1]); // 눌림 상태를 알리는 알약 버튼
+      b.addEventListener('click', function () { // 누르면
+        state[key] = o[0]; // 값 바꾸기
+        box.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-v') === o[0])); }); // 눌림 상태 갱신
+        render(); // 결과 다시 그리기
+        saveHash(); // 주소에 기억
+      }); // 클릭 끝
+      box.appendChild(b); // 추가
+    }); // 선택지 끝
+  } // makeFilter 끝
 
-  function makeButton(key, text, cls) { // 문화권 고르기 버튼을 만드는 함수
-    const b = el('button', { type: 'button', class: 'btn ' + (cls || ''), 'aria-pressed': 'false' }, text); // 눌림 상태를 알리는 토글 버튼
-    b.addEventListener('click', function () { select(key, true); }); // 누르면 그 문화권을 고름
-    bar.appendChild(b); // 버튼 줄에 추가
-    buttons[key] = b; // 나중에 상태를 바꾸려고 보관
-  } // makeButton 끝
+  function aspectsOf(res, cls) { // 자원의 측면 목록을 구하는 함수(어휘는 놓인 자리에서, 자료는 관련 장면에서)
+    if (cls === 'scene' || cls === 'concept') return [X.aspectOf(res)]; // 장면·생활 대상은 자기 측면
+    if (cls === 'label') return (A.labelPlacement[res.id] || []).map(function (p) { return p[1]; }); // 어휘는 전시에서 놓인 측면
+    return X.asList(res['dcterms:relation']).map(function (v) { return X.aspectOf(X.byId.get(v.ref)); }); // 자료는 관련 장면의 측면
+  } // aspectsOf 끝
 
-  function select(key, fromUser) { // 문화권을 고르는 함수
-    current = buttons[key] ? key : 'all'; // 모르는 키면 전체
-    Object.keys(buttons).forEach(function (k) { buttons[k].setAttribute('aria-pressed', String(k === current)); }); // 버튼 눌림 상태 갱신
-    Object.keys(sections).forEach(function (gid) { sections[gid].hidden = !(current === 'all' || keyOf(gid) === current); }); // 고른 문화권만 보임
-    if (fromUser) history.replaceState(null, '', current === 'all' ? location.pathname : '#' + current); // 주소에 선택 상태를 남김(뒤로 가기 기록은 늘리지 않음)
-  } // select 끝
+  function groupsOfAny(res, cls) { // 자원의 문화권 목록(생활 대상은 그 대상을 다루는 장면·어휘에서)
+    if (cls !== 'concept') return X.groupsOf(res); // 나머지는 spatial에서
+    const out = new Set(); // 결과
+    A.scenes.concat(A.labels).forEach(function (r) { // 장면과 어휘마다
+      const hit = X.asList(r['dcterms:subject']).concat(X.asList(r['dia:denotes'])).some(function (v) { return v && v.ref === res.id; }); // 이 대상을 가리키는지
+      if (hit) X.groupsOf(r).forEach(function (g) { out.add(g); }); // 가리키면 그 문화권 추가
+    }); // 끝
+    return Array.from(out); // 배열로 돌려줌
+  } // groupsOfAny 끝
 
-  function groupSection(g) { // 문화권 하나의 묶음을 만드는 함수
-    const key = keyOf(g.id); // 짧은 키
-    const sec = el('section', { class: 'band ' + X.GROUP_CLASS[g.id], id: 'sec-' + key, 'aria-labelledby': 'h-' + key }); // 문화권 띠
-    const head = el('header', { class: 'band-head' }); // 머리
-    head.appendChild(el('h2', { id: 'h-' + key }, el('a', { href: X.itemUrl(g.id), style: 'color:inherit;text-decoration:none' }, X.titleOf(g)))); // 문화권 이름(자원 페이지 링크)
-    const more = el('details', { class: 'more' }); // 이동 개요는 접어 둠
-    more.appendChild(el('summary', {}, '이동 개요 보기')); // 펼치기 버튼
-    X.asList(g['dcterms:description']).forEach(function (d) { more.appendChild(X.valueNode(d)); }); // 개요 문장과 출처
-    head.appendChild(more); // 머리에 붙임
-    sec.appendChild(head); // 머리 붙임
+  function conceptCard(c) { // 생활 대상 카드(아이콘 + 이름)를 만드는 함수
+    const card = el('article', { class: 'word-tile' }); // 타일 틀
+    card.appendChild(window.ArchiveIcons.iconSvg(c.id)); // 아이콘
+    card.appendChild(el('p', { class: 'word-group' }, '생활 대상 · ' + X.aspectOf(c))); // 종류와 측면
+    card.appendChild(el('p', { class: 'word' }, el('a', { href: X.itemUrl(c.id) }, X.titleOf(c)))); // 이름
+    card.appendChild(X.citeCompact(X.firstCites(c))); // 출처·쪽수
+    return card; // 카드를 돌려줌
+  } // conceptCard 끝
 
-    const scenes = A.scenes.filter(function (s) { return X.groupsOf(s).indexOf(g.id) >= 0; }); // 이 문화권의 장면
-    sec.appendChild(el('h3', {}, '생활 장면 · ' + scenes.length)); // 장면 소제목
-    const sg = el('div', { class: 'grid' }); // 장면 카드 격자
-    scenes.forEach(function (s) { sg.appendChild(X.sceneCard(s)); }); // 장면 카드
-    sec.appendChild(sg); // 격자 붙임
+  function materialCard(m) { // 자료 카드를 만드는 함수
+    const card = el('article', { class: 'word-tile ' + (X.GROUP_CLASS[X.groupsOf(m)[0]] || '') }); // 타일 틀
+    card.appendChild(el('p', { class: 'word-group' }, '자료 · ' + (m['dcterms:type'] ? m['dcterms:type'].value : ''))); // 종류와 유형
+    card.appendChild(el('p', { class: 'word', style: 'font-size:1.25rem' }, el('a', { href: X.itemUrl(m.id) }, X.titleOf(m)))); // 제목
+    card.appendChild(X.citeCompact(X.firstCites(m))); // 출처·쪽수
+    return card; // 카드를 돌려줌
+  } // materialCard 끝
 
-    const labels = A.labels.filter(function (s) { return X.groupsOf(s).indexOf(g.id) >= 0; }); // 이 문화권의 어휘
-    sec.appendChild(el('h3', {}, '어휘 · ' + labels.length)); // 어휘 소제목
-    const lg = el('div', { class: 'word-wall' }); // 큰 글씨 타일 벽
-    labels.forEach(function (l) { lg.appendChild(X.labelCard(l)); }); // 어휘 타일
-    sec.appendChild(lg); // 벽 붙임
+  function render() { // 거르개에 맞는 결과를 그리는 함수
+    const out = document.getElementById('results'); // 결과 자리
+    out.textContent = ''; // 지우기
+    let total = 0; // 결과 수
+    CLASSES.forEach(function (c) { // 클래스마다
+      if (state.cls !== 'all' && state.cls !== c[0]) return; // 고른 클래스가 아니면 건너뜀
+      const list = A[c[0] + 's'].filter(function (r) { // 자원 거르기
+        const okG = state.group === 'all' || groupsOfAny(r, c[0]).indexOf(state.group) >= 0; // 문화권 맞는지
+        const okA = state.aspect === 'all' || aspectsOf(r, c[0]).indexOf(state.aspect) >= 0; // 측면 맞는지
+        return okG && okA; // 둘 다 맞으면 남김
+      }); // 거르기 끝
+      if (!list.length) return; // 없으면 이 클래스는 그리지 않음
+      total += list.length; // 수 더하기
+      out.appendChild(el('h2', { class: 'sub' }, c[1] + ' · ' + list.length)); // 클래스 소제목
+      const box = el('div', { class: c[0] === 'scene' ? 'grid' : 'word-wall' }); // 장면은 카드 격자, 나머지는 타일 벽
+      list.forEach(function (r) { // 자원마다
+        if (c[0] === 'scene') box.appendChild(X.sceneCard(r)); // 장면 카드
+        else if (c[0] === 'label') box.appendChild(X.labelCard(r)); // 어휘 카드
+        else if (c[0] === 'concept') box.appendChild(conceptCard(r)); // 생활 대상 카드
+        else box.appendChild(materialCard(r)); // 자료 카드
+      }); // 자원 끝
+      out.appendChild(box); // 붙임
+    }); // 클래스 끝
+    document.getElementById('result-count').textContent = '모두 ' + total + '건'; // 결과 수 표시
+    if (!total) out.appendChild(el('p', { class: 'empty' }, '조건에 맞는 자료를 아직 찾지 못했습니다.')); // 0건 안내
+  } // render 끝
 
-    const places = X.asList(g['dcterms:spatial']).map(function (v) { return v.ref; }); // 이 문화권의 장소 ID
-    sec.appendChild(el('h3', {}, '장소 · ' + places.length)); // 장소 소제목
-    const pl = el('div', { class: 'filter-bar' }); // 장소 칩 줄
-    places.forEach(function (pid) { pl.appendChild(el('a', { class: 'chip ' + X.GROUP_CLASS[g.id], href: X.itemUrl(pid) }, X.titleOf(X.byId.get(pid)))); }); // 장소 칩 링크
-    sec.appendChild(pl); // 줄 붙임
-    return sec; // 섹션을 돌려줌
-  } // groupSection 끝
+  function saveHash() { // 거르개 상태를 주소에 남기는 함수
+    history.replaceState(null, '', '#' + [state.group, state.aspect, state.cls].join('|')); // 예: #group:koryo|먹는 것|all
+  } // saveHash 끝
 
-  function drawMap() { // 장소를 문화권 색으로 찍고, 표식으로 문화권을 고르게 하는 지도
-    const box = document.getElementById('collection-map'); // 지도 자리
-    if (!window.L || !box) return; // 라이브러리가 없으면 그리지 않음
-    const map = L.map(box, { scrollWheelZoom: false, worldCopyJump: false }); // 지도 생성(스크롤로 페이지가 내려가도록 휠 확대는 끔)
-    X.osmLayer().addTo(map); // OSM 타일과 저작자 표시
-    const pts = []; // 화면 맞춤용 좌표
-    A.groups.forEach(function (g) { // 문화권마다
-      const color = getComputedStyle(document.documentElement).getPropertyValue('--' + keyOf(g.id)).trim(); // 문화권 색
-      X.asList(g['dcterms:spatial']).forEach(function (v) { // 장소마다
-        const p = X.byId.get(v.ref); // 장소 자원
-        if (!p || !p.coords) return; // 좌표가 없으면 건너뜀
-        const ll = [p.coords.lat, X.wrapLon(p.coords.lon)]; // 날짜변경선 보정한 좌표
-        pts.push(ll); // 맞춤용 목록에 추가
-        const m = L.circleMarker(ll, { radius: 8, color: '#fff', weight: 2, fillColor: color, fillOpacity: 0.95 }).addTo(map); // 원 표식
-        m.bindTooltip(X.titleOf(p) + ' · ' + X.titleOf(g)); // 마우스를 올리면 이름
-        m.on('click', function () { // 표식을 누르면
-          select(keyOf(g.id), true); // 그 문화권을 고름
-          const popup = el('div', {}, [el('strong', {}, X.titleOf(p)), el('br'), el('a', { href: X.itemUrl(p.id) }, '장소 자세히 보기')]); // 장소 링크가 든 팝업 내용
-          m.bindPopup(popup).openPopup(); // 팝업 열기
-        }); // 클릭 처리 끝
-      }); // 장소 끝
-    }); // 문화권 끝
-    X.fitWhenReady(map, pts, [30, 30]); // 모든 장소가 보이게 맞춤(상자 크기가 정해진 뒤에도 다시)
-  } // drawMap 끝
-
-  makeButton('all', '전체'); // 전체 버튼
-  A.groups.forEach(function (g) { // 문화권마다
-    makeButton(keyOf(g.id), X.titleOf(g), 'chip-btn ' + X.GROUP_CLASS[g.id]); // 문화권 버튼
-    sections[g.id] = groupSection(g); // 섹션 만들기
-    holder.appendChild(sections[g.id]); // 화면에 붙임
-  }); // 문화권 끝
-  drawMap(); // 지도 그리기
-  select(location.hash.slice(1) || 'all', false); // 주소의 #koryo 같은 값으로 처음 상태를 정함
-  window.addEventListener('hashchange', function () { select(location.hash.slice(1) || 'all', false); }); // 주소가 바뀌면 다시 고름
+  const saved = decodeURIComponent(location.hash.slice(1)).split('|'); // 주소에 남은 상태
+  if (saved.length === 3) { state.group = saved[0]; state.aspect = saved[1]; state.cls = saved[2]; } // 있으면 되살림
+  makeFilter('f-group', 'group', A.groups.map(function (g) { return [g.id, X.titleOf(g)]; })); // 문화권 거르개
+  makeFilter('f-aspect', 'aspect', X.ASPECTS.map(function (a) { return [a, a]; })); // 측면 거르개
+  makeFilter('f-class', 'cls', CLASSES); // 클래스 거르개
+  render(); // 처음 그리기
 })(); // 즉시 실행 함수 끝

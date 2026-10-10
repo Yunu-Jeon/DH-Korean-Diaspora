@@ -18,19 +18,28 @@
     potato: '<path d="M9 26c0-9 8-14 16-14s14 6 14 13-6 13-16 13S9 33 9 26z"/><path d="M19 22h.1M28 20h.1M25 30h.1"/>', // 감자
     round: '<circle cx="24" cy="24" r="16"/><path d="M15 21c3-3 6-3 9 0M24 29c3 3 6 3 9 0"/>', // 둥근 전
     strips: '<path d="M10 14c6 2 10 8 10 20M18 12c6 3 9 9 9 22M27 13c5 3 8 9 8 21"/>', // 말린 무 조각
-    plate: '<ellipse cx="24" cy="30" rx="18" ry="7"/><path d="M12 28c3-4 6 0 9-3s6 1 9-2 5 1 7-1"/><path d="M20 20c1-3 4-4 7-3"/>' // 넓은 접시 요리
+    plate: '<ellipse cx="24" cy="30" rx="18" ry="7"/><path d="M12 28c3-4 6 0 9-3s6 1 9-2 5 1 7-1"/><path d="M20 20c1-3 4-4 7-3"/>', // 넓은 접시 요리
+    jar: '<path d="M16 10h16l2 6c4 3 5 8 5 13 0 9-7 13-15 13S9 38 9 29c0-5 1-10 5-13z"/><path d="M14 16h20"/>', // 장독(된장)
+    sprout: '<path d="M24 42V20"/><path d="M24 26c-6 0-10-4-11-10 6 0 10 4 11 10zM24 22c5 0 9-4 10-10-6 0-10 4-10 10z"/><path d="M12 42h24"/>', // 벼 싹(농사)
+    speech: '<path d="M8 12h32v20H22l-9 8v-8H8z"/><path d="M15 20h18M15 26h11"/>', // 말풍선(부르는 것)
+    tool: '<path d="M14 40L34 20"/><path d="M30 10c5 0 9 4 9 9l-5 1-5-5z"/><path d="M8 34l6 6"/>', // 농기구·연장(일하는 것)
+    book: '<path d="M24 14c-4-3-10-4-16-3v26c6-1 12 0 16 3 4-3 10-4 16-3V11c-6-1-12 0-16 3z"/><path d="M24 14v26"/>' // 펼친 책(배우는 것)
   }; // SHAPES 끝
+
+  const BY_ASPECT = { '먹는 것': 'bowl', '부르는 것': 'speech', '일하는 것': 'tool', '배우는 것': 'book' }; // 측면 → 아이콘 이름
 
   const BY_CONCEPT = { // 생활 대상 ID → 아이콘 이름
     'concept:kimchi': 'cabbage', 'concept:carrot-kimchi': 'carrot', 'concept:rice': 'bowl', 'concept:rice-in-water': 'bowl', // 김치·당근 김치·밥
     'concept:siraegi-soup': 'bowl', 'concept:noodle': 'noodle', 'concept:dumpling': 'dumpling', 'concept:russian-bread': 'bread', // 국·국수·만두·빵
     'concept:blin': 'stack', 'concept:tofu': 'cube', 'concept:chalttoek': 'cube', 'concept:soy-sauce': 'bottle', // 블린·두부·찰떡·간장
     'concept:potato': 'potato', 'concept:besbarmak': 'plate', 'concept:offal': 'grill', 'concept:offal-grill': 'grill', // 감자·베스바르마크·내장
-    'concept:cod-muchim': 'fish', 'concept:mumallaengi': 'strips', 'concept:jeon': 'round', 'concept:cup': 'cup' // 대구무침·무말랭이·전·잔
+    'concept:cod-muchim': 'fish', 'concept:mumallaengi': 'strips', 'concept:jeon': 'round', 'concept:cup': 'cup', // 대구무침·무말랭이·전·잔
+    'concept:galbi': 'grill', 'concept:bulgogi': 'grill', 'concept:doenjang': 'jar', 'concept:rice-farming': 'sprout', // 갈비·불고기·된장·벼농사
+    'concept:hangul-school': 'book', 'concept:ethnic-school': 'book' // 한글학교·민족학교
   }; // BY_CONCEPT 끝
 
-  function iconSvg(conceptId) { // 생활 대상에 맞는 아이콘 SVG 요소를 만드는 함수
-    const name = BY_CONCEPT[conceptId] || 'bowl'; // 모르는 대상이면 그릇 아이콘
+  function iconSvg(key) { // 생활 대상 ID 또는 측면 이름에 맞는 아이콘 SVG 요소를 만드는 함수
+    const name = BY_CONCEPT[key] || BY_ASPECT[key] || 'bowl'; // 대상 → 측면 순으로 찾고, 없으면 그릇 아이콘
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); // SVG 요소 생성
     svg.setAttribute('viewBox', '0 0 48 48'); // 그림 칸 크기
     svg.setAttribute('aria-hidden', 'true'); // 장식이므로 스크린리더가 읽지 않게 함

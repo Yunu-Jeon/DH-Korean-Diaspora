@@ -47,6 +47,45 @@ for key, items in archive.items():  # 클래스마다
 if coord_count:  # 문헌 외 좌표가 하나라도 있으면
     pending.append({"id": None, "text": f"장소 {coord_count}곳의 좌표는 문헌에 없는 근사값이다(지도 표시용, 검수 필요)."})  # 한 줄로 요약해 추가
 archive["pending"] = pending  # 확인 필요 목록을 데이터에 넣음
+archive["curatorNotes"] = json.loads((DATA / "curator_notes.json").read_text(encoding="utf-8"))["notes"]  # 큐레이터 해설(해석, AP 밖)
+archive["others"] = json.loads((DATA / "others.json").read_text(encoding="utf-8"))["items"]  # 네 측면 밖 내용 목록
+
+
+def cites_of(res):  # 자원의 모든 값에 붙은 근거("출처ID:쪽")를 모으는 함수
+    out = set()  # 결과 집합
+    for val in res.values():  # 속성 값마다
+        for v in as_list(val):  # 값 객체마다
+            if isinstance(v, dict):  # 값 객체면
+                out.update(v.get("cite", []))  # 근거를 모음
+    return out  # 근거 집합을 돌려줌
+
+
+def groups_of(res):  # 자원이 속한 문화권 ID 목록을 구하는 함수
+    return [v["ref"] for v in as_list(res.get("dcterms:spatial", [])) if str(v.get("ref", "")).startswith("group:")]  # spatial 중 문화권만
+
+
+placement = {}  # 어휘 ID → [[문화권, 측면], ...] (전시에서 어휘 카드를 놓을 자리)
+for lab in archive["labels"]:  # 어휘마다
+    den = (lab.get("dia:denotes") or {}).get("ref")  # 가리키는 생활 대상
+    forms = [lab["skosxl:literalForm"]["value"]] + [v["value"] for v in as_list(lab.get("dia:variantForm", []))]  # 표기와 이표기
+    spots = []  # 이 어휘의 자리 목록
+    for g in groups_of(lab):  # 어휘가 쓰인 문화권마다
+        scenes = [s for s in archive["scenes"] if g in groups_of(s)]  # 같은 문화권의 장면
+        hit = [s for s in scenes if den and any(v.get("ref") == den for v in as_list(s.get("dcterms:subject", [])))]  # 규칙 1: 가리키는 대상을 다루는 장면
+        if not hit:  # 없으면
+            long_forms = [f for f in forms if len(f) >= 3]  # '재일'처럼 너무 짧은 표기는 아무 데나 걸리므로 뺌
+            text = {s["id"]: s["dcterms:title"]["value"] + " " + " ".join(d.get("value", "") for d in as_list(s["dcterms:description"])) for s in scenes}  # 장면별 제목+설명 글
+            count = {sid: sum(t.count(f) for f in long_forms) for sid, t in text.items()}  # 장면마다 표기가 나온 횟수
+            best = max(count.values(), default=0)  # 가장 많이 나온 횟수
+            hit = [s for s in scenes if best and count[s["id"]] == best]  # 규칙 2: 표기가 가장 많이 나오는 장면
+        if not hit:  # 그래도 없으면
+            hit = [s for s in scenes if cites_of(s) & cites_of(lab)]  # 규칙 3: 같은 문헌의 같은 쪽을 근거로 한 장면
+        concept = next((c for c in archive["concepts"] if c["id"] == den), None)  # 가리키는 생활 대상 자원
+        fallback = concept["dia:aspect"]["value"] if concept else "부르는 것"  # 장면이 없으면 대상의 측면, 대상도 없으면 '부르는 것'
+        aspects = sorted({s["dia:aspect"]["value"] for s in hit}) or [fallback]  # 장면들의 측면
+        spots += [[g, a] for a in aspects]  # 자리 추가
+    placement[lab["id"]] = spots  # 결과 저장
+archive["labelPlacement"] = placement  # 사이트에서 쓰도록 넣음
 archive["exported"] = date.today().isoformat()  # 내보낸 날짜를 기록
 
 OUT.parent.mkdir(exist_ok=True)  # site-data 폴더가 없으면 만듦

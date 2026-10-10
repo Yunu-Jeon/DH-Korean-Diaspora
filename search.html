@@ -8,7 +8,7 @@
   <meta name="description" content="한 뿌리, 다른 흙: 한인 디아스포라 생활문화·어휘 아카이브 (One Root, Other Soils)">
   <!-- 파비콘(로고 SVG) -->
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <!-- 글꼴: 본문 Noto Sans KR, 제목 Noto Serif KR -->
+  <!-- 글꼴: 본문 Noto Sans KR, 제목 Noto Serif KR(명조) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Noto+Serif+KR:wght@500;600;700&display=swap">
@@ -19,10 +19,10 @@
   <!-- 본문 바로가기(키보드 사용자용) -->
   <a class="skip-link" href="#main">본문 바로가기</a>
 
-  <!-- 헤더: 로고·짧은 제목, 주 메뉴, 검색창, 자료에게 묻기 -->
+  <!-- 헤더: 로고와 짧은 제목, 메뉴 세 개, 검색창 -->
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="index.html" aria-label="한 뿌리, 다른 흙 — 처음으로">
+      <a class="brand" href="index.html" aria-label="한 뿌리, 다른 흙 — 홈">
         <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
           <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M16 26 V17"/><path d="M16 17 C16 13 11 12 7.5 8.5"/><path d="M16 17 V6.5"/><path d="M16 17 C16 13 21 12 24.5 8.5"/></g>
           <circle cx="16" cy="26" r="2.8" fill="var(--accent)"/><circle cx="7.5" cy="8.5" r="2" fill="currentColor"/><circle cx="16" cy="6.5" r="2" fill="currentColor"/><circle cx="24.5" cy="8.5" r="2" fill="currentColor"/>
@@ -31,19 +31,16 @@
       </a>
       <nav class="main-nav" aria-label="주 메뉴">
         <ul>
+          <li><a href="index.html">홈(전시)</a></li>
           <li><a href="collection.html">컬렉션</a></li>
-          <li><a href="exhibit.html">전시 「식탁 위의 말」</a></li>
           <li><a href="about.html">소개</a></li>
         </ul>
       </nav>
-      <div class="header-tools">
-        <form class="search-form" role="search" action="search.html" method="get">
-          <label class="sr-only" for="site-q">어휘·생활 대상·생활 장면 검색</label>
-          <input id="site-q" name="q" type="search" placeholder="예: Kim Chee, 김치, 똥창" autocomplete="off">
-          <button type="submit">검색</button>
-        </form>
-        <button class="btn" type="button" data-ask>자료에게 묻기</button>
-      </div>
+      <form class="search-form" role="search" action="search.html" method="get">
+        <label class="sr-only" for="site-q">어휘·생활 대상·생활 장면 검색</label>
+        <input id="site-q" name="q" type="search" placeholder="예: Kim Chee, 김치, 고본질" autocomplete="off">
+        <button type="submit">검색</button>
+      </form>
     </div>
   </header>
 
@@ -58,27 +55,11 @@
   <!-- 푸터 -->
   <footer class="site-footer">
     <div class="inner">
-      <p>한 뿌리, 다른 흙 — 화면의 모든 내용은 출처 문헌과 쪽수를 함께 적었습니다. 출처 목록과 이용 조건은 <a href="about.html">소개</a>에 있습니다.</p>
+      <p>한 뿌리, 다른 흙 — 모든 사실에 출처 문헌과 쪽수를 붙였습니다. <a href="about.html#sources">출처 목록</a> · <a href="about.html#terms">이용 조건</a></p>
     </div>
   </footer>
 
-  <!-- 자료에게 묻기 대화창(준비 중, 입력 비활성) -->
-  <dialog class="ask" id="ask-dialog" aria-labelledby="ask-title">
-    <div class="ask-head">
-      <h2 id="ask-title">자료에게 묻기</h2>
-      <button class="btn" type="button" data-close>닫기</button>
-    </div>
-    <div class="ask-body">
-      <p class="ask-notice" role="status">준비 중입니다. 아카이브 자료에 바탕해 답하는 기능을 곧 붙일 예정입니다.</p>
-    </div>
-    <form class="ask-form" onsubmit="return false">
-      <label class="sr-only" for="ask-input">질문 입력(준비 중)</label>
-      <input id="ask-input" type="text" placeholder="준비 중입니다" disabled>
-      <button class="btn" type="submit" disabled>보내기</button>
-    </form>
-  </dialog>
-
-  <!-- 스크립트: 데이터, 공통 기능, 이 페이지 기능 -->
+  <!-- 스크립트: 데이터, 아이콘, 공통 기능(챗봇 창 포함), 이 페이지 기능 -->
   <script src="site-data/archive.js"></script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/common.js"></script>

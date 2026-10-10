@@ -168,13 +168,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:106"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -184,8 +177,15 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:107"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
-    "kwon2020:106",
     "kwon2020:107",
     "kwon2020:108"
    ]
@@ -254,13 +254,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:108"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -270,6 +263,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:108"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:108"
    ]
@@ -339,13 +340,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:109"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -356,6 +350,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:109"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:104",
     "kwon2020:109",
@@ -420,13 +422,6 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:110"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -436,6 +431,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:110"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:109",
     "kwon2020:110"
@@ -507,13 +510,6 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:113"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -524,6 +520,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:113"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:113",
     "kwon2020:114"
@@ -580,13 +584,6 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:114"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -597,6 +594,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:114"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:114",
     "kwon2020:115"
@@ -680,13 +685,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:120"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -697,6 +695,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:120"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:119",
     "kwon2020:120"
@@ -775,13 +781,6 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:122"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -792,6 +791,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:121"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "kwon2020:121",
     "kwon2020:122"
@@ -862,13 +869,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "yeon:29"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "yeon",
@@ -880,6 +880,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "yeon:29"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "yeon:23",
     "yeon:29",
@@ -965,13 +973,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "yeon:30"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "yeon",
@@ -982,6 +983,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "yeon:30"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "yeon:27",
     "yeon:30"
@@ -1053,13 +1062,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "yeon:31"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "yeon",
@@ -1070,6 +1072,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "yeon:31"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 가게 운영이라는 생업이 중심이라 '일하는 것'"
+   },
    "dia:citation": [
     "yeon:31",
     "yeon:33"
@@ -1141,13 +1151,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "lee2017:135"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "lee2017",
@@ -1159,6 +1162,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "lee2017:134"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식 이름이 재일 문화를 부르는 이름이 된 이야기라 '부르는 것'"
+   },
    "dia:citation": [
     "lee2017:124",
     "lee2017:134",
@@ -1223,13 +1234,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "iwata2020:61"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "iwata2020",
@@ -1241,6 +1245,15 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "iwata2020:61"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
+   "representation": "문학 속 재현",
    "dia:citation": [
     "iwata2020:61",
     "iwata2020:63",
@@ -1308,13 +1321,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "iwata2020:66"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "iwata2020",
@@ -1326,6 +1332,15 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "iwata2020:65"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
+   "representation": "문학 속 재현",
    "dia:citation": [
     "iwata2020:65",
     "iwata2020:66",
@@ -1399,13 +1414,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "lee2014:78"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "lee2014",
@@ -1415,6 +1423,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "lee2014:78"
    ]
@@ -1490,13 +1506,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "lee2014:78"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "lee2014",
@@ -1506,6 +1515,14 @@ window.ARCHIVE = {
      "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심"
+   },
    "dia:citation": [
     "lee2014:78"
    ]
@@ -1533,6 +1550,13 @@ window.ARCHIVE = {
      "cite": [
       "lee2014:78",
       "lee2014:79"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1950년대 빅아일랜드에서 만든 〈코할라 김치〉는 뉴욕 등 미국 본토까지 팔렸고, 한국 김치보다 덜 맵게 만들어졌다.",
+     "cite": [
+      "nfm2003:150"
      ],
      "basis": "보고"
     },
@@ -1597,13 +1621,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "lee2014:78"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "lee2014",
@@ -1613,12 +1630,1903 @@ window.ARCHIVE = {
       "lee2014:87"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:150"
+     ],
+     "basis": "보고"
     }
    ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식·식생활이 중심. 김치 공장은 '일하는 것'에도 걸치지만 상품이 된 음식이 중심"
+   },
    "dia:citation": [
     "lee2014:78",
     "lee2014:79",
-    "lee2014:87"
+    "lee2014:87",
+    "nfm2003:150"
+   ]
+  },
+  {
+   "id": "scene:koryo-kolkhoz-rice",
+   "dcterms:title": {
+    "value": "콜호즈 들판의 벼와 목화",
+    "cite": [
+     "kwon2020:105"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "강제 이주 뒤 고려인들은 콜호즈(집단농장)에 배치되어 벼와 목화를 주로 길렀고, 소련 전체에서 손꼽히는 생산량을 올렸다.",
+     "cite": [
+      "kwon2020:104",
+      "kwon2020:105"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "카라탈 지역의 고려인 농장 20곳은 기록적인 수확을 거두었고 23명이 '사회주의 노동영웅' 칭호를 받았다.",
+     "cite": [
+      "kwon2020:106"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "저자는 높은 농업 생산성이 카자흐인과의 우호 관계와 정착에 도움이 되었다고 본다.",
+     "cite": [
+      "kwon2020:106"
+     ],
+     "basis": "해석"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:rice-farming",
+     "cite": [
+      "kwon2020:105"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwon2020:105"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:kazakhstan",
+     "cite": [
+      "kwon2020:105"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1937년 강제 이주 이후",
+    "cite": [
+     "kwon2020:104"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "kwon2020:105"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 집단농장의 농사일이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwon2020",
+     "cite": [
+      "kwon2020:104",
+      "kwon2020:105",
+      "kwon2020:106"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kwon2020:104",
+    "kwon2020:105",
+    "kwon2020:106"
+   ]
+  },
+  {
+   "id": "scene:koryo-ushtobe-rice",
+   "dcterms:title": {
+    "value": "우쉬토베 들판에서 이어지는 벼농사",
+    "cite": [
+     "lee2012:209"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "고려인의 벼농사는 강제 이주 전 극동 전역에서 이루어졌고, 이주 뒤에도 콜호즈마다 목화와 함께 가장 특색 있는 작물이었다.",
+     "cite": [
+      "lee2012:209"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "고려인이 처음 정착한 우쉬토베에서는 1989–90년 무렵 지역 기후에 맞는 새 벼 품종 4가지가 개발되었다는 구술이 있다.",
+     "cite": [
+      "lee2012:210"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "고려인의 쌀 수요는 줄고 있어, 지금은 현지인의 식탁(밥, 플로프)에 맞는 품종이 주로 재배된다고 한다.",
+     "cite": [
+      "lee2012:211"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:rice-farming",
+     "cite": [
+      "lee2012:209"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "lee2012:209"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:ushtobe",
+     "cite": [
+      "lee2012:210"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "극동 시기 ~ 2012년",
+    "cite": [
+     "lee2012:209",
+     "lee2012:210"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "lee2012:209"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 농사와 품종 개발이라는 일이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:209",
+      "lee2012:210",
+      "lee2012:211"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "lee2012:209",
+    "lee2012:210",
+    "lee2012:211"
+   ]
+  },
+  {
+   "id": "scene:koryo-gobonjil",
+   "dcterms:title": {
+    "value": "땅을 빌려 떠나는 농사, 고본질",
+    "cite": [
+     "kwak2007:262"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "고려인 가족들이 작은 공동체를 꾸려 농사철에 집을 떠나 먼 곳의 땅을 빌려 짓고 수확물을 파는 농업 방식을 '고본질'이라 부른다.",
+     "cite": [
+      "kwak2007:262"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "이 말은 뜻이 넓어져 '집을 떠나 고생스럽게 돈벌이를 함', '보따리장사'를 가리키게 되었다.",
+     "cite": [
+      "kwak2007:262"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "강제 이주 뒤 고본질이 생기면서 물에 만 밥을 더 자주 먹게 되었다고 한다.",
+     "cite": [
+      "kwon2020:108"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:rice-in-water",
+     "cite": [
+      "kwon2020:108"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:262"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "강제 이주 이후",
+    "cite": [
+     "kwon2020:108"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "kwak2007:262"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 생업 방식과 그 이름이 중심. 말 자체도 다루지만 가리키는 것이 '일'이라 '일하는 것'"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:262"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "kwon2020",
+     "cite": [
+      "kwon2020:108"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kwak2007:262",
+    "kwon2020:108"
+   ]
+  },
+  {
+   "id": "scene:koryo-doenjang",
+   "dcterms:title": {
+    "value": "메주를 띄워 된장을 담그는 집",
+    "cite": [
+     "lee2012:222"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "우즈베키스탄 시온고 콜호즈에서는 된장 만들기 전통이 거의 그대로 이어져, 메주콩을 삶고 으깨 둥글납작하게 빚어 그늘에 말리는 과정을 보여 주었다.",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "지금도 된장·고추장·간장을 직접 담가 먹는 고려인이 많고, 딸과 며느리에게 담그는 법을 알려 준다는 구술이 있다.",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "일상 음식으로 시락장물·국시·두부·비지장이, 저장 음식으로 김치·된장·고추장·간장이 이어지고 있다.",
+     "cite": [
+      "lee2012:221",
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:doenjang",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:tashkent",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "2012년 조사",
+    "cite": [
+     "lee2012:222"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2012:222"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식과 그 재료 만들기가 중심. 다음 세대에 전하는 면은 '배우는 것'에도 걸침"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:221",
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "lee2012:221",
+    "lee2012:222"
+   ]
+  },
+  {
+   "id": "scene:koryo-borrowed-words",
+   "dcterms:title": {
+    "value": "러시아어가 스며든 고려말",
+    "cite": [
+     "kwak2007:260"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "새로운 개념어는 고려말로 바꿔 보급할 기관이 없어 러시아어를 그대로 빌려 쓴다. 수술은 '오뻬라찌', 아파트는 '과찌라'라고 한다.",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "친족 호칭은 오래 남았지만 부모만큼은 러시아어식으로 '마마', '빠빠'라고 부른다.",
+     "cite": [
+      "kwak2007:260"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "러시아어 영향으로 '오이'의 첫소리를 [v]로 발음하는 등 소리도 바뀌었다.",
+     "cite": [
+      "kwak2007:260"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "잔을 '따깐', 성냥을 '비지깨'라고 하는 것처럼 러시아어를 변형한 낱말도 많다.",
+     "cite": [
+      "ency_koryomal:내용"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:260"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "kwak2007:260"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 말이 섞이고 바뀌는 양상이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:260",
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "ency_koryomal",
+     "cite": [
+      "ency_koryomal:내용"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "ency_koryomal:내용",
+    "kwak2007:260",
+    "kwak2007:261"
+   ]
+  },
+  {
+   "id": "scene:koryo-name-revival",
+   "dcterms:title": {
+    "value": "'조선'에서 다시 '고려'로",
+    "cite": [
+     "ency_koryomal:연원 및 변천"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "초기 고려인 신문 『레닌기치』에서는 자기 말을 '고려말', '고려어'라 불렀으나, 북한 정부 수립 뒤 '조선'이라는 말로 바뀌었다.",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1988년 서울올림픽을 계기로 한국에 관심이 커지면서, 소련 해체 전후로 '고려사람', '고려말'이라는 이름이 다시 쓰이게 되었다.",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "'고려', '고려말', '고려사람'이라는 명칭은 1920년대에 이미 쓰였다고 한다.",
+     "cite": [
+      "kwak2007:231"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1920년대 ~ 1991년 무렵",
+    "cite": [
+     "kwak2007:231",
+     "ency_koryomal:연원 및 변천"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "ency_koryomal:연원 및 변천"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 스스로를 부르는 이름의 변화가 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "ency_koryomal",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:231"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "ency_koryomal:연원 및 변천",
+    "kwak2007:231"
+   ]
+  },
+  {
+   "id": "scene:koryo-1938",
+   "dcterms:title": {
+    "value": "1938년, 끊긴 한국어 교육",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "구소련에서는 1938년 공식적으로 모든 한국어 교육을 폐지했고, 고려말은 모국어와 떨어진 채 변해 왔다.",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "강제 이주 때 크즐오르다로 옮겨진 고려사범대학은 폐쇄되거나 러시아어로 가르치는 학교로 바뀌었다.",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "이후 60여 년 러시아어로 교육받으면서 고려말을 다음 세대에 물려주기가 현실적으로 어려워졌다.",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:kyzylorda",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1938년 이후",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 언어 교육과 다음 세대 전승이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "ency_koryomal",
+     "cite": [
+      "ency_koryomal:연원 및 변천"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "ency_koryomal:연원 및 변천",
+    "kwak2007:261"
+   ]
+  },
+  {
+   "id": "scene:koryo-kazan-textbooks",
+   "dcterms:title": {
+    "value": "카잔에서 만든 한인 교과서",
+    "cite": [
+     "kwak2007:236"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "20세기 초 러시아정교선교협회는 카잔사범학교의 한인 학생들의 도움으로 한인 자녀용 러시아어 교과서·철자 교과서·회화서·사전을 펴냈다(1901–1904).",
+     "cite": [
+      "kwak2007:236",
+      "kwak2007:237"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한인 학생들의 말을 키릴문자로 정밀하게 받아 적어, 1세기 전 육진방언을 보여 주는 자료가 되었다.",
+     "cite": [
+      "kwak2007:237",
+      "kwak2007:238"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "곽충구는 이 교재들이 한인을 러시아 공민으로 만들고 정교를 전하려는 목적에서 만들어졌다고 설명한다.",
+     "cite": [
+      "kwak2007:240"
+     ],
+     "basis": "해석"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:237"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:primorye",
+     "cite": [
+      "kwak2007:237"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1901–1904년",
+    "cite": [
+     "kwak2007:237"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "kwak2007:236"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 교과서와 학교 교육이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:236",
+      "kwak2007:237",
+      "kwak2007:238",
+      "kwak2007:240"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kwak2007:236",
+    "kwak2007:237",
+    "kwak2007:238",
+    "kwak2007:240"
+   ]
+  },
+  {
+   "id": "scene:zainichi-lost-work",
+   "dcterms:title": {
+    "value": "국적을 잃고 일할 자리도 잃다",
+    "cite": [
+     "kimgo2010:67"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "재일조선인이 일본 국적을 잃었다고 명시되면서, 세금은 내면서도 참정권과 직업 선택의 자유, 공무담임권, 공영주택·건강보험·연금 같은 권리를 잃었다.",
+     "cite": [
+      "kimgo2010:67"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한국전쟁 무렵 재일조선인 경제활동인구 가운데 무직자 비율이 가장 높았고, 취업자 중에서는 일용노무자가 가장 많았다.",
+     "cite": [
+      "kimgo2010:75"
+     ],
+     "basis": "보고"
+    },
+    {
+     "status": "확인 필요",
+     "cite": [
+      "kimgo2010:67",
+      "kimgo2010:75"
+     ],
+     "note": "조치가 시행된 연도와 직업별 비율은 PDF 텍스트에서 숫자가 빠져 판독 불가"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "kimgo2010:67"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "status": "확인 필요",
+    "cite": [
+     "kimgo2010:67"
+    ],
+    "note": "연도 숫자 판독 불가"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "kimgo2010:67"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 직업 제한과 생계가 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kimgo2010",
+     "cite": [
+      "kimgo2010:67",
+      "kimgo2010:75"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kimgo2010:67",
+    "kimgo2010:75"
+   ]
+  },
+  {
+   "id": "scene:zainichi-school-closure",
+   "dcterms:title": {
+    "value": "민족학교 폐쇄령과 한신교육투쟁",
+    "cite": [
+     "kimgo2010:67"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "연합군최고사령부는 조선인 교육을 일본 법 안에서 하라고 지시한 뒤 민족학교 폐교 명령을 내려, 재일조선인 아이들을 일본인 학교에 다니게 했다.",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "학교폐쇄령이 나오자 한신 지역(오사카·고베)의 학부모와 동포들이 민족교육을 지키려는 투쟁을 벌였다.",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "저자는 이 반대운동을 거치며 재일조선인들이 민족 정체성을 확인했고, 이것이 조선학교 건립운동으로 이어졌다고 본다.",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "해석"
+    },
+    {
+     "status": "확인 필요",
+     "cite": [
+      "kimgo2010:67",
+      "kimgo2010:68"
+     ],
+     "note": "폐쇄령·투쟁의 연도와 학교 수는 PDF 텍스트에서 숫자가 빠져 판독 불가"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:ethnic-school",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:hanshin",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "status": "확인 필요",
+    "cite": [
+     "kimgo2010:67"
+    ],
+    "note": "연도 숫자 판독 불가"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "kimgo2010:67"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 민족학교와 교육권이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kimgo2010",
+     "cite": [
+      "kimgo2010:67",
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kimgo2010:67",
+    "kimgo2010:68"
+   ]
+  },
+  {
+   "id": "scene:zainichi-education-issue",
+   "dcterms:title": {
+    "value": "잡지가 물은 '민족교육의 미래'",
+    "cite": [
+     "lee2017:138"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "『호르몬 문화』는 호마다 특집을 정했는데, 2호는 '일하는 재일조선인', 5호는 '재일조선인·민족교육의 미래'였다.",
+     "cite": [
+      "lee2017:138"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "저자는 이 잡지가 직업·선거권·가족·교육 같은 오래된 주제를 3세대와 1990년대의 눈으로 다시 보려 했다고 평가한다.",
+     "cite": [
+      "lee2017:138"
+     ],
+     "basis": "해석"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:ethnic-school",
+     "cite": [
+      "lee2017:138"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "lee2017:138"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1990년대",
+    "cite": [
+     "lee2017:138"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "lee2017:138"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 민족교육을 다룬 특집이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2017",
+     "cite": [
+      "lee2017:138"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "lee2017:138"
+   ]
+  },
+  {
+   "id": "scene:zainichi-names",
+   "dcterms:title": {
+    "value": "스스로를 부르는 이름이 갈라지다",
+    "cite": [
+     "jung2012:265"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "해방 직후 일본에 남은 사람들은 일제시기처럼 자신을 '재일조선인'이라 불렀다.",
+     "cite": [
+      "jung2012:265"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1948년 남북한 정부가 세워진 뒤 이름이 갈라져, 민단과 총련이 '재일한국인'과 '재일조선인'을 쓰면서 '재일동포'라는 말도 함께 썼다.",
+     "cite": [
+      "jung2012:266"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "지금은 재일한인·재일동포·재일한국인·재일조선인·재일코리안·재일 등 여러 이름이 경합한다.",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "저자는 '재일동포'·'재일교포'가 같은 민족에 근거한 이름인 반면, '재일'·'재일코리안'은 국가와 민족보다 그 존재 자체에 주목하는 이름이라고 설명한다.",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "해석"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1945년 ~ 2012년",
+    "cite": [
+     "jung2012:265"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "jung2012:265"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 스스로와 남을 부르는 이름(호칭)이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "jung2012",
+     "cite": [
+      "jung2012:259",
+      "jung2012:265",
+      "jung2012:266"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "jung2012:259",
+    "jung2012:265",
+    "jung2012:266"
+   ]
+  },
+  {
+   "id": "scene:zainichi-japanese-magazines",
+   "dcterms:title": {
+    "value": "일본어로 쓰는 재일 잡지",
+    "cite": [
+     "lee2017:126"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "일본어로 낸 첫 재일 종합문예지 『민주조선』(1946)은 왜곡된 조선의 역사와 문화에 대한 일본인의 인식을 바로잡겠다며 출발했다.",
+     "cite": [
+      "lee2017:126"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한 재일 작가는 모국어 교육을 전혀 받지 못했는데도 '국어로 쓰지 않은 것은 문학이 아니'라는 비판을 받았다고 회고했다.",
+     "cite": [
+      "lee2017:129"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "lee2017:126"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1946년 이후",
+    "cite": [
+     "lee2017:126"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "lee2017:126"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 어느 말로 쓰는가라는 언어의 문제가 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2017",
+     "cite": [
+      "lee2017:126",
+      "lee2017:129"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "lee2017:126",
+    "lee2017:129"
+   ]
+  },
+  {
+   "id": "scene:hawaii-plantation-camp",
+   "dcterms:title": {
+    "value": "사탕수수 농장의 민족별 캠프",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "1903년 1월 13일 102명의 한인 이민자가 호놀룰루항에 내렸고, 1905년 8월까지 약 7,400명이 사탕수수 농장 노동자로 왔다.",
+     "cite": [
+      "lee2014:76"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "농장은 포르투갈인·일본인·한인 캠프처럼 민족별로 마을을 나누었고, 첫 이민단은 와이알루아 농장 한인 캠프에 짐을 풀었다.",
+     "cite": [
+      "lee2014:78"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한인들은 캠프에서 동장을 뽑아 동네 질서를 지켰다.",
+     "cite": [
+      "lee2014:82"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "lee2014:76"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:waialua",
+     "cite": [
+      "lee2014:78"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1903–1905년",
+    "cite": [
+     "lee2014:76"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 농장 노동과 노동자 마을이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2014",
+     "cite": [
+      "lee2014:76",
+      "lee2014:78",
+      "lee2014:82"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "lee2014:76",
+    "lee2014:78",
+    "lee2014:82"
+   ]
+  },
+  {
+   "id": "scene:hawaii-taxi-cart",
+   "dcterms:title": {
+    "value": "카트와 택시, 하와이 한인의 생업",
+    "cite": [
+     "nfm2003:135"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "와이키키 인터내셔널 마켓의 카트 100개 정도 가운데 50개 정도를 한인이 운영했다.",
+     "cite": [
+      "nfm2003:132"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1981년 한인 기사 30여 명이 돈을 모아 한인 최초의 택시회사 '로얄택시'를 세웠고, 택시업에는 7–800명 정도가 일한다.",
+     "cite": [
+      "nfm2003:135"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "손님 가운데 일본인 관광객이 많아 택시 기사에게 일본어가 필수라고 한다.",
+     "cite": [
+      "nfm2003:135"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:132"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:waikiki",
+     "cite": [
+      "nfm2003:132"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1981년 ~ 2003년",
+    "cite": [
+     "nfm2003:135"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "nfm2003:135"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 생업과 가게가 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:132",
+      "nfm2003:135"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:132",
+    "nfm2003:135"
+   ]
+  },
+  {
+   "id": "scene:hawaii-kimchi-factory",
+   "dcterms:title": {
+    "value": "하루 2–3톤, 하와이 최대 김치공장",
+    "cite": [
+     "nfm2003:137"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "제조업에 종사하는 한인은 적지만, 김치공장을 하는 한인도 있다.",
+     "cite": [
+      "nfm2003:137"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "하와이 최대 김치공장 '함즈 엔터프라이즈'는 하루 2–3톤의 김치를 만든다.",
+     "cite": [
+      "nfm2003:137"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "관광객이 많을수록 한인 식당의 김치 소비도 늘어, 관광객 수가 김치 소비에 영향을 미친다고 한다.",
+     "cite": [
+      "nfm2003:137"
+     ],
+     "basis": "해석"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:kimchi",
+     "cite": [
+      "nfm2003:137"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:137"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "2003년 조사",
+    "cite": [
+     "nfm2003:137"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "nfm2003:137"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 공장 운영이라는 생업이 중심. 김치라는 음식은 '먹는 것'에도 걸침"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:137"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:137"
+   ]
+  },
+  {
+   "id": "scene:hawaii-taegu",
+   "dcterms:title": {
+    "value": "하와이 토착 음식이 된 대구무침",
+    "cite": [
+     "nfm2003:147"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "초기 이민자들은 고추장과 된장을 직접 만들었고, 마른 대구를 불려 무친 대구무침은 이제 하와이의 토착 음식이 되었다.",
+     "cite": [
+      "nfm2003:147"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "하와이 슈퍼마켓은 대구무침을 'Tae Gu', 'Taegu'라는 이름으로 판다.",
+     "cite": [
+      "nfm2003:147",
+      "nfm2003:148"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "저자는 참치를 무친 '아히 포키'가 대표적인 하와이 음식이라 비슷한 대구무침이 하와이 토착 음식이자 한인의 민족 음식이 되었다고 본다.",
+     "cite": [
+      "nfm2003:147"
+     ],
+     "basis": "해석"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:cod-muchim",
+     "cite": [
+      "nfm2003:147"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:147"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "이민 초기 ~ 2003년",
+    "cite": [
+     "nfm2003:147"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "nfm2003:147"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:147",
+      "nfm2003:148"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:147",
+    "nfm2003:148"
+   ]
+  },
+  {
+   "id": "scene:hawaii-takeout",
+   "dcterms:title": {
+    "value": "테이크아웃 한식당의 메뉴판",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "맞벌이나 가게 일로 바쁜 사람들은 테이크아웃 한식당에서 음식을 사 간다.",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한 테이크아웃 한식당 메뉴판은 갈비를 'Kal bi', 불고기를 'Bul Go Gi', 만두를 'man doo', 전을 'Jun'으로 적었다.",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "반찬으로는 김치·콩나물과 함께 마카로니 샐러드, 대구무침(Daegu)이 매일 나온다.",
+     "cite": [
+      "nfm2003:156"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:galbi",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "concept:bulgogi",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "concept:dumpling",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "concept:jeon",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "2003년 조사",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 음식이 중심. 메뉴 표기는 '부르는 것'에도 걸침"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155",
+      "nfm2003:156"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:155",
+    "nfm2003:156"
+   ]
+  },
+  {
+   "id": "scene:hawaii-code-mixing",
+   "dcterms:title": {
+    "value": "'you, homework 했어?' 섞어 쓰는 말",
+    "cite": [
+     "nfm2003:227"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "초기 이민 2세들은 한국말을 거의 못 하고, 두 언어의 낱말을 섞어 쓰는 언어혼용이 뚜렷하다.",
+     "cite": [
+      "nfm2003:227"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한 2세 할머니는 'you, homework 했어?', '이 떡 안에 daikong 있어'처럼 영어와 한국어, 일본어를 섞어 말했다.",
+     "cite": [
+      "nfm2003:227",
+      "nfm2003:228"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1965년 이후 온 이민자들도 '벵크럽(bankruptcy) 났어요'처럼 섞어 쓰지만, 반말과 you 호칭은 드물다.",
+     "cite": [
+      "nfm2003:228"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:227"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "2003년 조사",
+    "cite": [
+     "nfm2003:227"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "nfm2003:227"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 말이 섞이고 바뀌는 양상이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:227",
+      "nfm2003:228"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:227",
+    "nfm2003:228"
+   ]
+  },
+  {
+   "id": "scene:hawaii-chamber-split",
+   "dcterms:title": {
+    "value": "말이 갈라 놓은 상공회의소",
+    "cite": [
+     "nfm2003:224"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "1978년 한인경제인연합회가 호놀룰루 한인 상업회의소에 들어갔지만, 영어로 회의하려는 2·3세와 한국어로 하려는 후기 이민자가 갈라져 두 단체가 되었다.",
+     "cite": [
+      "nfm2003:224",
+      "nfm2003:225"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "갈등은 '누가 한인인가'라는 논쟁으로 번졌고, 두 단체는 1988년 1월 30일 하와이 한인 상의회로 다시 합쳤다.",
+     "cite": [
+      "nfm2003:225"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:224"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:honolulu",
+     "cite": [
+      "nfm2003:224"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1978–1988년",
+    "cite": [
+     "nfm2003:224",
+     "nfm2003:225"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "부르는 것",
+    "cite": [
+     "nfm2003:224"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 어떤 말을 쓰는가가 집단을 가른 이야기라 '부르는 것'"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:224",
+      "nfm2003:225"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:224",
+    "nfm2003:225"
+   ]
+  },
+  {
+   "id": "scene:hawaii-first-schools",
+   "dcterms:title": {
+    "value": "한인중앙학교와 섬마다 세운 한글학교",
+    "cite": [
+     "nfm2003:239"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "1904년 9월 하와이에 첫 한인 학생 학교가 세워졌고, 이 학교는 1913년 여학생을 받아 한인중앙학원이 되었다.",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한인중앙학교에서는 정규 과정 외에 오후에 한국사와 한글을 가르쳤다.",
+     "cite": [
+      "lee2014:80"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1907년 힐로의 한인소학교를 시작으로 하와이 여러 섬에 한글학교 25개가 있었고, 국문을 모르는 어른도 밤에 배웠다.",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:hangul-school",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:honolulu",
+     "cite": [
+      "lee2014:80"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:hilo",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "1904년 ~ 1910년대",
+    "cite": [
+     "nfm2003:239"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "nfm2003:239"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 학교와 한글 교육이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "lee2014",
+     "cite": [
+      "lee2014:80"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "lee2014:80",
+    "nfm2003:239"
+   ]
+  },
+  {
+   "id": "scene:hawaii-saturday-school",
+   "dcterms:title": {
+    "value": "토요일의 교회 한글학교",
+    "cite": [
+     "nfm2003:242"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "2003년 봄 학기에 하와이 한인학교협의회 소속 18개 학교에 741명이 등록했다.",
+     "cite": [
+      "nfm2003:242"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한글학교는 대개 교회나 사찰 부설로, 매주 토요일 3–5시간씩 가르친다.",
+     "cite": [
+      "nfm2003:243"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "학생의 절반 이상이 한국어를 처음 배우는 기초·초급반이다.",
+     "cite": [
+      "nfm2003:243"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:subject": [
+    {
+     "ref": "concept:hangul-school",
+     "cite": [
+      "nfm2003:242"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:242"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "2003년",
+    "cite": [
+     "nfm2003:242"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "nfm2003:242"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 학교와 한국어 교육이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:242",
+      "nfm2003:243"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:242",
+    "nfm2003:243"
+   ]
+  },
+  {
+   "id": "scene:hawaii-mother-tongue",
+   "dcterms:title": {
+    "value": "어머니에게서 딸에게 이어진 우리말",
+    "cite": [
+     "nfm2003:227"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:description": [
+    {
+     "value": "마지막 사진신부의 딸 엘리스 김은 초기 이민 1세들이 자녀에게 우리말을 가르치려 애썼지만 결국 포기하곤 했다고 말했다.",
+     "cite": [
+      "nfm2003:227"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "그나마 어머니와 딸, 시어머니와 며느리 사이에서 한국어가 이어졌고, 음식과 전통에 관련된 말은 지금도 쓴다.",
+     "cite": [
+      "nfm2003:227"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "한국어 습득은 집에서 어머니와 지낸 딸들이 아들들보다 나았다는 연구가 소개된다.",
+     "cite": [
+      "nfm2003:224"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:227"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:temporal": {
+    "value": "초기 이민 2세대",
+    "cite": [
+     "nfm2003:227"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "nfm2003:227"
+    ],
+    "basis": "해석",
+    "note": "대표 측면 선택 이유: 다음 세대에게 말을 전하는 일이 중심"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:224",
+      "nfm2003:227"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:224",
+    "nfm2003:227"
    ]
   }
  ],
@@ -1640,13 +3548,6 @@ window.ARCHIVE = {
     "cite": [
      "kwon2020:114",
      "iwata2020:61"
-    ],
-    "basis": "보고"
-   },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:113"
     ],
     "basis": "보고"
    },
@@ -1677,7 +3578,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:113"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:carrot-kimchi",
@@ -1696,13 +3605,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:114"
-    ],
-    "basis": "보고"
-   },
    "skos:exactMatch": {
     "status": "확인 필요",
     "cite": [],
@@ -1716,7 +3618,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:114"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:rice",
@@ -1735,13 +3645,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:108"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -1750,7 +3653,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:108"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:siraegi-soup",
@@ -1771,13 +3682,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:109"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -1786,7 +3690,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:109"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:noodle",
@@ -1805,13 +3717,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:115"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -1821,7 +3726,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:115"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:dumpling",
@@ -1840,13 +3753,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:116"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -1855,7 +3761,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:116"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:russian-bread",
@@ -1876,13 +3790,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:111"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -1898,20 +3805,21 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwak2007:264"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:soy-sauce",
    "skos:prefLabel": {
     "value": "간장",
     "lang": "ko",
-    "cite": [
-     "kwak2007:264"
-    ],
-    "basis": "보고"
-   },
-   "dia:lifeDomain": {
-    "value": "식",
     "cite": [
      "kwak2007:264"
     ],
@@ -1925,7 +3833,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwak2007:264"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:potato",
@@ -1934,13 +3850,6 @@ window.ARCHIVE = {
     "lang": "ko",
     "cite": [
      "kwak2007:247"
-    ],
-    "basis": "보고"
-   },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:111"
     ],
     "basis": "보고"
    },
@@ -1959,7 +3868,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwak2007:247"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:chalttoek",
@@ -1972,13 +3889,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:120"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -1987,7 +3897,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:120"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:besbarmak",
@@ -2006,13 +3924,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:117"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -2021,7 +3932,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:117"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:offal",
@@ -2041,13 +3960,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "yeon:27"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "yeon",
@@ -2057,7 +3969,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "yeon:27"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:offal-grill",
@@ -2077,13 +3997,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "yeon:28"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "yeon",
@@ -2099,20 +4012,21 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "yeon:28"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:cod-muchim",
    "skos:prefLabel": {
     "value": "대구무침",
     "lang": "ko",
-    "cite": [
-     "lee2014:78"
-    ],
-    "basis": "보고"
-   },
-   "dia:lifeDomain": {
-    "value": "식",
     "cite": [
      "lee2014:78"
     ],
@@ -2127,7 +4041,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:rice-in-water",
@@ -2146,13 +4068,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:108"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -2161,7 +4076,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:108"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:blin",
@@ -2180,13 +4103,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:110"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -2195,7 +4111,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:110"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:tofu",
@@ -2214,13 +4138,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "kwon2020:115"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "kwon2020",
@@ -2229,20 +4146,21 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "kwon2020:115"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:jeon",
    "skos:prefLabel": {
     "value": "전(고기전·생선전)",
     "lang": "ko",
-    "cite": [
-     "lee2014:87"
-    ],
-    "basis": "보고"
-   },
-   "dia:lifeDomain": {
-    "value": "식",
     "cite": [
      "lee2014:87"
     ],
@@ -2256,7 +4174,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2014:87"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:cup",
@@ -2268,14 +4194,6 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "ency_koryomal:내용"
-    ],
-    "basis": "해석",
-    "note": "마실 것을 담는 식기라서 '식'으로 분류한 것은 편집 판단"
-   },
    "dcterms:source": [
     {
      "ref": "ency_koryomal",
@@ -2284,7 +4202,15 @@ window.ARCHIVE = {
      ],
      "basis": "보고"
     }
-   ]
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "ency_koryomal:내용"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
   },
   {
    "id": "concept:mumallaengi",
@@ -2296,18 +4222,240 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    },
-   "dia:lifeDomain": {
-    "value": "식",
-    "cite": [
-     "lee2014:78"
-    ],
-    "basis": "보고"
-   },
    "dcterms:source": [
     {
      "ref": "lee2014",
      "cite": [
       "lee2014:78"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2014:78"
+    ],
+    "basis": "해석",
+    "note": "음식·식기라서 '먹는 것'으로 분류(편집 판단)"
+   }
+  },
+  {
+   "id": "concept:galbi",
+   "skos:prefLabel": {
+    "value": "갈비",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ]
+  },
+  {
+   "id": "concept:bulgogi",
+   "skos:prefLabel": {
+    "value": "불고기(고기구이)",
+    "cite": [
+     "nfm2003:155",
+     "yeon:24"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "skos:definition": {
+    "value": "고기를 불에 직접 구워 먹는 음식.",
+    "cite": [
+     "yeon:24",
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155",
+      "nfm2003:158"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "yeon",
+     "cite": [
+      "yeon:24"
+     ],
+     "basis": "보고"
+    }
+   ]
+  },
+  {
+   "id": "concept:doenjang",
+   "skos:prefLabel": {
+    "value": "된장",
+    "cite": [
+     "lee2012:222",
+     "nfm2003:151"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:aspect": {
+    "value": "먹는 것",
+    "cite": [
+     "lee2012:222"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:151"
+     ],
+     "basis": "보고"
+    }
+   ]
+  },
+  {
+   "id": "concept:rice-farming",
+   "skos:prefLabel": {
+    "value": "벼농사",
+    "cite": [
+     "lee2012:209",
+     "kwon2020:105"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "skos:definition": {
+    "value": "논에 벼를 심어 쌀을 거두는 농사.",
+    "cite": [
+     "lee2012:209"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "일하는 것",
+    "cite": [
+     "lee2012:209"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:209",
+      "lee2012:210"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "kwon2020",
+     "cite": [
+      "kwon2020:105"
+     ],
+     "basis": "보고"
+    }
+   ]
+  },
+  {
+   "id": "concept:hangul-school",
+   "skos:prefLabel": {
+    "value": "한글학교",
+    "cite": [
+     "nfm2003:239",
+     "nfm2003:242"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "skos:definition": {
+    "value": "정규 학교와 별도로 교회 등에서 한글과 한국어를 가르치는 학교.",
+    "cite": [
+     "nfm2003:239",
+     "nfm2003:243"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "nfm2003:239"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:239",
+      "nfm2003:242",
+      "nfm2003:243"
+     ],
+     "basis": "보고"
+    }
+   ]
+  },
+  {
+   "id": "concept:ethnic-school",
+   "skos:prefLabel": {
+    "value": "민족학교(조선학교)",
+    "cite": [
+     "kimgo2010:68"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "skos:definition": {
+    "value": "재일조선인이 세운 민족교육 기관.",
+    "cite": [
+     "kimgo2010:68"
+    ],
+    "basis": "보고"
+   },
+   "dia:aspect": {
+    "value": "배우는 것",
+    "cite": [
+     "kimgo2010:68"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kimgo2010",
+     "cite": [
+      "kimgo2010:68"
      ],
      "basis": "보고"
     }
@@ -2333,13 +4481,22 @@ window.ARCHIVE = {
       "lee2014:78"
      ],
      "basis": "보고"
+    },
+    {
+     "value": "Kohala Kim Chee",
+     "cite": [
+      "nfm2003:149",
+      "nfm2003:150"
+     ],
+     "basis": "보고"
     }
    ],
    "dia:gloss": {
     "value": "김치. 하와이 한인 2세들의 김치 상표 이름(Joe Kim Kim Chee, Kohala Kim Chee 등)에 쓰인 영문 표기.",
     "cite": [
      "lee2014:78",
-     "lee2014:79"
+     "lee2014:79",
+     "nfm2003:150"
     ],
     "basis": "보고"
    },
@@ -2374,12 +4531,23 @@ window.ARCHIVE = {
       "lee2014:79"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:150",
+      "nfm2003:156"
+     ],
+     "basis": "보고"
     }
    ],
    "note": "상표 표기로 확인되는 시기는 1949년(Kohala) 이후, 1950년대(Joe Kim Kim Chee, Keeau, Halm's). 이 시기·매체 맥락은 AP의 dia:variantForm에 담을 수 없어 note로 둠.",
    "dia:citation": [
     "lee2014:78",
-    "lee2014:79"
+    "lee2014:79",
+    "nfm2003:149",
+    "nfm2003:150",
+    "nfm2003:156"
    ]
   },
   {
@@ -2404,6 +4572,20 @@ window.ARCHIVE = {
      "value": "고기전",
      "cite": [
       "lee2014:87"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "Jun",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "juhn",
+     "cite": [
+      "nfm2003:159"
      ],
      "basis": "보고"
     }
@@ -2445,11 +4627,21 @@ window.ARCHIVE = {
       "lee2014:87"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155",
+      "nfm2003:159"
+     ],
+     "basis": "보고"
     }
    ],
    "note": "lee2014는 'fish jeon'도 함께 든다. sources.json의 'meat jun'(han2022, 소설)과 같은 말인지는 han2022를 열람하지 않아 미확인.",
    "dia:citation": [
-    "lee2014:87"
+    "lee2014:87",
+    "nfm2003:155",
+    "nfm2003:159"
    ]
   },
   {
@@ -2839,13 +5031,21 @@ window.ARCHIVE = {
       "ency_koryomal:내용"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
     }
    ],
    "dia:citation": [
     "ency_koryomal:내용",
     "kwon2020:114",
     "kwon2020:115",
-    "kwon2020:116"
+    "kwon2020:116",
+    "lee2012:222"
    ]
   },
   {
@@ -3641,6 +5841,929 @@ window.ARCHIVE = {
     "iwata2020:67",
     "iwata2020:68"
    ]
+  },
+  {
+   "id": "label:tae-gu",
+   "skosxl:literalForm": {
+    "value": "Tae Gu",
+    "cite": [
+     "nfm2003:147"
+    ],
+    "basis": "보고",
+    "lang": "en"
+   },
+   "dia:variantForm": [
+    {
+     "value": "Taegu",
+     "cite": [
+      "nfm2003:147",
+      "nfm2003:148"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "Daegu",
+     "cite": [
+      "nfm2003:156"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "Taegue",
+     "cite": [
+      "nfm2003:148"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "대구무침. 하와이 슈퍼마켓 상품명과 식당 반찬 이름으로 쓰인다.",
+    "cite": [
+     "nfm2003:147",
+     "nfm2003:156"
+    ],
+    "basis": "보고"
+   },
+   "dia:denotes": {
+    "ref": "concept:cod-muchim",
+    "cite": [
+     "nfm2003:147"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:147"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "nfm2003:147"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:147",
+      "nfm2003:148",
+      "nfm2003:156"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:147",
+    "nfm2003:148",
+    "nfm2003:156"
+   ]
+  },
+  {
+   "id": "label:man-doo",
+   "skosxl:literalForm": {
+    "value": "Man Doo",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고",
+    "lang": "en"
+   },
+   "dia:variantForm": [
+    {
+     "value": "man doo",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "Mandoo",
+     "cite": [
+      "nfm2003:156"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "만두. 테이크아웃 한식당 메뉴판의 영문 표기.",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dia:denotes": {
+    "ref": "concept:dumpling",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "해석",
+    "note": "베고자와 같은 '만두'로 묶은 것은 편집 판단"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155",
+      "nfm2003:156"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:155",
+    "nfm2003:156"
+   ]
+  },
+  {
+   "id": "label:kal-bi",
+   "skosxl:literalForm": {
+    "value": "Kal bi",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고",
+    "lang": "en"
+   },
+   "dia:variantForm": [
+    {
+     "value": "Kal Bi",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "갈비. 테이크아웃 한식당 메뉴판의 영문 표기.",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dia:denotes": {
+    "ref": "concept:galbi",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:155"
+   ]
+  },
+  {
+   "id": "label:bul-go-gi",
+   "skosxl:literalForm": {
+    "value": "Bul Go Gi",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고",
+    "lang": "en"
+   },
+   "dia:gloss": {
+    "value": "불고기. 메뉴판에서는 '숯불에 구운 살코기 소고기'로 풀이한다.",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dia:denotes": {
+    "ref": "concept:bulgogi",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "nfm2003:155"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:155"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:155"
+   ]
+  },
+  {
+   "id": "label:yakiniku",
+   "skosxl:literalForm": {
+    "value": "焼肉",
+    "cite": [
+     "nfm2003:158"
+    ],
+    "basis": "보고",
+    "lang": "ja"
+   },
+   "dia:variantForm": [
+    {
+     "value": "야끼니꾸",
+     "cite": [
+      "yeon:24",
+      "nfm2003:158"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "yakiniku",
+     "cite": [
+      "nfm2003:157"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "고기를 불에 직접 구워 먹는 요리를 일본에서 부르는 말. 재일 조선인이 정착시킨 음식으로 소개되며, 호놀룰루의 한국 음식점들도 이 일본어를 상호와 간판에 쓴다.",
+    "cite": [
+     "yeon:24",
+     "nfm2003:158"
+    ],
+    "basis": "보고"
+   },
+   "dia:denotes": {
+    "ref": "concept:bulgogi",
+    "cite": [
+     "yeon:24"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "yeon:24"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "group:hawaii",
+     "cite": [
+      "nfm2003:158"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "jpn",
+    "cite": [
+     "yeon:24"
+    ],
+    "basis": "보고"
+   },
+   "dia:etymologyNote": {
+    "value": "nfm2003은 하와이 한국 음식점이 일본어를 쓰는 것을 일본인 관광객과 일본계 주민을 겨냥한 것으로 본다.",
+    "cite": [
+     "nfm2003:158"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "yeon",
+     "cite": [
+      "yeon:24"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "nfm2003",
+     "cite": [
+      "nfm2003:157",
+      "nfm2003:158"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "nfm2003:157",
+    "nfm2003:158",
+    "yeon:24"
+   ]
+  },
+  {
+   "id": "label:gobonjil",
+   "skosxl:literalForm": {
+    "value": "고본질",
+    "cite": [
+     "kwak2007:262"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:gloss": {
+    "value": "고려인 가족들이 농사철에 집을 떠나 먼 곳의 땅을 빌려 농사짓고 파는 이동 임차 농업. 뜻이 넓어져 '집을 떠나 고생스럽게 돈벌이를 함', '보따리장사'도 가리킨다.",
+    "cite": [
+     "kwak2007:262"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:262"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "kwak2007:262"
+    ],
+    "basis": "보고"
+   },
+   "dia:etymologyNote": {
+    "value": "'고본(股本)'에 '어떤 동작이나 행위'를 뜻하는 접미사 '-질'이 붙은 합성어로 곽충구가 분석한다.",
+    "cite": [
+     "kwak2007:262"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:262"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "kwon2020",
+     "cite": [
+      "kwon2020:108"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "note": "AP에 따라 활동을 가리키는 말이라 dia:denotes는 비움.",
+   "dia:citation": [
+    "kwak2007:262",
+    "kwon2020:108"
+   ]
+  },
+  {
+   "id": "label:operatsi",
+   "skosxl:literalForm": {
+    "value": "오뻬라찌",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:variantForm": [
+    {
+     "value": "операция",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "수술. 고려말에 자리 잡은 러시아어 직접 차용어.",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "rus",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kwak2007:261"
+   ]
+  },
+  {
+   "id": "label:kvartira",
+   "skosxl:literalForm": {
+    "value": "과찌라",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:variantForm": [
+    {
+     "value": "квартира",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "아파트. 러시아어를 그대로 빌려 쓴 말.",
+    "cite": [
+     "kwak2007:261",
+     "kwak2007:264"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "kwak2007:261"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "rus",
+    "cite": [
+     "kwak2007:261"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "kwak2007",
+     "cite": [
+      "kwak2007:261",
+      "kwak2007:264"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "kwak2007:261",
+    "kwak2007:264"
+   ]
+  },
+  {
+   "id": "label:ogre",
+   "skosxl:literalForm": {
+    "value": "오그레",
+    "cite": [
+     "lee2012:218",
+     "lee2012:222"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:gloss": {
+    "value": "고려인이 절기에 먹는 음식(절식)의 하나로 조사된 음식.",
+    "cite": [
+     "lee2012:218",
+     "lee2012:222"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "lee2012:218"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:source": [
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:218",
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "note": "어떤 음식인지 문헌에 풀이가 없어 dia:denotes는 비움(확인 필요).",
+   "dia:citation": [
+    "lee2012:218",
+    "lee2012:222"
+   ]
+  },
+  {
+   "id": "label:gajuri",
+   "skosxl:literalForm": {
+    "value": "가주리",
+    "cite": [
+     "lee2012:221",
+     "lee2012:222"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:gloss": {
+    "value": "고려인의 명절·잔치 의례 음식의 하나. 타슈켄트 시장에서 팔리기도 한다.",
+    "cite": [
+     "lee2012:221",
+     "lee2012:222",
+     "kwon2020:120"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "lee2012:221"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:source": [
+    {
+     "ref": "lee2012",
+     "cite": [
+      "lee2012:221",
+      "lee2012:222"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "kwon2020",
+     "cite": [
+      "kwon2020:120",
+      "kwon2020:122"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "note": "어떤 음식인지 문헌에 풀이가 없어 dia:denotes는 비움(확인 필요).",
+   "dia:citation": [
+    "kwon2020:120",
+    "kwon2020:122",
+    "lee2012:221",
+    "lee2012:222"
+   ]
+  },
+  {
+   "id": "label:zainichi-chosenjin",
+   "skosxl:literalForm": {
+    "value": "재일조선인",
+    "cite": [
+     "jung2012:265"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:variantForm": [
+    {
+     "value": "在日朝鮮人",
+     "cite": [
+      "jung2012:265"
+     ],
+     "basis": "해석",
+     "note": "한자 표기는 편집자 보충, 확인 필요"
+    }
+   ],
+   "dia:gloss": {
+    "value": "해방 직후 일본에 남은 사람들이 스스로를 부른 이름. 1948년 뒤에는 주로 총련 쪽 이름이 되었다.",
+    "cite": [
+     "jung2012:265",
+     "jung2012:266"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "jung2012:265"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "jung2012:265"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "jung2012",
+     "cite": [
+      "jung2012:259",
+      "jung2012:265",
+      "jung2012:266"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "note": "호칭이라 가리키는 생활 대상이 없어 dia:denotes는 비움.",
+   "dia:citation": [
+    "jung2012:259",
+    "jung2012:265",
+    "jung2012:266"
+   ]
+  },
+  {
+   "id": "label:zainichi-kankokujin",
+   "skosxl:literalForm": {
+    "value": "재일한국인",
+    "cite": [
+     "jung2012:259",
+     "jung2012:266"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:gloss": {
+    "value": "재일 사람들을 한국 국적의 측면에서 부르는 이름. 1948년 뒤 민단 쪽에서 쓰였다.",
+    "cite": [
+     "jung2012:259",
+     "jung2012:266"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "jung2012:259"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "jung2012",
+     "cite": [
+      "jung2012:259",
+      "jung2012:266"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "jung2012:259",
+    "jung2012:266"
+   ]
+  },
+  {
+   "id": "label:zainichi-dongpo",
+   "skosxl:literalForm": {
+    "value": "재일동포",
+    "cite": [
+     "jung2012:259"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:variantForm": [
+    {
+     "value": "재일교포",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "남북한 사람들의 입장에서 같은 민족임에 근거해 부르는 이름.",
+    "cite": [
+     "jung2012:259"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "kor",
+    "cite": [
+     "jung2012:259"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:source": [
+    {
+     "ref": "jung2012",
+     "cite": [
+      "jung2012:259",
+      "jung2012:266"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "jung2012:259",
+    "jung2012:266"
+   ]
+  },
+  {
+   "id": "label:zainichi-korean",
+   "skosxl:literalForm": {
+    "value": "재일코리안",
+    "cite": [
+     "jung2012:259"
+    ],
+    "basis": "보고",
+    "lang": "ko"
+   },
+   "dia:variantForm": [
+    {
+     "value": "在日コリアン",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "해석",
+     "note": "일본어 표기 일부는 문헌의 'コリアン' 표기를 따름"
+    },
+    {
+     "value": "재일",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:gloss": {
+    "value": "주로 일본에서 쓰이는 이름으로, 국가와 민족보다 재일이라는 존재 자체에 주목한다.",
+    "cite": [
+     "jung2012:259"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:zainichi",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:source": [
+    {
+     "ref": "jung2012",
+     "cite": [
+      "jung2012:259"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "yeon",
+     "cite": [
+      "yeon:23"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "jung2012:259",
+    "yeon:23"
+   ]
+  },
+  {
+   "id": "label:bijikkae",
+   "skosxl:literalForm": {
+    "value": "비지깨",
+    "cite": [
+     "ency_koryomal:내용"
+    ],
+    "basis": "보고"
+   },
+   "dia:gloss": {
+    "value": "성냥.",
+    "cite": [
+     "ency_koryomal:내용"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:spatial": [
+    {
+     "ref": "group:koryo",
+     "cite": [
+      "ency_koryomal:내용"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:sourceLanguage": {
+    "value": "rus",
+    "cite": [
+     "ency_koryomal:내용"
+    ],
+    "basis": "보고"
+   },
+   "dia:etymologyNote": {
+    "value": "성냥을 뜻하는 러시아어 спички(spichki)가 변형된 말이라고 백과사전은 설명한다.",
+    "cite": [
+     "ency_koryomal:내용"
+    ],
+    "basis": "해석"
+   },
+   "dcterms:source": [
+    {
+     "ref": "ency_koryomal",
+     "cite": [
+      "ency_koryomal:내용"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dia:citation": [
+    "ency_koryomal:내용"
+   ]
   }
  ],
  "places": [
@@ -3909,6 +7032,108 @@ window.ARCHIVE = {
     ],
     "basis": "보고"
    }
+  },
+  {
+   "id": "place:tashkent",
+   "dcterms:title": {
+    "value": "타슈켄트주 (시온고 콜호즈 등)",
+    "cite": [
+     "lee2012:222"
+    ],
+    "basis": "보고"
+   },
+   "coords": {
+    "lat": 41.3,
+    "lon": 69.24,
+    "basis": "문헌 외",
+    "note": "검수 필요"
+   }
+  },
+  {
+   "id": "place:hanshin",
+   "dcterms:title": {
+    "value": "한신 지역 (오사카·고베)",
+    "cite": [
+     "kimgo2010:68"
+    ],
+    "basis": "보고"
+   },
+   "coords": {
+    "lat": 34.69,
+    "lon": 135.2,
+    "basis": "문헌 외",
+    "note": "검수 필요"
+   }
+  },
+  {
+   "id": "place:wahiawa",
+   "dcterms:title": {
+    "value": "오아후 섬 와히아와",
+    "cite": [
+     "nfm2003:159",
+     "nfm2003:160"
+    ],
+    "basis": "보고"
+   },
+   "coords": {
+    "lat": 21.5,
+    "lon": -158.02,
+    "basis": "문헌 외",
+    "note": "검수 필요"
+   },
+   "dcterms:isPartOf": {
+    "ref": "place:hawaii",
+    "cite": [
+     "nfm2003:159"
+    ],
+    "basis": "보고"
+   }
+  },
+  {
+   "id": "place:waikiki",
+   "dcterms:title": {
+    "value": "호놀룰루 와이키키",
+    "cite": [
+     "nfm2003:132"
+    ],
+    "basis": "보고"
+   },
+   "coords": {
+    "lat": 21.28,
+    "lon": -157.83,
+    "basis": "문헌 외",
+    "note": "검수 필요"
+   },
+   "dcterms:isPartOf": {
+    "ref": "place:honolulu",
+    "cite": [
+     "nfm2003:132"
+    ],
+    "basis": "보고"
+   }
+  },
+  {
+   "id": "place:hilo",
+   "dcterms:title": {
+    "value": "하와이 섬 힐로",
+    "cite": [
+     "nfm2003:239"
+    ],
+    "basis": "보고"
+   },
+   "coords": {
+    "lat": 19.72,
+    "lon": -155.08,
+    "basis": "문헌 외",
+    "note": "검수 필요"
+   },
+   "dcterms:isPartOf": {
+    "ref": "place:hawaii",
+    "cite": [
+     "nfm2003:239"
+    ],
+    "basis": "보고"
+   }
   }
  ],
  "groups": [
@@ -4002,6 +7227,13 @@ window.ARCHIVE = {
       "kwon2020:105"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "place:tashkent",
+     "cite": [
+      "lee2012:222"
+     ],
+     "basis": "보고"
     }
    ],
    "dcterms:source": [
@@ -4083,6 +7315,13 @@ window.ARCHIVE = {
       "yeon:30"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "place:hanshin",
+     "cite": [
+      "kimgo2010:68"
+     ],
+     "basis": "보고"
     }
    ],
    "dcterms:source": [
@@ -4110,6 +7349,13 @@ window.ARCHIVE = {
      "value": "구한말 국내의 생활고와 하와이 사탕수수 농업의 노동력 수요가 맞물려, 1902년부터 1905년까지 약 7,400명이 하와이로 이민을 떠났다.",
      "cite": [
       "imin2010:1부"
+     ],
+     "basis": "보고"
+    },
+    {
+     "value": "1903년 1월 13일 102명의 첫 한인 이민단이 호놀룰루항에 내려 사탕수수 농장 노동자가 되었다.",
+     "cite": [
+      "lee2014:76"
      ],
      "basis": "보고"
     },
@@ -4149,6 +7395,27 @@ window.ARCHIVE = {
       "lee2014:78"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "place:wahiawa",
+     "cite": [
+      "nfm2003:160"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:waikiki",
+     "cite": [
+      "nfm2003:132"
+     ],
+     "basis": "보고"
+    },
+    {
+     "ref": "place:hilo",
+     "cite": [
+      "nfm2003:239"
+     ],
+     "basis": "보고"
     }
    ],
    "dcterms:source": [
@@ -4158,9 +7425,16 @@ window.ARCHIVE = {
       "imin2010:1부"
      ],
      "basis": "보고"
+    },
+    {
+     "ref": "lee2014",
+     "cite": [
+      "lee2014:76"
+     ],
+     "basis": "보고"
     }
    ],
-   "note": "lee2014의 이민 시작(1903)·인원 정보는 use 밖이라 넣지 않음. imin2010은 출발 시점을 1902년으로 적음."
+   "note": "imin2010은 이민 시작을 1902년, lee2014는 첫 도착을 1903년 1월 13일로 적음(출발과 도착의 차이로 보이나 확인 필요)."
   }
  ],
  "references": [
@@ -4586,142 +7860,6 @@ window.ARCHIVE = {
    }
   },
   {
-   "id": "kim2001",
-   "class": "bibo:Thesis",
-   "dcterms:creator": [
-    {
-     "value": "金美善",
-     "cite": [
-      "sources.json"
-     ],
-     "basis": "보고"
-    }
-   ],
-   "dcterms:title": {
-    "value": "在日コリアンの言語接触に関する社会言語学的研究",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:date": {
-    "value": "2001",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "bibo:uri": {
-    "value": "https://ir.library.osaka-u.ac.jp/repo/ouka/all/42207/15909_Abstract.pdf",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:accessRights": {
-    "value": "요지만 공개",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "status": "확인 필요",
-   "note": "uploads에 PDF 없음. 내용 추출하지 않음."
-  },
-  {
-   "id": "kim2015",
-   "class": "bibo:Thesis",
-   "dcterms:creator": [
-    {
-     "value": "김보향",
-     "cite": [
-      "sources.json"
-     ],
-     "basis": "보고"
-    }
-   ],
-   "dcterms:title": {
-    "value": "재일제주인의 언어 변화와 언어 전환 과정 연구",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:date": {
-    "value": "2015",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "bibo:uri": {
-    "value": "https://mslib.jejunu.ac.kr/handle/2020.oak/21375",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:accessRights": {
-    "value": "원문 공개 여부 확인 필요",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "status": "확인 필요",
-   "note": "uploads에 PDF 없음. 내용 추출하지 않음."
-  },
-  {
-   "id": "son2018",
-   "class": "bibo:AcademicArticle",
-   "dcterms:creator": [
-    {
-     "value": "손영석",
-     "cite": [
-      "sources.json"
-     ],
-     "basis": "보고"
-    }
-   ],
-   "dcterms:title": {
-    "value": "재일한국인 이중언어 사용자들의 「-スル」「-하다」 사용실태 연구",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:date": {
-    "value": "2018",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:isPartOf": {
-    "value": "『일본학보』 115",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "bibo:uri": {
-    "value": "https://www.earticle.net/Article/A331404",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "dcterms:accessRights": {
-    "value": "earticle(학교 계정)",
-    "cite": [
-     "sources.json"
-    ],
-    "basis": "보고"
-   },
-   "status": "확인 필요",
-   "note": "uploads에 PDF 없음. 내용 추출하지 않음."
-  },
-  {
    "id": "ency_koryomal",
    "class": "bibo:Document",
    "dcterms:creator": [
@@ -4882,7 +8020,7 @@ window.ARCHIVE = {
     "basis": "보고"
    },
    "scholarly": false,
-   "note": "소설이므로 학술 근거 아님. 웹 문헌(file 없음)이라 이번 추출에서는 열람하지 않음."
+   "note": "소설이므로 학술 근거 아님. sources.json에 따라 meat jun의 학술 근거는 lee2014 87쪽(meat jeon)으로 대체했고, 이 문헌에서는 값을 가져오지 않음."
   },
   {
    "id": "imin2010",
@@ -4961,6 +8099,104 @@ window.ARCHIVE = {
    },
    "status": "확인 필요",
    "note": "웹 데이터셋(file 없음). 이번 추출에서는 열람하지 않음."
+  },
+  {
+   "id": "lee2012",
+   "class": "bibo:AcademicArticle",
+   "dcterms:creator": [
+    {
+     "value": "이병조",
+     "cite": [
+      "lee2012:187"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:title": {
+    "value": "독립국가연합(CIS) 고려인의 전통문화유산에 대한 인식과 전승실태: 중앙아시아·러시아의 고려인 무형문화유산을 중심으로",
+    "cite": [
+     "lee2012:187"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:date": {
+    "value": "2012",
+    "cite": [
+     "lee2012:187"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:isPartOf": {
+    "value": "『재외한인연구』 28",
+    "cite": [
+     "lee2012:187"
+    ],
+    "basis": "보고"
+   },
+   "bibo:uri": {
+    "value": "https://m.earticle.net/Article/A187618",
+    "cite": [
+     "sources.json"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:accessRights": {
+    "value": "원문 PDF 보유(재외한인학회)",
+    "cite": [
+     "sources.json"
+    ],
+    "basis": "보고"
+   },
+   "note": "PDF 메타데이터의 글자는 깨져 있으나 본문 텍스트는 정상 추출됨. 사할린 한인 내용은 쓰지 않음."
+  },
+  {
+   "id": "nfm2003",
+   "class": "bibo:Document",
+   "dcterms:creator": [
+    {
+     "value": "한국문화인류학회 편",
+     "cite": [
+      "sources.json"
+     ],
+     "basis": "보고"
+    }
+   ],
+   "dcterms:title": {
+    "value": "미국 하와이지역 한인동포의 생활문화",
+    "cite": [
+     "nfm2003:115"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:date": {
+    "value": "2003",
+    "cite": [
+     "sources.json"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:isPartOf": {
+    "value": "국립민속박물관 학술총서 34",
+    "cite": [
+     "sources.json"
+    ],
+    "basis": "보고"
+   },
+   "bibo:uri": {
+    "value": "https://ci.nii.ac.jp/ncid/BA6718294X",
+    "cite": [
+     "sources.json"
+    ],
+    "basis": "보고"
+   },
+   "dcterms:accessRights": {
+    "value": "국립민속박물관 발간 보고서(PDF 보유). 이미지·사진은 저작권 확인 전 사이트 게재 금지",
+    "cite": [
+     "sources.json"
+    ],
+    "basis": "보고"
+   },
+   "note": "스캔본이라 쪽 이미지를 직접 보고 읽음(텍스트 추출 결과는 쓰지 않음). 읽은 범위: 5장 119–143쪽, 6장 1절 식생활·2절 일부 147–164쪽, 9장 222–229·238–243쪽. 쪽은 인쇄 쪽 기준. 업로드 파일 이름은 americankorean.pdf였고 새 저장소에서는 nfm2003.pdf로 복사함. 실제 대응은 PDF 쪽(1부터) = 인쇄 쪽 − 9(5장), − 10(6장), − 15(9장)로, sources.json의 '− 7'과 다름(장 사이에 쪽 번호 없는 간지·화보가 있는 것으로 보임)."
   }
  ],
  "pending": [
@@ -4971,6 +8207,22 @@ window.ARCHIVE = {
   {
    "id": "material:diamond-k-kimchi-ad",
    "text": "다이아몬드 케이 김치 『국민보』 광고 — dcterms:source: 원 소장처 링크 미확인. kookminbo_xml(독립기념관 신문자료) 열람으로 찾을 수 있을지 확인 필요"
+  },
+  {
+   "id": "scene:zainichi-lost-work",
+   "text": "국적을 잃고 일할 자리도 잃다 — dcterms:description: 조치가 시행된 연도와 직업별 비율은 PDF 텍스트에서 숫자가 빠져 판독 불가"
+  },
+  {
+   "id": "scene:zainichi-lost-work",
+   "text": "국적을 잃고 일할 자리도 잃다 — dcterms:temporal: 연도 숫자 판독 불가"
+  },
+  {
+   "id": "scene:zainichi-school-closure",
+   "text": "민족학교 폐쇄령과 한신교육투쟁 — dcterms:description: 폐쇄령·투쟁의 연도와 학교 수는 PDF 텍스트에서 숫자가 빠져 판독 불가"
+  },
+  {
+   "id": "scene:zainichi-school-closure",
+   "text": "민족학교 폐쇄령과 한신교육투쟁 — dcterms:temporal: 연도 숫자 판독 불가"
   },
   {
    "id": "concept:kimchi",
@@ -4989,18 +8241,6 @@ window.ARCHIVE = {
    "text": "詩に刻むキムチ──「在日」詩人の描く食・ジェンダー・差別 — dcterms:isPartOf: "
   },
   {
-   "id": "kim2001",
-   "text": "在日コリアンの言語接触に関する社会言語学的研究: uploads에 PDF 없음. 내용 추출하지 않음."
-  },
-  {
-   "id": "kim2015",
-   "text": "재일제주인의 언어 변화와 언어 전환 과정 연구: uploads에 PDF 없음. 내용 추출하지 않음."
-  },
-  {
-   "id": "son2018",
-   "text": "재일한국인 이중언어 사용자들의 「-スル」「-하다」 사용실태 연구: uploads에 PDF 없음. 내용 추출하지 않음."
-  },
-  {
    "id": "nara_mou",
    "text": "한-카자흐 기록관리 협약 (국가기록원 뉴스레터): 웹 문헌(file 없음). 이번 추출에서는 열람하지 않음."
   },
@@ -5010,8 +8250,427 @@ window.ARCHIVE = {
   },
   {
    "id": null,
-   "text": "장소 13곳의 좌표는 문헌에 없는 근사값이다(지도 표시용, 검수 필요)."
+   "text": "장소 18곳의 좌표는 문헌에 없는 근사값이다(지도 표시용, 검수 필요)."
   }
  ],
+ "curatorNotes": [
+  {
+   "group": "group:koryo",
+   "aspect": "먹는 것",
+   "text": "연해주와 중앙아시아를 거치며 고려인의 밥상에는 한식, 러시아 음식, 카자흐 음식이 함께 오르게 되었습니다. 배추 대신 양배추와 당근으로 담근 김치가 그 길을 보여 줍니다.",
+   "scenes": [
+    "scene:koryo-daily-table",
+    "scene:koryo-cabbage-kimchi",
+    "scene:koryo-carrot-kimchi"
+   ]
+  },
+  {
+   "group": "group:koryo",
+   "aspect": "부르는 것",
+   "text": "새 물건과 개념은 러시아어로 들어왔고, 스스로를 부르는 이름은 '고려'에서 '조선'으로, 다시 '고려'로 돌아왔습니다.",
+   "scenes": [
+    "scene:koryo-borrowed-words",
+    "scene:koryo-name-revival"
+   ]
+  },
+  {
+   "group": "group:koryo",
+   "aspect": "일하는 것",
+   "text": "강제 이주 뒤 고려인의 생계는 콜호즈의 벼농사와, 땅을 빌려 멀리 떠나는 농사에 기대었습니다.",
+   "scenes": [
+    "scene:koryo-kolkhoz-rice",
+    "scene:koryo-ushtobe-rice",
+    "scene:koryo-gobonjil"
+   ]
+  },
+  {
+   "group": "group:koryo",
+   "aspect": "배우는 것",
+   "text": "한인 아이들을 위한 교과서가 만들어지던 때도 있었지만, 1938년 한국어 교육이 끊기면서 고려말은 집 안의 말로 남았습니다.",
+   "scenes": [
+    "scene:koryo-kazan-textbooks",
+    "scene:koryo-1938"
+   ]
+  },
+  {
+   "group": "group:zainichi",
+   "aspect": "먹는 것",
+   "text": "버려지던 내장을 구워 먹던 노동자의 음식은 일본 외식 문화가 되었고, 김치는 차별의 냄새에서 편의점 상품으로 자리를 옮겼습니다.",
+   "scenes": [
+    "scene:zainichi-worker-offal",
+    "scene:zainichi-black-market",
+    "scene:zainichi-poem-kimchi",
+    "scene:zainichi-konbini-kimchi"
+   ]
+  },
+  {
+   "group": "group:zainichi",
+   "aspect": "부르는 것",
+   "text": "재일조선인, 재일한국인, 재일동포, 재일코리안. 같은 사람들을 부르는 이름이 갈라졌고, 그들의 잡지는 일본어로 쓰였습니다.",
+   "scenes": [
+    "scene:zainichi-names",
+    "scene:zainichi-japanese-magazines",
+    "scene:zainichi-horumon-bunka"
+   ]
+  },
+  {
+   "group": "group:zainichi",
+   "aspect": "일하는 것",
+   "text": "국적과 함께 일할 권리를 잃은 사람들에게 내장구이 가게는 일본에 뿌리내리는 몇 안 되는 길이었습니다.",
+   "scenes": [
+    "scene:zainichi-lost-work",
+    "scene:zainichi-horumon-shop"
+   ]
+  },
+  {
+   "group": "group:zainichi",
+   "aspect": "배우는 것",
+   "text": "민족학교가 문을 닫으라는 명령을 받았을 때, 학부모와 동포들은 아이들의 교육을 지키려고 나섰습니다.",
+   "scenes": [
+    "scene:zainichi-school-closure",
+    "scene:zainichi-education-issue"
+   ]
+  },
+  {
+   "group": "group:hawaii",
+   "aspect": "먹는 것",
+   "text": "농장 캠프의 아이들이 나눠 먹던 김치와 대구무침은 Kim Chee, Taegu라는 이름을 달고 하와이 음식이 되었습니다.",
+   "scenes": [
+    "scene:hawaii-camp-kimchi",
+    "scene:hawaii-independence-fund",
+    "scene:hawaii-kimchi-brands",
+    "scene:hawaii-taegu",
+    "scene:hawaii-takeout"
+   ]
+  },
+  {
+   "group": "group:hawaii",
+   "aspect": "부르는 것",
+   "text": "2세들은 영어와 한국어, 일본어를 섞어 말했고, 어떤 말로 회의하느냐가 한인 단체를 둘로 갈라 놓기도 했습니다.",
+   "scenes": [
+    "scene:hawaii-code-mixing",
+    "scene:hawaii-chamber-split"
+   ]
+  },
+  {
+   "group": "group:hawaii",
+   "aspect": "일하는 것",
+   "text": "사탕수수 농장의 민족별 캠프에서 시작한 한인의 일은 카트, 택시, 김치공장으로 이어졌습니다.",
+   "scenes": [
+    "scene:hawaii-plantation-camp",
+    "scene:hawaii-taxi-cart",
+    "scene:hawaii-kimchi-factory"
+   ]
+  },
+  {
+   "group": "group:hawaii",
+   "aspect": "배우는 것",
+   "text": "섬마다 세운 한글학교는 지금도 토요일마다 열리지만, 우리말은 주로 어머니와 딸 사이에서 이어졌습니다.",
+   "scenes": [
+    "scene:hawaii-first-schools",
+    "scene:hawaii-saturday-school",
+    "scene:hawaii-mother-tongue"
+   ]
+  }
+ ],
+ "others": [
+  {
+   "what": "돌잔치와 돌상(쌀·실·책 등), 카자흐 사회로 퍼진 돌잡이",
+   "kind": "의례",
+   "group": "group:koryo",
+   "cite": [
+    "kwon2020:120",
+    "kwon2020:121"
+   ]
+  },
+  {
+   "what": "연해주 시절 부활절(빠스하)을 쇠며 달걀에 칠하고 빵을 구운 일",
+   "kind": "신앙·명절",
+   "group": "group:koryo",
+   "cite": [
+    "kwon2020:118"
+   ]
+  },
+  {
+   "what": "백일은 쇠지 않고 사람이 죽은 뒤 백일을 지냄",
+   "kind": "의례",
+   "group": "group:koryo",
+   "cite": [
+    "kwon2020:121"
+   ]
+  },
+  {
+   "what": "결혼식(국시 먹이기, 쌀가마 넘어오기 등)과 돌잡이",
+   "kind": "의례",
+   "group": "group:koryo",
+   "cite": [
+    "lee2012:226",
+    "lee2012:229"
+   ]
+  },
+  {
+   "what": "고려인 설화·민담 목록",
+   "kind": "구전",
+   "group": "group:koryo",
+   "cite": [
+    "lee2012:211"
+   ]
+  },
+  {
+   "what": "개량한복, 교회에 입고 가는 한복, 알로하 셔츠",
+   "kind": "의복",
+   "group": "group:hawaii",
+   "cite": [
+    "nfm2003:162",
+    "nfm2003:163",
+    "nfm2003:164"
+   ]
+  },
+  {
+   "what": "한인회장 취임식·결혼 피로연의 식전 기도",
+   "kind": "신앙·의례",
+   "group": "group:hawaii",
+   "cite": [
+    "nfm2003:161"
+   ]
+  },
+  {
+   "what": "연날리기 대회, 한국 전통 춤 공연, 한인 퍼레이드",
+   "kind": "놀이·공연",
+   "group": "group:hawaii",
+   "cite": [
+    "lee2014:81",
+    "lee2014:83",
+    "lee2014:84"
+   ]
+  },
+  {
+   "what": "광화문 모형을 단 한인기독교회 건물",
+   "kind": "주거·건축",
+   "group": "group:hawaii",
+   "cite": [
+    "lee2014:83",
+    "lee2014:84"
+   ]
+  }
+ ],
+ "labelPlacement": {
+  "label:kim-chee": [
+   [
+    "group:hawaii",
+    "먹는 것"
+   ],
+   [
+    "group:hawaii",
+    "일하는 것"
+   ]
+  ],
+  "label:meat-jeon": [
+   [
+    "group:hawaii",
+    "먹는 것"
+   ]
+  ],
+  "label:jimchi": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:morkovcha": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:babimuri": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ],
+   [
+    "group:koryo",
+    "일하는 것"
+   ]
+  ],
+  "label:sirak-jangmul": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:guksi": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:pegodya": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:mauje-tteok": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:khleb": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:gireumgubi": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:dwi": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:jire": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:gamji": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:ttakkan": [
+   [
+    "group:koryo",
+    "부르는 것"
+   ]
+  ],
+  "label:ttongchang": [
+   [
+    "group:zainichi",
+    "먹는 것"
+   ]
+  ],
+  "label:horumon": [
+   [
+    "group:zainichi",
+    "먹는 것"
+   ]
+  ],
+  "label:chosenzuke": [
+   [
+    "group:zainichi",
+    "먹는 것"
+   ]
+  ],
+  "label:kimuchi": [
+   [
+    "group:zainichi",
+    "먹는 것"
+   ]
+  ],
+  "label:tae-gu": [
+   [
+    "group:hawaii",
+    "먹는 것"
+   ]
+  ],
+  "label:man-doo": [
+   [
+    "group:hawaii",
+    "먹는 것"
+   ]
+  ],
+  "label:kal-bi": [
+   [
+    "group:hawaii",
+    "먹는 것"
+   ]
+  ],
+  "label:bul-go-gi": [
+   [
+    "group:hawaii",
+    "먹는 것"
+   ]
+  ],
+  "label:yakiniku": [
+   [
+    "group:zainichi",
+    "먹는 것"
+   ],
+   [
+    "group:hawaii",
+    "먹는 것"
+   ]
+  ],
+  "label:gobonjil": [
+   [
+    "group:koryo",
+    "일하는 것"
+   ]
+  ],
+  "label:operatsi": [
+   [
+    "group:koryo",
+    "부르는 것"
+   ]
+  ],
+  "label:kvartira": [
+   [
+    "group:koryo",
+    "부르는 것"
+   ]
+  ],
+  "label:ogre": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:gajuri": [
+   [
+    "group:koryo",
+    "먹는 것"
+   ]
+  ],
+  "label:zainichi-chosenjin": [
+   [
+    "group:zainichi",
+    "부르는 것"
+   ]
+  ],
+  "label:zainichi-kankokujin": [
+   [
+    "group:zainichi",
+    "부르는 것"
+   ]
+  ],
+  "label:zainichi-dongpo": [
+   [
+    "group:zainichi",
+    "부르는 것"
+   ]
+  ],
+  "label:zainichi-korean": [
+   [
+    "group:zainichi",
+    "부르는 것"
+   ]
+  ],
+  "label:bijikkae": [
+   [
+    "group:koryo",
+    "부르는 것"
+   ]
+  ]
+ },
  "exported": "2026-10-10"
 };

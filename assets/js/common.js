@@ -159,19 +159,29 @@
     return card; // 타일을 돌려줌
   } // labelCard 끝
 
+  const ASPECTS = ['먹는 것', '부르는 것', '일하는 것', '배우는 것']; // 전시의 네 부분(순서대로)
+  const ASPECT_KEY = { '먹는 것': 'eat', '부르는 것': 'call', '일하는 것': 'work', '배우는 것': 'learn' }; // 측면 → 주소용 짧은 키
+
+  function aspectOf(res) { // 장면·생활 대상의 측면 값을 꺼내는 함수
+    return res && res['dia:aspect'] ? res['dia:aspect'].value : ''; // 없으면 빈 문자열
+  } // aspectOf 끝
+
   function sceneCard(sc) { // 생활 장면 카드(그림 표지 + 제목 + 한 문장)를 만드는 함수
     const gid = groupsOf(sc)[0]; // 첫 문화권
     const card = el('article', { class: 'scene-card ' + (GROUP_CLASS[gid] || '') }); // 카드 틀
-    const subject = asList(sc['dcterms:subject'])[0]; // 첫 생활 대상
+    const subject = asList(sc['dcterms:subject'])[0]; // 첫 생활 대상(없을 수 있음)
+    const aspect = aspectOf(sc); // 장면의 측면
     const cover = el('div', { class: 'scene-cover', 'aria-hidden': 'true' }); // 그림 표지(장식)
-    if (subject && window.ArchiveIcons) cover.appendChild(window.ArchiveIcons.iconSvg(subject.ref)); // 대상 아이콘
-    if (subject) cover.appendChild(el('span', { class: 'cover-word' }, titleOf(byId.get(subject.ref)))); // 대상 이름을 큰 글씨로
+    if (window.ArchiveIcons) cover.appendChild(window.ArchiveIcons.iconSvg(subject ? subject.ref : aspect)); // 대상 아이콘, 대상이 없으면 측면 아이콘
+    cover.appendChild(el('span', { class: 'cover-aspect' }, aspect)); // 측면 이름(작은 글씨)
+    cover.appendChild(el('span', { class: 'cover-word' }, subject ? titleOf(byId.get(subject.ref)) : titleOf(byId.get(gid)))); // 대상 이름(없으면 문화권 이름)을 큰 글씨로
     card.appendChild(cover); // 표지 붙임
     const body = el('div', { class: 'scene-body' }); // 글 영역
     const meta = el('p', { class: 'scene-meta' }, titleOf(byId.get(gid))); // 문화권 이름
     if (sc['dcterms:temporal'] && sc['dcterms:temporal'].value) meta.appendChild(document.createTextNode(' · ' + sc['dcterms:temporal'].value)); // 시기
+    if (sc.representation) meta.appendChild(el('span', { class: 'badge badge-lit' }, sc.representation)); // 문학 속 재현 표시
     body.appendChild(meta); // 메타 줄 붙임
-    body.appendChild(el('h3', {}, el('a', { href: itemUrl(sc.id) }, titleOf(sc)))); // 제목(자원 페이지 링크)
+    body.appendChild(el('h4', {}, el('a', { href: itemUrl(sc.id) }, titleOf(sc)))); // 제목(자원 페이지 링크)
     const first = asList(sc['dcterms:description']).filter(function (d) { return d.value; })[0]; // 첫 설명 문장
     if (first) body.appendChild(el('p', { class: 'scene-summary' }, first.value)); // 한 문장 요약
     body.appendChild(citeCompact(firstCites(sc))); // 출처·쪽수 한 줄
@@ -271,21 +281,55 @@
   } // suggest 끝
 
   // ===== 헤더 공통 동작 =====
-  function setupAsk() { // '자료에게 묻기' 대화창을 연결하는 함수
-    const dlg = document.getElementById('ask-dialog'); // 대화창 요소
-    if (!dlg) return; // 없으면 아무것도 하지 않음
-    let opener = null; // 대화창을 연 버튼(닫은 뒤 초점을 돌려주기 위해)
-    document.querySelectorAll('[data-ask]').forEach(function (btn) { // 묻기 버튼마다
-      btn.addEventListener('click', function () { // 누르면
-        opener = btn; // 연 버튼 기억
-        dlg.showModal(); // 모달 대화창 열기(Esc로 닫힘)
-        dlg.querySelector('[data-close]').focus(); // 닫기 버튼으로 초점 이동
-      }); // 클릭 처리 끝
-    }); // 버튼 연결 끝
-    dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); }); // 닫기 버튼
-    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); }); // 바깥 어두운 곳을 누르면 닫기
-    dlg.addEventListener('close', function () { if (opener) opener.focus(); }); // 닫히면 연 버튼으로 초점 복귀
-  } // setupAsk 끝
+  function svgIcon(paths, size) { // 챗봇 버튼에 쓰는 작은 선 아이콘을 만드는 함수(미리 정한 도형만 넣음)
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); // SVG 요소
+    svg.setAttribute('viewBox', '0 0 ' + size + ' ' + size); // 그림 칸 크기
+    svg.setAttribute('aria-hidden', 'true'); // 장식이므로 읽지 않음
+    svg.setAttribute('focusable', 'false'); // 초점을 받지 않음
+    svg.innerHTML = '<g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + paths + '</g>'; // 선 도형
+    return svg; // 아이콘을 돌려줌
+  } // svgIcon 끝
+
+  const BOT_ICON = '<rect x="4" y="8" width="16" height="12" rx="4"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.5c1.5 1 3.5 1 5 0"/>'; // 챗봇 얼굴 아이콘
+  const SEND_ICON = '<path d="M4 12l16-8-6 16-2-6z"/>'; // 보내기(종이비행기) 아이콘
+
+  function setupChat() { // 오른쪽 아래 챗봇 버튼과 채팅 창을 만들고 연결하는 함수
+    const fab = el('button', { type: 'button', class: 'chat-fab', 'aria-expanded': 'false', 'aria-controls': 'chat-panel' }); // 떠 있는 챗봇 버튼
+    const avatar = el('span', { class: 'avatar' }); // 동그란 챗봇 얼굴
+    avatar.appendChild(svgIcon(BOT_ICON, 24)); // 얼굴 아이콘
+    fab.appendChild(avatar); // 버튼에 붙임
+    fab.appendChild(el('span', { class: 'label' }, '아카이브 챗봇')); // 버튼 이름
+    fab.appendChild(el('span', { class: 'soon' }, '준비 중')); // 준비 중 표시
+    const panel = el('section', { class: 'chat-panel', id: 'chat-panel', role: 'dialog', 'aria-modal': 'false', 'aria-labelledby': 'chat-title', hidden: '' }); // 채팅 창
+    const head = el('div', { class: 'chat-head' }); // 창 머리
+    const headAvatar = el('span', { class: 'avatar' }); // 머리의 챗봇 얼굴
+    headAvatar.appendChild(svgIcon(BOT_ICON, 24)); // 얼굴 아이콘
+    head.appendChild(headAvatar); // 붙임
+    head.appendChild(el('div', {}, [el('h2', { id: 'chat-title' }, '아카이브 챗봇'), el('p', {}, '아카이브 자료로 답하는 챗봇')])); // 이름과 한 줄 소개
+    const close = el('button', { type: 'button', class: 'close', 'aria-label': '채팅 창 닫기' }, '×'); // 닫기 버튼
+    head.appendChild(close); // 붙임
+    panel.appendChild(head); // 머리 붙임
+    const log = el('div', { class: 'chat-log', role: 'log', 'aria-live': 'polite' }); // 대화 내용 영역
+    log.appendChild(el('p', { class: 'bubble' }, '준비 중입니다. 곧 이 아카이브의 자료를 바탕으로 질문에 답할 예정입니다.')); // 준비 중 안내(예시 답변은 넣지 않음)
+    panel.appendChild(log); // 붙임
+    const form = el('form', { class: 'chat-form' }); // 입력 줄
+    form.appendChild(el('label', { class: 'sr-only', for: 'chat-input' }, '질문 입력(준비 중이라 쓸 수 없음)')); // 입력칸 이름
+    form.appendChild(el('input', { id: 'chat-input', type: 'text', placeholder: '준비 중입니다', disabled: '' })); // 비활성 입력칸
+    const send = el('button', { type: 'submit', disabled: '', 'aria-label': '보내기(준비 중)' }); // 비활성 보내기 버튼
+    send.appendChild(svgIcon(SEND_ICON, 24)); // 종이비행기 아이콘
+    form.appendChild(send); // 붙임
+    form.addEventListener('submit', function (e) { e.preventDefault(); }); // 혹시 제출되어도 아무 일도 하지 않음
+    panel.appendChild(form); // 붙임
+    document.body.appendChild(fab); // 화면에 버튼 추가
+    document.body.appendChild(panel); // 화면에 창 추가
+
+    function open() { panel.hidden = false; fab.setAttribute('aria-expanded', 'true'); close.focus(); } // 창 열기: 닫기 버튼으로 초점 이동
+    function shut() { panel.hidden = true; fab.setAttribute('aria-expanded', 'false'); fab.focus(); } // 창 닫기: 챗봇 버튼으로 초점 복귀
+    fab.addEventListener('click', open); // 버튼을 누르면 열기
+    close.addEventListener('click', shut); // 닫기 버튼
+    panel.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); }); // Esc로 닫기
+    document.querySelectorAll('[data-chat]').forEach(function (b) { b.addEventListener('click', open); }); // 다른 곳의 챗봇 열기 버튼도 연결
+  } // setupChat 끝
 
   function setupSearchBox() { // 헤더 검색창에 현재 검색어를 채워 두는 함수
     const q = new URLSearchParams(location.search).get('q'); // 주소의 q 값
@@ -326,7 +370,7 @@
   } // representativePlace 끝
 
   document.addEventListener('DOMContentLoaded', function () { // 문서가 준비되면
-    setupAsk(); // 대화창 연결
+    setupChat(); // 챗봇 버튼과 채팅 창 만들기
     setupSearchBox(); // 검색창 채우기
   }); // 준비 처리 끝
 
@@ -336,6 +380,7 @@
     groupsOf: groupsOf, groupChips: groupChips, labelCard: labelCard, sceneCard: sceneCard, citeCompact: citeCompact, firstCites: firstCites, // 카드·칩
     search: search, suggest: suggest, wrapLon: wrapLon, osmLayer: osmLayer, // 검색·지도
     fitWhenReady: fitWhenReady, representativePlace: representativePlace, // 지도 맞춤·대표 장소
+    ASPECTS: ASPECTS, ASPECT_KEY: ASPECT_KEY, aspectOf: aspectOf, // 네 측면
     GROUP_CLASS: GROUP_CLASS, CLASS_NAME: CLASS_NAME, LANG_NAME: LANG_NAME // 표시용 사전
   }; // 묶음 끝
 })(); // 즉시 실행 함수 끝

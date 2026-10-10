@@ -8,8 +8,8 @@
 
   const ORDER = { // AP 3장의 클래스별 속성 순서와 화면 이름
     material: [['dcterms:title', '제목'], ['dcterms:type', '유형'], ['dcterms:date', '생산 연도'], ['dcterms:rights', '이용 조건'], ['dcterms:source', '원 소장처 링크'], ['dcterms:spatial', '문화권'], ['dcterms:relation', '관련 생활 장면'], ['dia:citation', '근거 출처와 쪽수']], // 자료
-    scene: [['dcterms:title', '장면 제목'], ['dcterms:description', '설명'], ['dcterms:subject', '다루는 생활 대상'], ['dcterms:spatial', '장소·문화권'], ['dcterms:temporal', '시기'], ['dia:lifeDomain', '생활 영역'], ['dcterms:source', '근거 출처'], ['dia:citation', '근거 쪽수']], // 생활 장면
-    concept: [['skos:prefLabel', '대표 이름'], ['skos:definition', '설명'], ['dia:lifeDomain', '생활 영역'], ['skos:exactMatch', '외부 전거'], ['dcterms:source', '근거 출처']], // 생활 대상
+    scene: [['dcterms:title', '장면 제목'], ['dcterms:description', '설명'], ['dcterms:subject', '다루는 생활 대상'], ['dcterms:spatial', '장소·문화권'], ['dcterms:temporal', '시기'], ['dia:aspect', '생활문화의 측면'], ['dcterms:source', '근거 출처'], ['dia:citation', '근거 쪽수']], // 생활 장면
+    concept: [['skos:prefLabel', '대표 이름'], ['skos:definition', '설명'], ['dia:aspect', '생활문화의 측면'], ['skos:exactMatch', '외부 전거'], ['dcterms:source', '근거 출처']], // 생활 대상
     label: [['skosxl:literalForm', '표기'], ['dia:variantForm', '이표기'], ['dia:gloss', '뜻'], ['dia:denotes', '가리키는 생활 대상'], ['dcterms:spatial', '쓰인 문화권'], ['dia:sourceLanguage', '기원 언어'], ['dia:etymologyNote', '어원 설명(연구자 해석)'], ['dcterms:source', '근거 출처'], ['dia:citation', '근거 쪽수']], // 어휘
     place: [['dcterms:title', '이름'], ['coords', '좌표'], ['dcterms:isPartOf', '상위 장소'], ['skos:exactMatch', '외부 전거']], // 장소
     group: [['dcterms:title', '이름'], ['dcterms:description', '이동 개요'], ['dcterms:spatial', '주요 장소'], ['dcterms:source', '근거 출처']], // 문화권
@@ -59,9 +59,20 @@
     const cls = X.classOf(id); // 클래스
     const title = X.titleOf(res); // 이름
     document.title = title + ' — 한 뿌리, 다른 흙'; // 탭 제목
-    box.appendChild(el('p', { class: 'eyebrow' }, X.CLASS_NAME[cls] + (res.class ? ' · ' + res.class : ''))); // 클래스 이름
+    const gid = cls === 'group' ? id : X.groupsOf(res)[0]; // 색을 정할 문화권
+    const hero = el('div', { class: 'item-hero ' + (X.GROUP_CLASS[gid] || '') }); // 그림 표지 + 제목 줄
+    const mark = el('div', { class: 'mark', 'aria-hidden': 'true' }); // 그림 표지(장식)
+    const subj = X.asList(res['dcterms:subject'])[0] || X.asList(res['dia:denotes'])[0]; // 장면의 대상 또는 어휘가 가리키는 대상
+    const iconKey = cls === 'concept' ? id : (subj && subj.ref) || X.aspectOf(res) || ({ label: '부르는 것', reference: '배우는 것', group: '부르는 것' })[cls] || '먹는 것'; // 아이콘 고르기
+    mark.appendChild(window.ArchiveIcons.iconSvg(iconKey)); // 아이콘
+    hero.appendChild(mark); // 붙임
+    const titleBox = el('div'); // 제목 묶음
+    titleBox.appendChild(el('p', { class: 'eyebrow' }, X.CLASS_NAME[cls] + (res.class ? ' · ' + res.class : '') + (X.aspectOf(res) ? ' · ' + X.aspectOf(res) : ''))); // 클래스·측면 이름
     const form = res['skosxl:literalForm']; // 어휘면 표기 언어를 h1에 붙이기 위해
-    box.appendChild(el('h1', { lang: form ? form.lang : null }, title)); // 제목
+    titleBox.appendChild(el('h1', { lang: form ? form.lang : null }, title)); // 제목
+    if (res.representation) titleBox.appendChild(el('span', { class: 'badge badge-lit', style: 'margin-left:0' }, res.representation)); // 문학 속 재현 표시
+    hero.appendChild(titleBox); // 붙임
+    box.appendChild(hero); // 화면에 붙임
     if (res.status === '확인 필요') box.appendChild(el('p', {}, [el('span', { class: 'badge badge-pending' }, '확인 필요'), ' ', res.note || ''])); // 자원 전체가 확인 필요면 안내
     if (res.scholarly === false) box.appendChild(el('p', {}, el('span', { class: 'badge badge-pending' }, '학술 근거 아님'))); // 소설 등 학술 근거가 아닌 출처 표시
 
