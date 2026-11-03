@@ -19,6 +19,12 @@ dia:aspect a rdf:Property ;
     rdfs:isDefinedBy <https://yunu-jeon.github.io/DH-Korean-Diaspora/ns> ;
     rdfs:range xsd:string .
 
+dia:basis a rdf:Property ;
+    rdfs:label "값 종류"@ko ;
+    rdfs:comment "값 하나의 성격 — '보고'(문헌이 보고한 사실), '해석'(연구자·큐레이터의 해석), '문헌 외'(문헌에 없어 편집자가 보탠 값, 예: 근사 좌표) 중 하나. 자원 전체가 아니라 값마다 붙이며, Omeka S 에서는 값 주석(value annotation)에 쓴다."@ko ;
+    rdfs:isDefinedBy <https://yunu-jeon.github.io/DH-Korean-Diaspora/ns> ;
+    rdfs:range xsd:string .
+
 dia:citation a rdf:Property ;
     rdfs:label "근거 쪽수"@ko ;
     rdfs:comment "근거 출처와 쪽수를 \"출처ID:쪽\" 문자열로 적는다(예: kwon2020:108). 쪽은 PDF 쪽이 아니라 인쇄된 쪽수, 웹 문헌은 절 이름. dcterms:source 는 문헌만 가리키므로 쪽수를 따로 둔다."@ko ;
@@ -63,11 +69,11 @@ dia:variantForm a rdf:Property ;
 <https://yunu-jeon.github.io/DH-Korean-Diaspora/ns> a owl:Ontology ;
     rdfs:label "Diaspora Ontology"@en ;
     dcterms:creator "Yunu-Jeon" ;
-    dcterms:description "「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 7개를 정의한다."@ko ;
+    dcterms:description "「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 8개를 정의한다."@ko ;
     dcterms:issued "2026-11-03"^^xsd:date ;
     dcterms:title "Diaspora Ontology"@en ;
     vann:preferredNamespacePrefix "dia" ;
     vann:preferredNamespaceUri "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#"^^xsd:anyURI ;
     rdfs:seeAlso <https://yunu-jeon.github.io/DH-Korean-Diaspora/> ;
-    owl:versionInfo "1.0" .
+    owl:versionInfo "1.1" .
 

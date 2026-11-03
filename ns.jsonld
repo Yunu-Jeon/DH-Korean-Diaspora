@@ -1,13 +1,69 @@
 [
   {
-    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#sourceLanguage",
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Yunu-Jeon"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "ko",
+        "@value": "「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 8개를 정의한다."
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2026-11-03"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Diaspora Ontology"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "dia"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
+        "@value": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Diaspora Ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "1.1"
+      }
+    ]
+  },
+  {
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#variantForm",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "ko",
-        "@value": "이 말이 온 언어의 ISO 639-3 코드(rus, jpn, eng, kor). dcterms:language 는 '자원이 쓰인 언어'라 뜻이 달라 따로 둔다."
+        "@value": "같은 말의 다른 표기(예: Kim Chee / 김치, Кукси / 국시). 검색에 필요하다. 표기마다 쓰인 시기·매체는 담지 못한다."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -23,68 +79,7 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "ko",
-        "@value": "기원 언어"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#denotes",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "ko",
-        "@value": "이 말이 가리키는 생활 대상. 말과 대상을 분리하는 핵심 연결이다. '고본질'처럼 사물이 아닌 활동을 가리키는 말이나 호칭은 비워 두고 dia:gloss 로 뜻을 적는다."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.w3.org/2008/05/skos-xl#Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "ko",
-        "@value": "가리키는 생활 대상"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ]
-  },
-  {
-    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#aspect",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "ko",
-        "@value": "생활문화의 네 측면 중 하나 — 값은 '먹는 것', '부르는 것', '일하는 것', '배우는 것'. 한 장면이 여러 측면에 걸쳐도 대표 측면 하나만 고르며, 그 선택은 큐레이터의 해석이다."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "ko",
-        "@value": "생활문화의 측면"
+        "@value": "이표기"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -160,14 +155,37 @@
     ]
   },
   {
-    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#variantForm",
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#Scene",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "ko",
+        "@value": "먹고, 부르고, 일하고, 배우는 생활문화의 한 장면. 사건(Event)이나 개념(Concept) 어느 쪽에도 맞지 않는 서사 단위."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "ko",
+        "@value": "생활 장면"
+      }
+    ]
+  },
+  {
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#denotes",
     "@type": [
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "ko",
-        "@value": "같은 말의 다른 표기(예: Kim Chee / 김치, Кукси / 국시). 검색에 필요하다. 표기마다 쓰인 시기·매체는 담지 못한다."
+        "@value": "이 말이 가리키는 생활 대상. 말과 대상을 분리하는 핵심 연결이다. '고본질'처럼 사물이 아닌 활동을 가리키는 말이나 호칭은 비워 두고 dia:gloss 로 뜻을 적는다."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -183,7 +201,40 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "ko",
-        "@value": "이표기"
+        "@value": "가리키는 생활 대상"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ]
+  },
+  {
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#sourceLanguage",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "ko",
+        "@value": "이 말이 온 언어의 ISO 639-3 코드(rus, jpn, eng, kor). dcterms:language 는 '자원이 쓰인 언어'라 뜻이 달라 따로 둔다."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://www.w3.org/2008/05/skos-xl#Label"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "ko",
+        "@value": "기원 언어"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -193,58 +244,58 @@
     ]
   },
   {
-    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns",
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#aspect",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Yunu-Jeon"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@language": "ko",
-        "@value": "「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 7개를 정의한다."
+        "@value": "생활문화의 네 측면 중 하나 — 값은 '먹는 것', '부르는 것', '일하는 것', '배우는 것'. 한 장면이 여러 측면에 걸쳐도 대표 측면 하나만 고르며, 그 선택은 큐레이터의 해석이다."
       }
     ],
-    "http://purl.org/dc/terms/issued": [
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2026-11-03"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "Diaspora Ontology"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
-      {
-        "@value": "dia"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespaceUri": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#anyURI",
-        "@value": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#"
+        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@language": "en",
-        "@value": "Diaspora Ontology"
+        "@language": "ko",
+        "@value": "생활문화의 측면"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#basis",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "ko",
+        "@value": "값 하나의 성격 — '보고'(문헌이 보고한 사실), '해석'(연구자·큐레이터의 해석), '문헌 외'(문헌에 없어 편집자가 보탠 값, 예: 근사 좌표) 중 하나. 자원 전체가 아니라 값마다 붙이며, Omeka S 에서는 값 주석(value annotation)에 쓴다."
       }
     ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "1.0"
+        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "ko",
+        "@value": "값 종류"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -273,29 +324,6 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#Scene",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "ko",
-        "@value": "먹고, 부르고, 일하고, 배우는 생활문화의 한 장면. 사건(Event)이나 개념(Concept) 어느 쪽에도 맞지 않는 서사 단위."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "ko",
-        "@value": "생활 장면"
       }
     ]
   }

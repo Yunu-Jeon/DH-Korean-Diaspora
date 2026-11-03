@@ -64,21 +64,22 @@
   <main id="main">
     <!-- 이 파일은 build_ns.py 로 어휘설명.ttl 에서 만든 것입니다 -->
     <h1>Diaspora Ontology</h1>
-    <p>「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 7개를 정의한다.</p>
+    <p>「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 8개를 정의한다.</p>
 
     <table class="ns-table">
       <tr><th scope="row">Namespace URI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#</code></td></tr>
       <tr><th scope="row">접두어</th><td><code>dia</code></td></tr>
-      <tr><th scope="row">버전</th><td>1.0 (2026-11-03)</td></tr>
+      <tr><th scope="row">버전</th><td>1.1 (2026-11-03)</td></tr>
       <tr><th scope="row">만든 이</th><td>Yunu-Jeon</td></tr>
       <tr><th scope="row">내려받기</th><td class="ns-formats"><a href="ns.ttl">Turtle</a><a href="ns.rdf">RDF/XML</a><a href="ns.jsonld">JSON-LD</a></td></tr>
     </table>
     <p>Omeka S 같은 도구에서 이 어휘를 가져올 때는 위 Namespace URI 와 접두어 <code>dia</code>를 그대로 쓰고, 파일 URL 로 <code>ns.ttl</code> 또는 <code>ns.rdf</code>의 주소를 넣습니다.</p>
 
-    <h2>용어 목록 (클래스 1개, 속성 7개)</h2>
+    <h2>용어 목록 (클래스 1개, 속성 8개)</h2>
     <ul class="ns-toc">
       <li><a href="#Scene"><code>dia:Scene</code></a> 생활 장면 <span class="ns-kind">클래스</span></li>
       <li><a href="#aspect"><code>dia:aspect</code></a> 생활문화의 측면 <span class="ns-kind">속성</span></li>
+      <li><a href="#basis"><code>dia:basis</code></a> 값 종류 <span class="ns-kind">속성</span></li>
       <li><a href="#citation"><code>dia:citation</code></a> 근거 쪽수 <span class="ns-kind">속성</span></li>
       <li><a href="#denotes"><code>dia:denotes</code></a> 가리키는 생활 대상 <span class="ns-kind">속성</span></li>
       <li><a href="#etymologyNote"><code>dia:etymologyNote</code></a> 어원 설명(연구자 해석) <span class="ns-kind">속성</span></li>
@@ -105,6 +106,16 @@
 <tr><th scope="row">정의</th><td>생활문화의 네 측면 중 하나 — 값은 &#x27;먹는 것&#x27;, &#x27;부르는 것&#x27;, &#x27;일하는 것&#x27;, &#x27;배우는 것&#x27;. 한 장면이 여러 측면에 걸쳐도 대표 측면 하나만 고르며, 그 선택은 큐레이터의 해석이다.</td></tr>
 <tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
 <tr><th scope="row">AP에서 쓰는 곳</th><td>생활 장면, 생활 대상</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="basis">
+      <h3><code>dia:basis</code> — 값 종류</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#basis</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>값 하나의 성격 — &#x27;보고&#x27;(문헌이 보고한 사실), &#x27;해석&#x27;(연구자·큐레이터의 해석), &#x27;문헌 외&#x27;(문헌에 없어 편집자가 보탠 값, 예: 근사 좌표) 중 하나. 자원 전체가 아니라 값마다 붙이며, Omeka S 에서는 값 주석(value annotation)에 쓴다.</td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>모든 클래스의 값 주석(value annotation)</td></tr>
       </table>
     </section>
     <section class="ns-term" id="citation">
