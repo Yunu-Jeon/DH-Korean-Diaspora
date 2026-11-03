@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:vann="http://purl.org/vocab/vann/"
+>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#sourceLanguage">
+    <rdfs:label xml:lang="ko">기원 언어</rdfs:label>
+    <rdfs:comment xml:lang="ko">이 말이 온 언어의 ISO 639-3 코드(rus, jpn, eng, kor). dcterms:language 는 '자원이 쓰인 언어'라 뜻이 달라 따로 둔다.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns">
+        <dcterms:title xml:lang="en">Diaspora Ontology</dcterms:title>
+        <rdfs:label xml:lang="en">Diaspora Ontology</rdfs:label>
+        <dcterms:description xml:lang="ko">「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 7개를 정의한다.</dcterms:description>
+        <dcterms:creator>Yunu-Jeon</dcterms:creator>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-03</dcterms:issued>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <vann:preferredNamespacePrefix>dia</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#</vann:preferredNamespaceUri>
+        <rdfs:seeAlso rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/"/>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#variantForm">
+    <rdfs:label xml:lang="ko">이표기</rdfs:label>
+    <rdfs:comment xml:lang="ko">같은 말의 다른 표기(예: Kim Chee / 김치, Кукси / 국시). 검색에 필요하다. 표기마다 쓰인 시기·매체는 담지 못한다.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#citation">
+    <rdfs:label xml:lang="ko">근거 쪽수</rdfs:label>
+    <rdfs:comment xml:lang="ko">근거 출처와 쪽수를 "출처ID:쪽" 문자열로 적는다(예: kwon2020:108). 쪽은 PDF 쪽이 아니라 인쇄된 쪽수, 웹 문헌은 절 이름. dcterms:source 는 문헌만 가리키므로 쪽수를 따로 둔다.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#Scene">
+    <rdfs:label xml:lang="ko">생활 장면</rdfs:label>
+    <rdfs:comment xml:lang="ko">먹고, 부르고, 일하고, 배우는 생활문화의 한 장면. 사건(Event)이나 개념(Concept) 어느 쪽에도 맞지 않는 서사 단위.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#aspect">
+    <rdfs:label xml:lang="ko">생활문화의 측면</rdfs:label>
+    <rdfs:comment xml:lang="ko">생활문화의 네 측면 중 하나 — 값은 '먹는 것', '부르는 것', '일하는 것', '배우는 것'. 한 장면이 여러 측면에 걸쳐도 대표 측면 하나만 고르며, 그 선택은 큐레이터의 해석이다.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#etymologyNote">
+    <rdfs:label xml:lang="ko">어원 설명(연구자 해석)</rdfs:label>
+    <rdfs:comment xml:lang="ko">어원에 대한 연구자의 해석. 문헌이 보고한 사실(dia:gloss)과 해석을 분리하려고 따로 둔다.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#denotes">
+    <rdfs:label xml:lang="ko">가리키는 생활 대상</rdfs:label>
+    <rdfs:comment xml:lang="ko">이 말이 가리키는 생활 대상. 말과 대상을 분리하는 핵심 연결이다. '고본질'처럼 사물이 아닌 활동을 가리키는 말이나 호칭은 비워 두고 dia:gloss 로 뜻을 적는다.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#gloss">
+    <rdfs:label xml:lang="ko">뜻</rdfs:label>
+    <rdfs:comment xml:lang="ko">이 말의 뜻. SKOS-XL 에서 이름표는 원래 뜻을 갖지 않지만, 문화권마다 미묘하게 다른 뜻을 담으려고 어휘에 둔다.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:isDefinedBy rdf:resource="https://yunu-jeon.github.io/DH-Korean-Diaspora/ns"/>
+  </rdf:Property>
+</rdf:RDF>

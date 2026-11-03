@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <!-- 문서 기본 정보 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diaspora Ontology (dia) — 한 뿌리, 다른 땅</title>
+  <meta name="description" content="한 뿌리, 다른 땅 아카이브의 커스텀 어휘 Diaspora Ontology(dia:) 정의서">
+  <!-- 기계가 읽는 같은 어휘 -->
+  <link rel="alternate" type="text/turtle" href="ns.ttl">
+  <link rel="alternate" type="application/rdf+xml" href="ns.rdf">
+  <link rel="alternate" type="application/ld+json" href="ns.jsonld">
+  <!-- 파비콘(로고 SVG) -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- 글꼴: 본문 Noto Sans KR, 제목 Noto Serif KR(명조) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Noto+Serif+KR:wght@500;600;700&display=swap">
+  <!-- 사이트 스타일 -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .ns-table { width: 100%; border-collapse: collapse; margin: 0 0 8px; }
+    .ns-table th, .ns-table td { text-align: left; vertical-align: top; padding: 10px 12px; border-top: 1px solid var(--line); }
+    .ns-table th { width: 9.5em; color: var(--ink-3); font-weight: 600; }
+    .ns-table td { overflow-wrap: anywhere; }
+    .ns-term { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px 20px 10px; margin: 0 0 18px; scroll-margin-top: calc(var(--header-h) + 12px); }
+    .ns-term h3 { margin: 0 0 10px; }
+    .ns-term:target { border-color: var(--accent); }
+    .ns-kind { color: var(--ink-3); font-size: 0.88em; }
+    .ns-toc { columns: 2 16em; padding-left: 1.2em; }
+    .ns-formats a { margin-right: 0.8em; }
+    @media (max-width: 640px) {
+      .ns-table th, .ns-table td { display: block; width: auto; }
+      .ns-table th { padding-bottom: 2px; }
+      .ns-table td { border-top: 0; padding-top: 0; }
+      .ns-term { padding: 14px 14px 6px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 본문 바로가기(키보드 사용자용) -->
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <!-- 헤더: 로고와 제목(홈으로), 긴 검색창 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="한 뿌리, 다른 땅 — 홈">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M16 26 V17"/><path d="M16 17 C16 13 11 12 7.5 8.5"/><path d="M16 17 V6.5"/><path d="M16 17 C16 13 21 12 24.5 8.5"/></g>
+          <circle cx="16" cy="26" r="2.8" fill="var(--accent)"/><circle cx="7.5" cy="8.5" r="2" fill="currentColor"/><circle cx="16" cy="6.5" r="2" fill="currentColor"/><circle cx="24.5" cy="8.5" r="2" fill="currentColor"/>
+        </svg>
+        <span>한 뿌리, 다른 땅</span>
+      </a>
+      <!-- 검색창: 돋보기 아이콘과 굵은 테두리로 눈에 띄게 -->
+      <form class="search-form" role="search" action="search.html" method="get">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></g></svg>
+        <label class="sr-only" for="site-q">아카이브 검색(어휘·음식·장면, 이표기 포함)</label>
+        <input id="site-q" name="q" type="search" placeholder="말·음식·장면 검색 (예: Kim Chee, 김치)" autocomplete="off">
+        <button type="submit">검색</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 이 파일은 build_ns.py 로 어휘설명.ttl 에서 만든 것입니다 -->
+    <h1>Diaspora Ontology</h1>
+    <p>「한 뿌리, 다른 땅: 한인 디아스포라 생활문화·어휘 아카이브」의 커스텀 어휘. Dublin Core·SKOS·SKOS-XL 등 표준 어휘에 없는 클래스 1개와 속성 7개를 정의한다.</p>
+
+    <table class="ns-table">
+      <tr><th scope="row">Namespace URI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#</code></td></tr>
+      <tr><th scope="row">접두어</th><td><code>dia</code></td></tr>
+      <tr><th scope="row">버전</th><td>1.0 (2026-11-03)</td></tr>
+      <tr><th scope="row">만든 이</th><td>Yunu-Jeon</td></tr>
+      <tr><th scope="row">내려받기</th><td class="ns-formats"><a href="ns.ttl">Turtle</a><a href="ns.rdf">RDF/XML</a><a href="ns.jsonld">JSON-LD</a></td></tr>
+    </table>
+    <p>Omeka S 같은 도구에서 이 어휘를 가져올 때는 위 Namespace URI 와 접두어 <code>dia</code>를 그대로 쓰고, 파일 URL 로 <code>ns.ttl</code> 또는 <code>ns.rdf</code>의 주소를 넣습니다.</p>
+
+    <h2>용어 목록 (클래스 1개, 속성 7개)</h2>
+    <ul class="ns-toc">
+      <li><a href="#Scene"><code>dia:Scene</code></a> 생활 장면 <span class="ns-kind">클래스</span></li>
+      <li><a href="#aspect"><code>dia:aspect</code></a> 생활문화의 측면 <span class="ns-kind">속성</span></li>
+      <li><a href="#citation"><code>dia:citation</code></a> 근거 쪽수 <span class="ns-kind">속성</span></li>
+      <li><a href="#denotes"><code>dia:denotes</code></a> 가리키는 생활 대상 <span class="ns-kind">속성</span></li>
+      <li><a href="#etymologyNote"><code>dia:etymologyNote</code></a> 어원 설명(연구자 해석) <span class="ns-kind">속성</span></li>
+      <li><a href="#gloss"><code>dia:gloss</code></a> 뜻 <span class="ns-kind">속성</span></li>
+      <li><a href="#sourceLanguage"><code>dia:sourceLanguage</code></a> 기원 언어 <span class="ns-kind">속성</span></li>
+      <li><a href="#variantForm"><code>dia:variantForm</code></a> 이표기 <span class="ns-kind">속성</span></li>
+    </ul>
+
+    <h2>용어 정의</h2>
+    <section class="ns-term" id="Scene">
+      <h3><code>dia:Scene</code> — 생활 장면</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#Scene</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdfs:Class</code></td></tr>
+<tr><th scope="row">정의</th><td>먹고, 부르고, 일하고, 배우는 생활문화의 한 장면. 사건(Event)이나 개념(Concept) 어느 쪽에도 맞지 않는 서사 단위.</td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>생활 장면(클래스 자체)</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="aspect">
+      <h3><code>dia:aspect</code> — 생활문화의 측면</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#aspect</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>생활문화의 네 측면 중 하나 — 값은 &#x27;먹는 것&#x27;, &#x27;부르는 것&#x27;, &#x27;일하는 것&#x27;, &#x27;배우는 것&#x27;. 한 장면이 여러 측면에 걸쳐도 대표 측면 하나만 고르며, 그 선택은 큐레이터의 해석이다.</td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>생활 장면, 생활 대상</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="citation">
+      <h3><code>dia:citation</code> — 근거 쪽수</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#citation</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>근거 출처와 쪽수를 &quot;출처ID:쪽&quot; 문자열로 적는다(예: kwon2020:108). 쪽은 PDF 쪽이 아니라 인쇄된 쪽수, 웹 문헌은 절 이름. dcterms:source 는 문헌만 가리키므로 쪽수를 따로 둔다.</td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>자료, 생활 장면, 어휘</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="denotes">
+      <h3><code>dia:denotes</code> — 가리키는 생활 대상</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#denotes</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>이 말이 가리키는 생활 대상. 말과 대상을 분리하는 핵심 연결이다. &#x27;고본질&#x27;처럼 사물이 아닌 활동을 가리키는 말이나 호칭은 비워 두고 dia:gloss 로 뜻을 적는다.</td></tr>
+<tr><th scope="row">정의역(domain)</th><td><a href="http://www.w3.org/2008/05/skos-xl#Label"><code>skosxl:Label</code></a></td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2004/02/skos/core#Concept"><code>skos:Concept</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>어휘</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="etymologyNote">
+      <h3><code>dia:etymologyNote</code> — 어원 설명(연구자 해석)</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#etymologyNote</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>어원에 대한 연구자의 해석. 문헌이 보고한 사실(dia:gloss)과 해석을 분리하려고 따로 둔다.</td></tr>
+<tr><th scope="row">정의역(domain)</th><td><a href="http://www.w3.org/2008/05/skos-xl#Label"><code>skosxl:Label</code></a></td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>어휘</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="gloss">
+      <h3><code>dia:gloss</code> — 뜻</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#gloss</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>이 말의 뜻. SKOS-XL 에서 이름표는 원래 뜻을 갖지 않지만, 문화권마다 미묘하게 다른 뜻을 담으려고 어휘에 둔다.</td></tr>
+<tr><th scope="row">정의역(domain)</th><td><a href="http://www.w3.org/2008/05/skos-xl#Label"><code>skosxl:Label</code></a></td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>어휘</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="sourceLanguage">
+      <h3><code>dia:sourceLanguage</code> — 기원 언어</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#sourceLanguage</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>이 말이 온 언어의 ISO 639-3 코드(rus, jpn, eng, kor). dcterms:language 는 &#x27;자원이 쓰인 언어&#x27;라 뜻이 달라 따로 둔다.</td></tr>
+<tr><th scope="row">정의역(domain)</th><td><a href="http://www.w3.org/2008/05/skos-xl#Label"><code>skosxl:Label</code></a></td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>어휘</td></tr>
+      </table>
+    </section>
+    <section class="ns-term" id="variantForm">
+      <h3><code>dia:variantForm</code> — 이표기</h3>
+      <table class="ns-table">
+<tr><th scope="row">IRI</th><td><code>https://yunu-jeon.github.io/DH-Korean-Diaspora/ns#variantForm</code></td></tr>
+<tr><th scope="row">유형</th><td><code>rdf:Property</code></td></tr>
+<tr><th scope="row">정의</th><td>같은 말의 다른 표기(예: Kim Chee / 김치, Кукси / 국시). 검색에 필요하다. 표기마다 쓰인 시기·매체는 담지 못한다.</td></tr>
+<tr><th scope="row">정의역(domain)</th><td><a href="http://www.w3.org/2008/05/skos-xl#Label"><code>skosxl:Label</code></a></td></tr>
+<tr><th scope="row">치역(range)</th><td><a href="http://www.w3.org/2001/XMLSchema#string"><code>xsd:string</code></a></td></tr>
+<tr><th scope="row">AP에서 쓰는 곳</th><td>어휘</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="inner">
+      <p>Diaspora Ontology — 「한 뿌리, 다른 땅」의 응용 프로파일(AP)에 쓰이는 커스텀 어휘입니다. <a href="index.html">아카이브 홈</a></p>
+    </div>
+  </footer>
+</body>
+</html>
